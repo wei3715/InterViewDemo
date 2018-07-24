@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface ClassA : NSObject
 
+@interface ClassA : NSObject
+-(void)methodA;
+@end
+
+@protocol ClassAProtocol <NSObject>
+-(void)protocolMethodA;
 @end

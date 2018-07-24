@@ -9,6 +9,7 @@
 #import "ZWWTableViewController.h"
 #import "ZWWTableViewController+method.h"
 #import "TestClass.h"
+#import "TestClass+Method.h"
 #import "ClassA.h"
 #import "ClassB.h"
 #import "ZWWTestWeakStongViewController.h"
@@ -26,8 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"object-c:'多继承'",@"属性修饰词",@"NSArray去重"];
-    _titleArr = @[@[@"代理实现多继承",@"02.内存中保存图片"],
+    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"NSArray去重"];
+    _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承"],
                   @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"],
                   @[@"NSArray去重"]
                   ];
@@ -78,16 +79,24 @@
     switch (indexPath.section) {
         case 0:{//object-c:'多继承
             switch (indexPath.row) {
-                case 0:{
-                    TestClass *c = [[TestClass alloc]init];
-                    ClassA *a = [[ClassA alloc]init];
-                    ClassB *b = [[ClassB alloc]init];
-                    [c printClass:a];
-                    [c printClass:b];
+                case 0:{//通过组合实现"多继承"效果
+                    TestClass *testCls = [[TestClass alloc]init];
+                    [testCls methodA];
+                    [testCls methodB];
                     break;
                 }
-                case 1:{//沙盒路径
-                    
+                case 1:{//通过代理实现"多继承"效果
+                    TestClass *testCls = [[TestClass alloc]init];
+                    ClassA *a = [[ClassA alloc]init];
+                    ClassB *b = [[ClassB alloc]init];
+                    [testCls printClass:a];
+                    [testCls printClass:b];
+                    break;
+                }
+                case 2:{//通过类别实现"单继承"效果
+                    TestClass *testCls = [[TestClass alloc]init];
+                    testCls.addr = @"类别添加属性";
+                    ZWWLog(@"类别添加的变量==%@",testCls.addr);
                     break;
                 }
                 default:
