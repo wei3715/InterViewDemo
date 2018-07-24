@@ -34,6 +34,7 @@
     NSString *str2 = [str mutableCopy];
     ZWWLog(@"不可变原始字符串指针==%p,copy后指针==%p，mutableCopy后指针==%p",str,str1,str2);
     
+    //可变对象
     NSMutableString *mStr = [NSMutableString stringWithFormat:@"coder"];
     NSMutableString *mStr1 = [mStr copy];
     NSMutableString *mStr2 = [mStr mutableCopy];
@@ -125,6 +126,39 @@
 }
 
 
-
+//
+- (void)testSignal{
+    //crate的value表示，最多几个资源可访问
+    //如果为2，那么肯定最后执行任务3；如果为1，那么肯定先执行完任务1，再任务2，再任务3
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(3);
+    dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    //任务1
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 1");
+        sleep(1);
+        NSLog(@"complete task 1");
+        dispatch_semaphore_signal(semaphore);
+    });
+    //任务2
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 2");
+        sleep(1);
+        NSLog(@"complete task 2");
+        dispatch_semaphore_signal(semaphore);
+    });
+    //任务3
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"run task 3");
+        sleep(1);
+        NSLog(@"complete task 3");
+        dispatch_semaphore_signal(semaphore);
+    });
+}
 
 @end

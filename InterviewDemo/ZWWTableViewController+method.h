@@ -26,8 +26,8 @@
 //Block监测网络状态
 - (void)testNetWorkWithBlock;
 
-//NSURLConnection 异步请求
-- (void)testAsynNSURLConnection;
+//信号量
+- (void)testSignal;
 //NSURLConnection 同步请求
 - (void)testSynNSURLConnection;
 @end
