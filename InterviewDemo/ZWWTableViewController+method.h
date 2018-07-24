@@ -23,9 +23,6 @@
 //单层深copy
 - (void)TestCopy202;
 
-//Block监测网络状态
-- (void)testNetWorkWithBlock;
-
 //NSURLConnection 异步请求
 - (void)testAsynNSURLConnection;
 //NSURLConnection 同步请求

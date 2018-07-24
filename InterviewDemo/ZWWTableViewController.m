@@ -11,6 +11,7 @@
 #import "TestClass.h"
 #import "ClassA.h"
 #import "ClassB.h"
+#import "ZWWTestWeakStongViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     _sectionTitleArr = @[@"object-c:'多继承'",@"属性修饰词"];
     _titleArr = @[@[@"代理实现多继承",@"02.内存中保存图片"],
-                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串"]
+                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -99,7 +100,7 @@
                     [self TestCopy];
                     break;
                 }
-                case 1:{//Block监测网络
+                case 1:{//自定义类的深浅拷贝
                     [self TestCopy1];
                     break;
                 }
@@ -111,8 +112,13 @@
                     
                     break;
                 }
-                case 4:{//NSURLConnection同步请求
+                case 4:{//copy&strong修饰的字符串
                     [self testStrongAndCopyStr];
+                    break;
+                }
+                case 5:{//weak&strong修饰的字符串
+                    ZWWTestWeakStongViewController *weakStrongVC = [[ZWWTestWeakStongViewController alloc]init];
+                    [self.navigationController pushViewController:weakStrongVC animated:YES];
                     break;
                 }
                 default:
