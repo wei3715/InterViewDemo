@@ -9,8 +9,10 @@
 #import "ZWWTableViewController.h"
 #import "ZWWTableViewController+method.h"
 #import "TestClass.h"
+#import "TestClass+Method.h"
 #import "ClassA.h"
 #import "ClassB.h"
+#import "ZWWTestWeakStongViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -25,10 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"object-c:'多继承'",@"属性修饰词",@"线程"];
-    _titleArr = @[@[@"代理实现多继承",@"02.内存中保存图片"],
-                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串"],
-                  @[@"信号量"]
+    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"NSArray去重"];
+    _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承"],
+                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"],
+                  @[@"NSArray去重",@"信号量"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -77,16 +79,24 @@
     switch (indexPath.section) {
         case 0:{//object-c:'多继承
             switch (indexPath.row) {
-                case 0:{
-                    TestClass *c = [[TestClass alloc]init];
-                    ClassA *a = [[ClassA alloc]init];
-                    ClassB *b = [[ClassB alloc]init];
-                    [c printClass:a];
-                    [c printClass:b];
+                case 0:{//通过组合实现"多继承"效果
+                    TestClass *testCls = [[TestClass alloc]init];
+                    [testCls methodA];
+                    [testCls methodB];
                     break;
                 }
-                case 1:{//沙盒路径
-                    
+                case 1:{//通过代理实现"多继承"效果
+                    TestClass *testCls = [[TestClass alloc]init];
+                    ClassA *a = [[ClassA alloc]init];
+                    ClassB *b = [[ClassB alloc]init];
+                    [testCls printClass:a];
+                    [testCls printClass:b];
+                    break;
+                }
+                case 2:{//通过类别实现"单继承"效果
+                    TestClass *testCls = [[TestClass alloc]init];
+                    testCls.addr = @"类别添加属性";
+                    ZWWLog(@"类别添加的变量==%@",testCls.addr);
                     break;
                 }
                 default:
@@ -100,7 +110,7 @@
                     [self TestCopy];
                     break;
                 }
-                case 1:{//Block监测网络
+                case 1:{//自定义类的深浅拷贝
                     [self TestCopy1];
                     break;
                 }
@@ -112,8 +122,13 @@
                     
                     break;
                 }
-                case 4:{//字符串strong和copy的区别
+                case 4:{//copy&strong修饰的字符串
                     [self testStrongAndCopyStr];
+                    break;
+                }
+                case 5:{//weak&strong修饰的字符串
+                    ZWWTestWeakStongViewController *weakStrongVC = [[ZWWTestWeakStongViewController alloc]init];
+                    [self.navigationController pushViewController:weakStrongVC animated:YES];
                     break;
                 }
                 default:
@@ -122,33 +137,20 @@
 
             break;
         }
-        case 2:{//线程相关
+        case 2:{
             switch (indexPath.row) {
-                case 0:{//Copy，MutableCopy
-                    [self testSignal];
+                case 0:{//数组去重
+                    [self deleteSame];
                     break;
                 }
-                case 1:{//Block监测网络
-                    [self TestCopy1];
+                case 1:{//信号量
+                   [self testSignal];
                     break;
                 }
-                case 2:{//容器对象的深浅copy
-                    [self TestCopy201];
-                    break;
-                }
-                case 3:{//block
                     
-                    break;
-                }
-                case 4:{//字符串strong和copy的区别
-                    [self testStrongAndCopyStr];
-                    break;
-                }
                 default:
                     break;
             }
-            
-            break;
         }
         default:
             break;

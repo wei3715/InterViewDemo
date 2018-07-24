@@ -15,11 +15,15 @@
 		047B75C420BE4A6500154E1A /* __DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75C320BE4A6500154E1A /* __DemoUITests.m */; };
 		047B75D520BE4AA500154E1A /* ZWWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75D220BE4AA500154E1A /* ZWWTableViewController.m */; };
 		047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */; };
+		04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A20D8E210732F800CBC5AE /* TestClass+Method.m */; };
 		04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD20320C674D500FCA2D8 /* ClassA.m */; };
 		04BDD20720C674E700FCA2D8 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD20620C674E700FCA2D8 /* ClassB.m */; };
 		04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD20920C674F800FCA2D8 /* TestClass.m */; };
 		04BDD20D20C6772A00FCA2D8 /* MyPTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD20C20C6772A00FCA2D8 /* MyPTL.m */; };
 		04C58CE720D368EA002B3B5F /* Model1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C58CE620D368EA002B3B5F /* Model1.m */; };
+		04EA94CD2106C45F00F7E153 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94CA2106C45F00F7E153 /* Person.m */; };
+		04EA94CE2106C45F00F7E153 /* ZWWCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */; };
+		04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +32,14 @@
 			containerPortal = 047B759420BE4A6000154E1A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 047B759B20BE4A6000154E1A;
-			remoteInfo = "InterviewDemo";
+			remoteInfo = InterviewDemo;
 		};
 		047B75C020BE4A6500154E1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 047B759420BE4A6000154E1A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 047B759B20BE4A6000154E1A;
-			remoteInfo = "InterviewDemo";
+			remoteInfo = InterviewDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,6 +63,8 @@
 		047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZWWTableViewController+method.m"; sourceTree = "<group>"; };
 		047B75D720BE4B0900154E1A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		047B75D820BE4B0900154E1A /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		04A20D8D210732F800CBC5AE /* TestClass+Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestClass+Method.h"; sourceTree = "<group>"; };
+		04A20D8E210732F800CBC5AE /* TestClass+Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestClass+Method.m"; sourceTree = "<group>"; };
 		04BDD20220C674D500FCA2D8 /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
 		04BDD20320C674D500FCA2D8 /* ClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
 		04BDD20520C674E700FCA2D8 /* ClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
@@ -69,6 +75,12 @@
 		04BDD20C20C6772A00FCA2D8 /* MyPTL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPTL.m; sourceTree = "<group>"; };
 		04C58CE520D368EA002B3B5F /* Model1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model1.h; sourceTree = "<group>"; };
 		04C58CE620D368EA002B3B5F /* Model1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model1.m; sourceTree = "<group>"; };
+		04EA94C92106C45F00F7E153 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		04EA94CA2106C45F00F7E153 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		04EA94CB2106C45F00F7E153 /* ZWWCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWCustomView.h; sourceTree = "<group>"; };
+		04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWCustomView.m; sourceTree = "<group>"; };
+		04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestWeakStongViewController.h; sourceTree = "<group>"; };
+		04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestWeakStongViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,7 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04EA94C82106C45F00F7E153 /* weak&strong */,
 				047B75D720BE4B0900154E1A /* PrefixHeader.pch */,
 				047B75D820BE4B0900154E1A /* UtilsMacros.h */,
 				047B75D320BE4AA500154E1A /* ZWWTableViewController.h */,
@@ -137,6 +150,8 @@
 				04BDD20620C674E700FCA2D8 /* ClassB.m */,
 				04BDD20820C674F800FCA2D8 /* TestClass.h */,
 				04BDD20920C674F800FCA2D8 /* TestClass.m */,
+				04A20D8D210732F800CBC5AE /* TestClass+Method.h */,
+				04A20D8E210732F800CBC5AE /* TestClass+Method.m */,
 				047B75A820BE4A6400154E1A /* Assets.xcassets */,
 				047B75AA20BE4A6400154E1A /* LaunchScreen.storyboard */,
 				047B75AD20BE4A6400154E1A /* Info.plist */,
@@ -163,6 +178,19 @@
 			path = InterviewDemoUITests;
 			sourceTree = "<group>";
 		};
+		04EA94C82106C45F00F7E153 /* weak&strong */ = {
+			isa = PBXGroup;
+			children = (
+				04EA94C92106C45F00F7E153 /* Person.h */,
+				04EA94CA2106C45F00F7E153 /* Person.m */,
+				04EA94CB2106C45F00F7E153 /* ZWWCustomView.h */,
+				04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */,
+				04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongViewController.h */,
+				04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */,
+			);
+			path = "weak&strong";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,7 +207,7 @@
 			dependencies = (
 			);
 			name = InterviewDemo;
-			productName = "InterviewDemo";
+			productName = InterviewDemo;
 			productReference = 047B759C20BE4A6000154E1A /* InterviewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -197,7 +225,7 @@
 				047B75B620BE4A6500154E1A /* PBXTargetDependency */,
 			);
 			name = InterviewDemoTests;
-			productName = "InterviewDemoTests";
+			productName = InterviewDemoTests;
 			productReference = 047B75B420BE4A6500154E1A /* InterviewDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -215,7 +243,7 @@
 				047B75C120BE4A6500154E1A /* PBXTargetDependency */,
 			);
 			name = InterviewDemoUITests;
-			productName = "InterviewDemoUITests";
+			productName = InterviewDemoUITests;
 			productReference = 047B75BF20BE4A6500154E1A /* InterviewDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -296,11 +324,15 @@
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
+				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
+				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
+				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */,
 				04BDD20720C674E700FCA2D8 /* ClassB.m in Sources */,
 				047B75D520BE4AA500154E1A /* ZWWTableViewController.m in Sources */,
 				047B75A120BE4A6000154E1A /* AppDelegate.m in Sources */,
 				04BDD20D20C6772A00FCA2D8 /* MyPTL.m in Sources */,
+				04EA94CE2106C45F00F7E153 /* ZWWCustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InterviewDemo/PrefixHeader.pch";
-				INFOPLIST_FILE = "InterviewDemo/Info.plist";
+				INFOPLIST_FILE = InterviewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InterviewDemo/PrefixHeader.pch";
-				INFOPLIST_FILE = "InterviewDemo/Info.plist";
+				INFOPLIST_FILE = InterviewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +528,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "InterviewDemoTests/Info.plist";
+				INFOPLIST_FILE = InterviewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +546,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "InterviewDemoTests/Info.plist";
+				INFOPLIST_FILE = InterviewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,7 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "InterviewDemoUITests/Info.plist";
+				INFOPLIST_FILE = InterviewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zoe.--DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "InterviewDemo";
+				TEST_TARGET_NAME = InterviewDemo;
 			};
 			name = Debug;
 		};
@@ -548,7 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "InterviewDemoUITests/Info.plist";
+				INFOPLIST_FILE = InterviewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,7 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zoe.--DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "InterviewDemo";
+				TEST_TARGET_NAME = InterviewDemo;
 			};
 			name = Release;
 		};

@@ -23,11 +23,12 @@
 //单层深copy
 - (void)TestCopy202;
 
-//Block监测网络状态
-- (void)testNetWorkWithBlock;
-
 //信号量
 - (void)testSignal;
+
+//NSArray去重
+- (void)deleteSame;
+
 //NSURLConnection 同步请求
 - (void)testSynNSURLConnection;
 @end

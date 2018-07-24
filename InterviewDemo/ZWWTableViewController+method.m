@@ -8,6 +8,7 @@
 
 #import "ZWWTableViewController+method.h"
 #import "Model1.h"
+
 @implementation ZWWTableViewController (method)
 
 //1、首先说说深浅copy
@@ -125,7 +126,6 @@
     
 }
 
-
 //
 - (void)testSignal{
     //crate的value表示，最多几个资源可访问
@@ -160,5 +160,20 @@
         dispatch_semaphore_signal(semaphore);
     });
 }
+
+- (void)deleteSame{
+    NSArray *arr = @[@"111",@"222",@"333",@"222"];
+    
+    //NSSet去重的数组没有进行排序
+    NSSet *set = [NSSet setWithArray:arr];
+    ZWWLog(@"NSSet去重结果==%@",set);
+    
+    NSMutableDictionary *mDic = [[NSMutableDictionary alloc]init];
+    for (id obj in arr) {
+        [mDic setObject:obj forKey:obj];
+    }
+     ZWWLog(@"NSMutableDictionary去重结果==%@",[mDic allValues]);
+}
+
 
 @end

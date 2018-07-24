@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface TestClass : NSObject
+//通过组合实现“多继承”
+- (instancetype)init;
+- (void)methodA;
+- (void)methodB;
+
+- (void)testCls;
 - (void)printClass:(id <MyPTLDelegate>)obj;
 @end

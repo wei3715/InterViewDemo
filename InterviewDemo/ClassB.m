@@ -12,6 +12,9 @@
 @end
 
 @implementation ClassB
+- (void)methodB{
+    ZWWLog(@"通过组合执行B方法");
+}
 
 -(void)printClass{
     ZWWLog(@"执行B协议方法");
