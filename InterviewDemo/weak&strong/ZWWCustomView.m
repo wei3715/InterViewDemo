@@ -13,6 +13,7 @@
 - (void)dealloc
 {
     ZWWLog(@"对象被销毁");
+    ZWWLog(@"retainCount=%ld 地址==%p",CFGetRetainCount((__bridge CFTypeRef)self),self);
 }
 
 @end

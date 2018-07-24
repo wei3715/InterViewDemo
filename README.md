@@ -9,7 +9,11 @@ oc是否有多继承
 对可变NSMutableString：strong仍是浅拷贝，strong修饰的属性变量会和被赋值对象指向同一块内存，被赋值对象值改变，属性变量值也会改变。copy此时则是深拷贝，是拷贝完全一份新的对象，所以赋值对象值改变不会影响copy修饰的属性变量
 所以：把一个对象赋值给一个属性变量，当这个对象变化了，如果希望属性变量变化就使用strong属性，如果希望属性变量不跟着变化，就是用copy属性。
 
-block等
+//答应
+ARC下打印retainCount， CFGetRetainCount((__bridge CFTypeRef)self  ： 打印retainCount
+打印指针的地址（不是指针指向对象的地址）：NSLog(@"aStr指针内存地址：%x",&aStr);
+打印指针所指向对象的地址使用这个 ：NSLog(@"aStr指针所指向对象的地址：%p",aStr);
+
 property常用修饰词weak，strong等区别：
 
 强指针strong：strong修饰的属性一般不会自动释放；
@@ -44,8 +48,32 @@ property常用修饰词weak，strong等区别：
 
 
 
+weak和assign
+一、区别
 
+1.修饰变量类型的区别
+weak 只可以修饰对象，就是指针类型。如果修饰基本数据类型，编译器会报错-“Property with ‘weak’ attribute must be of object type”。weak出现在ARC之后
+assign 可修饰对象，和基本数据类型。当需要修饰对象类型时，MRC时代使用unsafe_unretained。当然，unsafe_unretained也可能产生野指针，所以它名字是"unsafe_”。assign出现在ARC之前
 
+2.是否产生野指针的区别
+weak 不会产生野指针问题。因为weak修饰的对象释放后（引用计数器值为0），指针会自动被置nil，之后再向该对象发消息也不会崩溃。 weak是安全的。
+assign 如果修饰对象，会产生野指针问题；如果修饰基本数据类型则是安全的。修饰的对象释放后，指针不会自动被置空，此时向对象发消息会崩溃。
+weak弱引用，所引用对象的计数器不会加一，对象被释放时指针自动被置为nil，避免了循环引用。
+assign虽说也可以修饰对象，但是对象被释放时指针并没有被清空，也就是指针没有被置为nil，所以会出现野指针的情况，造成程序奔溃。weak是绝对不可以修饰基本数据类型的，会直接报错。
+
+二、相似
+
+都可以修饰对象类型，但是assign修饰对象会存在问题。它们都是弱引用声明类型
+
+三、总结
+
+assign 适用于基本数据类型如int,float,struct等值类型，不适用于引用类型。因为值类型会被放入栈中，遵循先进后出原则，由系统负责管理栈内存。而引用类型会被放入堆中，需要我们自己手动管理内存或通过ARC管理。
+weak 适用于delegate和block等引用类型，不会导致野指针问题，也不会循环引用，非常安全。
+
+作者：sxtra
+链接：https://www.jianshu.com/p/a8a43ae15dcd
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
 
 
