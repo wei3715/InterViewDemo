@@ -26,9 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"object-c:'多继承'",@"属性修饰词"];
+    _sectionTitleArr = @[@"object-c:'多继承'",@"属性修饰词",@"NSArray去重"];
     _titleArr = @[@[@"代理实现多继承",@"02.内存中保存图片"],
-                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"]
+                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"],
+                  @[@"NSArray去重"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -127,7 +128,17 @@
 
             break;
         }
-            
+        case 2:{
+            switch (indexPath.row) {
+                case 0:{
+                    [self deleteSame];
+                    break;
+                }
+                    
+                default:
+                    break;
+            }
+        }
         default:
             break;
     }

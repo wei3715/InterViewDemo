@@ -12,7 +12,7 @@
 
 @interface ZWWTestWeakStongViewController ()
 
-@property (nonatomic, weak) ZWWCustomView *customView;
+@property (nonatomic, strong) ZWWCustomView *customView;
 
 @end
 
@@ -110,7 +110,7 @@
 第一种：这种方式显然能实现这样的要求，我们能看到打印结果，在子视图被移除父控制器之后对象也被销毁了。然而这不是我们最常用的方式，有可能父控件上有很多子视图，这样效率很低，而且代码不简洁。
 第二种：我们给控制器增加一个属性，指向我们的子视图。这个属性有两种可能，一种是strong，一种是weak。我们先来试试strong。*/
 -(void)btnClick{
-    ZWWLog(@"3: retainCount=%ld",CFGetRetainCount((__bridge CFTypeRef)self.customView));
+    ZWWLog(@"3: retainCount=%ld,当前线程==%@",CFGetRetainCount((__bridge CFTypeRef)self.customView),[NSThread currentThread]);
     
     //第一种方式
 //    for (UIView *subView in self.view.subviews) {

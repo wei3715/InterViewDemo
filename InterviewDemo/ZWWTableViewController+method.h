@@ -23,8 +23,8 @@
 //单层深copy
 - (void)TestCopy202;
 
-//NSURLConnection 异步请求
-- (void)testAsynNSURLConnection;
+//NSArray去重
+- (void)deleteSame;
 //NSURLConnection 同步请求
 - (void)testSynNSURLConnection;
 @end
