@@ -13,7 +13,7 @@
 
 @implementation ClassB
 - (void)methodB{
-    ZWWLog(@"通过组合执行B方法");
+    ZWWLog();
 }
 
 -(void)printClass{

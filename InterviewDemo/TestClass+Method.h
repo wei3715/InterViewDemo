@@ -12,5 +12,5 @@
 
 - (void)setAddr:(NSString *)addr;
 - (NSString *)addr;
-
+- (void)testCategoryFunc;
 @end

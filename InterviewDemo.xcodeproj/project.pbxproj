@@ -24,6 +24,8 @@
 		04EA94CD2106C45F00F7E153 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94CA2106C45F00F7E153 /* Person.m */; };
 		04EA94CE2106C45F00F7E153 /* ZWWCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */; };
 		04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */; };
+		04F066B5210828C900823498 /* TestClass+method1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B4210828C900823498 /* TestClass+method1.m */; };
+		04F066B821082CCA00823498 /* TestClassSon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B721082CC900823498 /* TestClassSon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWCustomView.m; sourceTree = "<group>"; };
 		04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestWeakStongViewController.h; sourceTree = "<group>"; };
 		04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestWeakStongViewController.m; sourceTree = "<group>"; };
+		04F066B3210828C900823498 /* TestClass+method1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestClass+method1.h"; sourceTree = "<group>"; };
+		04F066B4210828C900823498 /* TestClass+method1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestClass+method1.m"; sourceTree = "<group>"; };
+		04F066B621082CC900823498 /* TestClassSon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassSon.h; sourceTree = "<group>"; };
+		04F066B721082CC900823498 /* TestClassSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassSon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +156,12 @@
 				04BDD20620C674E700FCA2D8 /* ClassB.m */,
 				04BDD20820C674F800FCA2D8 /* TestClass.h */,
 				04BDD20920C674F800FCA2D8 /* TestClass.m */,
+				04F066B621082CC900823498 /* TestClassSon.h */,
+				04F066B721082CC900823498 /* TestClassSon.m */,
 				04A20D8D210732F800CBC5AE /* TestClass+Method.h */,
 				04A20D8E210732F800CBC5AE /* TestClass+Method.m */,
+				04F066B3210828C900823498 /* TestClass+method1.h */,
+				04F066B4210828C900823498 /* TestClass+method1.m */,
 				047B75A820BE4A6400154E1A /* Assets.xcassets */,
 				047B75AA20BE4A6400154E1A /* LaunchScreen.storyboard */,
 				047B75AD20BE4A6400154E1A /* Info.plist */,
@@ -321,9 +331,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
+				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
+				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,

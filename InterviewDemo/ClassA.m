@@ -12,8 +12,12 @@
 @end
 
 @implementation ClassA
+//+ (void)load{
+//    ZWWLog();
+//}
+
 - (void)methodA{
-    ZWWLog(@"通过组合执行A方法");
+    ZWWLog();
 }
 
 - (void)printClass{

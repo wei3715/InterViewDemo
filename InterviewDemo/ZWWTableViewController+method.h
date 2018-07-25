@@ -10,6 +10,7 @@
 
 @interface ZWWTableViewController (method)
 
+
 //框架类的深浅copy
 - (void)TestCopy;
 
@@ -23,11 +24,17 @@
 //单层深copy
 - (void)TestCopy202;
 
+//字符串的strong和copy
+- (void)testStrongAndCopyStr;
+
 //信号量
 - (void)testSignal;
 
 //NSArray去重
 - (void)deleteSame;
+
+//指针问题
+- (void)testPointer;
 
 //NSURLConnection 同步请求
 - (void)testSynNSURLConnection;

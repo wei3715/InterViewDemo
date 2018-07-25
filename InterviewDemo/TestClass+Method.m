@@ -23,4 +23,21 @@ const char *Addr = "NSString *";
     return addr;
 }
 
+//不会覆盖主类的load
++ (void)load{
+    ZWWLog();
+}
+
+//会覆盖主类的initialize
++ (void)initialize
+{
+    if (self == [self class]) {
+        ZWWLog();
+    }
+}
+
+- (void)testCategoryFunc{
+    ZWWLog(@"执行 TestClass (method) 分类方法");
+}
+
 @end
