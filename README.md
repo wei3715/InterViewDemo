@@ -85,7 +85,7 @@ ARC下打印retainCount， CFGetRetainCount((__bridge CFTypeRef)self  ： 打印
 对代码中打印retaincount个数+1的状况不是很理解，勉强用这句话解释过去吧：
 引用计数的问题不必纠结，不光你自己alloc或者copy会导致引用计数增加，系统自己也会将之增减，只不过系统增加了多少，它自己会减少多少，你不要用打印引用计数的方法来查看操作是否正确，举个简单的例子  a = [aclass alloc] init]  这时候a的计数是1  [b addsubview a] 这时候a的计数应该是2或者更多 你relese之后 只会减1，至于此时a的计数到底是多少 是不确定的，可以肯定的是，再你操作对a从初始化到最后操作完毕之后，dealloc 之前，a的计数应该是1，否则不能释放 
 
-关于执行重写的dealloc事，reataincount = 1 而不是 = 0 ，个人感觉这个链接讲的很好：
+关于执行重写的dealloc时，reataincount = 1 而不是 = 0 ，个人感觉这个链接讲的很好：
 
 https://blog.csdn.net/wangjiangang_/article/details/46352559
 

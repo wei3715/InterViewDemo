@@ -15,6 +15,7 @@
 		047B75C420BE4A6500154E1A /* __DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75C320BE4A6500154E1A /* __DemoUITests.m */; };
 		047B75D520BE4AA500154E1A /* ZWWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75D220BE4AA500154E1A /* ZWWTableViewController.m */; };
 		047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */; };
+		04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04879BED210963AE00A1A30A /* ZWWTestThreadViewController.m */; };
 		04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A20D8E210732F800CBC5AE /* TestClass+Method.m */; };
 		04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD20320C674D500FCA2D8 /* ClassA.m */; };
 		04BDD20720C674E700FCA2D8 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BDD20620C674E700FCA2D8 /* ClassB.m */; };
@@ -65,6 +66,8 @@
 		047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZWWTableViewController+method.m"; sourceTree = "<group>"; };
 		047B75D720BE4B0900154E1A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		047B75D820BE4B0900154E1A /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		04879BEC210963AE00A1A30A /* ZWWTestThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestThreadViewController.h; sourceTree = "<group>"; };
+		04879BED210963AE00A1A30A /* ZWWTestThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestThreadViewController.m; sourceTree = "<group>"; };
 		04A20D8D210732F800CBC5AE /* TestClass+Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestClass+Method.h"; sourceTree = "<group>"; };
 		04A20D8E210732F800CBC5AE /* TestClass+Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestClass+Method.m"; sourceTree = "<group>"; };
 		04BDD20220C674D500FCA2D8 /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				047B75D220BE4AA500154E1A /* ZWWTableViewController.m */,
 				047B75D120BE4AA500154E1A /* ZWWTableViewController+method.h */,
 				047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */,
+				04879BEC210963AE00A1A30A /* ZWWTestThreadViewController.h */,
+				04879BED210963AE00A1A30A /* ZWWTestThreadViewController.m */,
 				047B759F20BE4A6000154E1A /* AppDelegate.h */,
 				047B75A020BE4A6000154E1A /* AppDelegate.m */,
 				04C58CE520D368EA002B3B5F /* Model1.h */,
@@ -337,6 +342,7 @@
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
 				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
+				04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
 				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */,
