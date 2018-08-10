@@ -10,6 +10,7 @@
 
 @interface Model1 : NSObject<NSCopying>
 
-@property (nonatomic,assign)NSInteger a;
+@property (nonatomic, assign) NSInteger  age;
+@property (nonatomic, copy)   NSString   *name;
 
 @end

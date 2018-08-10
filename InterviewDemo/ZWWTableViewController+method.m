@@ -37,86 +37,40 @@
 }
 
 - (void)testStrongAndCopyStr{
-    //初始化两个字符串
-    NSString *strongStr = @"aa";
-    NSString *copyStr = @"bb";
+    //参考CSDN文章
+    //情况1:给属性赋NSString类型的值
+    NSString *strongStr = @"I am Strong";
+    NSString *copyStr = @"I am Copy";
     self.stringStrong = strongStr;
     self.stringCopy = copyStr;
     
     //strongStr是一个指针变量，它指向strongStr对象的地址。&strongStr指的是strongStr这个指针变量所在的地址。
-    ZWWLog(@"strongStr地址==%p, self.stringStrong地址==%p", strongStr,self.stringStrong);
-    ZWWLog(@"copyStr地址==%p,self.stringCopy地址==%p", copyStr,self.stringCopy);
-    //结果：
-    //strongStr地址==0x105d554c0, self.stringStrong地址==0x105d554c0
-    //copyStr地址==0x105d554e0,self.stringCopy地址==0x105d554e0
-    //结果分析：
-    //指针变量地址相同，说明对象地址没有变，只有一份；可以看出，此时无论是strong修饰的字符串还是copy修饰的字符串，都进行了浅Copy.
+    ZWWLog(@"strongStr地址==%p; self.stringStrong地址==%p",strongStr,self.stringStrong);
+    ZWWLog(@"copyStr地址==%p; self.stringCopy地址==%p",copyStr,self.stringCopy);
+
+    //两个NSString进行操作（对不可变字符串拼接，是产生两个新的内存）
+    NSString *strong1Append =  [strongStr stringByAppendingString:@"+11111"];
+    NSString *copy1Append = [copyStr stringByAppendingString:@"+22222"];
+    ZWWLog(@"原字符串拼接后strong1Append地址==%p，strong1Append内容==%@，strongStr地址==%p,内容==%@, self.stringStrong地址==%p，内容==%@",strong1Append,strong1Append, strongStr,strongStr,self.stringStrong,self.stringStrong);
+    ZWWLog(@"原字符串拼接后copy1Append地址=%p，copy1Append内容==%@，copy1地址==%p,内容==%@,self.stringCopy地址==%p，内容==%@",copy1Append,copy1Append, copyStr,copyStr,self.stringCopy,self.stringCopy);
     
     
-    //新创建两个
-    NSMutableString *mStrongStr = [NSMutableString stringWithFormat:@"StrongMutable"];
-    NSMutableString *mCopyStr = [NSMutableString stringWithFormat:@"CopyMutable"];
+    
+    
+    //情况2:给属性赋NSMutableString类型的值
+    NSMutableString *mStrongStr = [NSMutableString stringWithFormat:@"I am MutableStrong"];
+    NSMutableString *mCopyStr = [NSMutableString stringWithFormat:@"I am MutableCopy"];
     self.stringStrong = mStrongStr;
     self.stringCopy = mCopyStr;
     ZWWLog(@"mStrongStr地址==%p, self.stringStrong地址==%p", mStrongStr,self.stringStrong);
     ZWWLog(@"mCopyStr地址==%p,self.stringCopy地址==%p", mCopyStr,self.stringCopy);
-    //结果：
-    //mStrongStr地址==0x60400025ab80, self.stringStrong地址==0x60400025ab80
-    //mCopyStr地址==0x60400025ac40,self.stringCopy地址==0x6040000351e0
+
     
-    
-    //结果分析：用strong修饰的字符串依旧进行了浅Copy,而由copy修饰的字符串进行了深Copy,所以mStrongStr与stringStrong指向了同一块内存，而mCopyStr和stringCopy指向的是完全两块不同的内存。
-    
-    
-    //*******作用*******
-    
-    //新创建两个NSString对象
-    NSString * strong1 = @"I am Strong!";
-    NSString * copy1 = @"I am Copy!";
-    
-    //初始化两个字符串
-    self.stringStrong = strong1;
-    self.stringCopy = copy1;
-    
-    //两个NSString进行操作
-    [strong1 stringByAppendingString:@"11111"];
-    [copy1 stringByAppendingString:@"22222"];
-    ZWWLog(@"strong1地址==%p,内容==%@, self.stringStrong地址==%p，内容==%@", strong1,strong1,self.stringStrong,self.stringStrong);
-    ZWWLog(@"copy1地址==%p,内容==%@,self.stringCopy地址==%p，内容==%@", copy1,copy1,self.stringCopy,self.stringCopy);
-    
-    //结果
-    //strong1地址==0x105d555c0,内容==I am Strong!, self.stringStrong地址==0x105d555c0，内容==I am Strong!
-    //copy1地址==0x105d555e0,内容==I am Copy!,self.stringCopy地址==0x105d555e0，内容==I am Copy!
-    //结果分析：
-    //分别对在字符串后面进行拼接，当然这个拼接对原字符串没有任何的影响，因为不可变自字符串调用的方法都是有返回值的，原来的值是不会发生变化的.打印如下，对结果没有任何的影响:
-    
-    
-    //新创建两个NSMutableString对象
-    NSMutableString * mutableStrong = [NSMutableString stringWithString:@"StrongMutable"];
-    NSMutableString * mutableCopy = [NSMutableString stringWithString:@"CopyMutable"];
-    
-    //初始化两个字符串
-    self.stringStrong = mutableStrong;
-    self.stringCopy = mutableCopy;
-    
-    //两个MutableString进行操作
-    [mutableStrong appendString:@"Strong!"];
-    [mutableCopy appendString:@"Copy!"];
-    ZWWLog(@"mutableStrong地址==%p,内容==%@, self.stringStrong地址==%p,内容==%@", mutableStrong,mutableStrong,self.stringStrong,self.stringStrong);
-    ZWWLog(@"mutableCopy地址==%p,内容==%@,self.stringCopy地址==%p,内容==%@", mutableCopy,mutableCopy,self.stringCopy,self.stringCopy);
-    //结果：
-    //mutableStrong地址==0x60000044f000,内容==StrongMutableStrong!, self.stringStrong地址==0x60000044f000,内容==StrongMutableStrong!
-    // mutableCopy地址==0x600000447740,内容==CopyMutableCopy!,self.stringCopy地址==0x60000022d4a0,内容==CopyMutable
-    
-    //结果分析：
-    //     再来看一下结果:对mutableStrong进行的操作，由于用strong修饰的stringStrong没有进行深Copy，导致共用了一块内存，当mutableStrong对内存进行了操作的时候，实际上对stringStrong也进行了操作;   相反，用copy修饰的stringCopy进行了深Copy，也就是说stringCopy与mutableCopy用了两块完全不同的内存，所以不管mutableCopy进行了怎么样的变化，原来的stringCopy都不会发生变化.这就在日常中避免了出现一些不可预计的错误。
-    
-    
-    // 总对比结果分析：
-    
-    //    这样看来，在不可变对象之间进行转换，strong与copy作用是一样的，但是如果在不可变与可变之间进行操作，那么楼主比较推荐copy,这也就是为什么很多地方用copy，而不是strong修饰NSString,NSArray等存在可变不可变之分的类对象了，避免出现意外的数据操作.
-    
-    
+    //两个MutableString进行操作（不返回值）
+    [mStrongStr appendString:@"+11111"];
+    [mCopyStr appendString:@"+22222"];
+    ZWWLog(@"mStrongStr地址==%p,内容==%@, self.stringStrong地址==%p,内容==%@", mStrongStr,mStrongStr,self.stringStrong,self.stringStrong);
+    ZWWLog(@"mCopyStr地址==%p,内容==%@,self.stringCopy地址==%p,内容==%@", mCopyStr,mCopyStr,self.stringCopy,self.stringCopy);
 }
 
 
@@ -138,15 +92,35 @@
     //不可变对象
     NSString *str = @"zww";
     
-    NSString *str1 = [str copy];
-    NSString *str2 = [str mutableCopy];
-    ZWWLog(@"不可变原始字符串指针==%p,copy后指针==%p，mutableCopy后指针==%p",str,str1,str2);
+    NSString *str1 = [str copy];                //浅拷贝
+    NSString *str2 = [str mutableCopy];         //深拷贝
+   
+    NSMutableString *str3 = [str copy];         //浅拷贝
+    //crash
+//    [str3 appendString:@"333"];               //对 NSString copy结果为不可变对象
+    NSMutableString *str4 = [str mutableCopy];  //深拷贝
+    //正常
+    [str4 appendString:@"333"];                //对 NSString mutableCopy结果为可变对象
+    ZWWLog(@"指针值str=%p,str1=%p",str,str1);
+    ZWWLog(@"指针值str=%p,str2=%p",str,str2);
+    ZWWLog(@"指针值str=%p,mStr1=%p",str,str3);
+    ZWWLog(@"指针值str=%p,mStr2=%p",str,str4);
+    NSLog(@"str4==%@",str4);
     
     //可变对象
     NSMutableString *mStr = [NSMutableString stringWithFormat:@"coder"];
-    NSMutableString *mStr1 = [mStr copy];
-    NSMutableString *mStr2 = [mStr mutableCopy];
-    ZWWLog(@"可变原始字符串指针==%p,copy后指针==%p，mutableCopy后指针==%p",mStr,mStr1,mStr2);
+    
+    NSString *mStr1 = [mStr copy];                    //深拷贝
+    NSString *mStr2 = [mStr mutableCopy];             //深拷贝
+    NSMutableString *mStr3 = [mStr copy];             //深拷贝
+//    [mStr3 appendString:@"333"]; //crash            //对 NSMutableString copy结果为不可变对象
+    NSMutableString *mStr4 = [mStr mutableCopy];      //深拷贝
+    [mStr4 appendString:@"444"];                      //对 NSMutableString mutableCopy结果为可变对象
+    ZWWLog(@"指针值mStr=%p,mStr1=%p",mStr,mStr1);
+    ZWWLog(@"指针值mStr=%p,mStr2=%p",mStr,mStr2);
+    ZWWLog(@"指针值mStr=%p,mStr3=%p",mStr,mStr3);
+    ZWWLog(@"指针值mStr=%p,mStr4=%p",mStr,mStr4);
+    NSLog(@"mStr4==%@",mStr4 );
 }
 
 //结果分析
@@ -157,9 +131,10 @@
 //对于一个我们自定义的类型，显然比框架类容易操纵的多。此处就拿NSCopying举例（因为从没有自定义过具有可变类型的类，当然，如果有需要的话，也可以实现NSMutableCopying）。自定义的类就和2中的原则没有半毛钱关系了，一切就看你怎么实现NSCopying协议中的copyWithZone:方法。
 - (void)TestCopy1{
     Model1 *model = [[Model1 alloc]init];
+    model.name = @"coder";
     Model1 *copyModel = [model copy];
-    ZWWLog(@"原始Model指针==%p",model);
-    ZWWLog(@"CopyModel指针==%p",copyModel);
+    ZWWLog(@"指针值model==%p，copyModel==%p",model,copyModel);
+    ZWWLog(@"属性地址model.name==%p,copyModel.name==%p",model.name,copyModel.name);
 }
 
 
@@ -168,11 +143,18 @@
     NSArray *arr = [NSArray arrayWithObjects:@"1", nil];
     NSArray *copyArr = [arr copy];
     ZWWLog(@"******************浅copy******************");
-    ZWWLog(@"原本对象地址==%p", arr);
-    ZWWLog(@"copy后对象地址==%p", copyArr);
-    ZWWLog(@"******************单层深copy******************");
+    ZWWLog(@"原对象指针arr==%p,copyArr==%p", arr,copyArr);
     
-    [self TestCopy202];
+    ZWWLog(@"******************单层深copy******************");
+    //这里的单层指的是完成了NSArray对象的深copy，而未对其容器内对象进行处理。
+    NSArray *mCopyArr = [arr mutableCopy];
+    ZWWLog(@"原对象指针arr==%p,mCopyArr==%p", arr,mCopyArr);
+    ZWWLog(@"指针变量地址==%p, arr对象地址==%p", &arr,arr);
+    ZWWLog(@"指针变量地址==%p, mCopyArr对象地址==%p",&copyArr, mCopyArr);
+    
+    //打印arr、copyArr内部元素进行对比
+    ZWWLog(@"arr对象首元素地址==%p", arr[0]);
+    ZWWLog(@"mCopyArr对象首元素地址==%p", mCopyArr[0]);
     ZWWLog(@"******************双层深copy******************");
     [self TestCopy203];
 }
@@ -183,53 +165,35 @@
 //2018-06-15 11:59:44.450861+0800 InterviewDemo[17801:149670] -[ZWWTableViewController(method) TestCopy201] [Line 63] 0x60c000023c20
 
 
-//准则
-//容器的单层深copy，符合三.2中的原则（只是深copy变成了单层深copy）。这里的单层指的是完成了NSArray对象的深copy，而未对其容器内对象进行处理。
-- (void)TestCopy202{
-    
-    NSArray *arr = [NSArray arrayWithObjects:@"1",@"2", nil];
-    NSArray *copyArr = [arr mutableCopy];
-    
-//    0x7ffeeecefc38->0x60400002dd6->0x100f12188
-    
-    ZWWLog(@"指针变量地址==%p, arr对象地址==%p", &arr,arr);
-    ZWWLog(@"指针变量地址==%p, copyArr对象地址==%p",&copyArr, copyArr);
-    
-    //打印arr、copyArr内部元素进行对比
-    ZWWLog(@"arr对象首元素地址==%p", arr[0]);
-    ZWWLog(@"copyArr对象首元素地址==%p", copyArr[0]);
-}
-
 //容器的双层深copy已经脱离了三.2中的原则。这里的双层指的是完成了NSArray对象和NSArray容器内对象的深copy（为什么不说完全，是因为无法处理NSArray中还有一个NSArray这种情况）。
 - (void)TestCopy203{
     
     // 随意创建一个NSMutableString对象
-    NSMutableString *mutableString = [NSMutableString stringWithString:@"1"];
+    NSMutableString *mStr = [NSMutableString stringWithString:@"zww"];
     
     // 随意创建一个包涵NSMutableString的NSMutableArray对象
-    NSMutableString *mutalbeString1 = [NSMutableString stringWithString:@"1"];
-    NSMutableArray *mutableArr = [NSMutableArray arrayWithObjects:mutalbeString1, nil];
+    NSMutableString *mStr1 = [NSMutableString stringWithString:@"111"];
+    NSMutableArray *mArr = [NSMutableArray arrayWithObjects:mStr1, nil];
     
     // 将mutableString和mutableArr放入一个新的NSArray中
-    NSArray *testArr = [NSArray arrayWithObjects:mutableString, mutableArr, nil];
+    NSArray *testArr = [NSArray arrayWithObjects:mStr, mArr, nil];
     // 通过官方文档提供的方式创建
     NSArray *testArrCopy = [[NSArray alloc] initWithArray:testArr copyItems:YES];
     
     // testArr和testArrCopy指针对比
-    ZWWLog(@"%p", testArr);
-    ZWWLog(@"%p", testArrCopy);
+     ZWWLog(@"原对象指针testArr==%p,testArrCopy==%p", testArr,testArrCopy);
     
     // testArr和testArrCopy中元素指针对比
-    // mutableString对比
-    ZWWLog(@"%p", testArr[0]);
-    ZWWLog(@"%p", testArrCopy[0]);
-    // mutableArr对比
-    ZWWLog(@"%p", testArr[1]);
-    ZWWLog(@"%p", testArrCopy[1]);
+    // mStr对比
+    ZWWLog(@"首元素mStr地址testArr[0]==%p，testArrCopy[0]==%p", testArr[0],testArrCopy[0]);
+  
+    // mArr对比
+    ZWWLog(@"其中元素mArr地址testArr[1]==%p，testArrCopy[1]==%p", testArr[1],testArrCopy[1]);
     
-    // mutableArr中的元素对比，即mutalbeString1对比
-    ZWWLog(@"%p", testArr[1][0]);
-    ZWWLog(@"%p", testArrCopy[1][0]);
+    
+    // mArr中的元素对比，即mStr1对比
+    ZWWLog(@"其中元素mArr里面包含元素mStr1的地址testArr[1][0]==%p，testArrCopy[1][0]==%p", testArr[1][0],testArrCopy[1][0]);
+  
     
 }
 
@@ -311,5 +275,20 @@
     // 输出指针变量p
     ZWWLog(@"p指针地址==%p  p+1指针地址%p" , p,p+1);
 }
+
+//测试字符常量区
+- (void)testOCSting{
+    NSString *str1 = @"zww";
+    NSLog(@"str1的内存地址==%p",str1);
+    [self testOCSting01];
+}
+- (void)testOCSting01{
+    NSString *str2 = @"zww";
+    NSLog(@"str2的内存地址==%p",str2);
+}
+//结论：
+/*发现str1的内存地址和str2的内存地址完全一样！！！ 因为它们存放在字符常量区
+字符常量区的工作原理：创建一个字符串常量时，先从字符常量区查找看有没有相同内容的内存，会先去找有没有同样内容的字符串，有的话直接共用这块内存，没有的话再开辟新的内存放入变量值
+字符串常量是不可变的，一旦改变就会生成一个新的变量，开辟一个新的内存*/
 
 @end

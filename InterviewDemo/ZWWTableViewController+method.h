@@ -36,6 +36,8 @@
 //指针问题
 - (void)testPointer;
 
-//NSURLConnection 同步请求
-- (void)testSynNSURLConnection;
+//测试字符常量区
+- (void)testOCSting;
+
+
 @end

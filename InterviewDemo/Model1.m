@@ -15,16 +15,15 @@
     return self;
 }
 
-//原始Model指针==0x60c00001a790
-//CopyModel指针==0x60c00001a790
-
 //深拷贝(内容复制，会创建一个新的对象)
 //- (id)copyWithZone:(NSZone *)zone{
+//    //创建新的对象空间
 //    Model1 *model = [[Model1 allocWithZone:zone]init];
-//    model.a = self.a;
+//
+//    //为每个属性创建新的空间，并将内容复制
+//    model.name = [self.name mutableCopy];
+//    model.age = self.age;
 //    return model;
 //}
 
-// 原始Model指针==0x600000015a30
-// CopyModel指针==0x600000015a60
 @end
