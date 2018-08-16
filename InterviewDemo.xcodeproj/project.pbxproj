@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046F31CF211D78210084CED2 /* TestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F31CE211D78210084CED2 /* TestBlock.m */; };
 		047B75A120BE4A6000154E1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B75A020BE4A6000154E1A /* AppDelegate.m */; };
 		047B75A920BE4A6400154E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047B75A820BE4A6400154E1A /* Assets.xcassets */; };
 		047B75AC20BE4A6400154E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B75AA20BE4A6400154E1A /* LaunchScreen.storyboard */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046F31CD211D78210084CED2 /* TestBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlock.h; sourceTree = "<group>"; };
+		046F31CE211D78210084CED2 /* TestBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlock.m; sourceTree = "<group>"; };
 		047B759C20BE4A6000154E1A /* InterviewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047B759F20BE4A6000154E1A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		047B75A020BE4A6000154E1A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				047B75A020BE4A6000154E1A /* AppDelegate.m */,
 				04C58CE520D368EA002B3B5F /* Model1.h */,
 				04C58CE620D368EA002B3B5F /* Model1.m */,
+				046F31CD211D78210084CED2 /* TestBlock.h */,
+				046F31CE211D78210084CED2 /* TestBlock.m */,
 				04BDD20B20C6772A00FCA2D8 /* MyPTL.h */,
 				04BDD20C20C6772A00FCA2D8 /* MyPTL.m */,
 				04BDD20220C674D500FCA2D8 /* ClassA.h */,
@@ -346,6 +351,7 @@
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
 				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */,
+				046F31CF211D78210084CED2 /* TestBlock.m in Sources */,
 				04BDD20720C674E700FCA2D8 /* ClassB.m in Sources */,
 				047B75D520BE4AA500154E1A /* ZWWTableViewController.m in Sources */,
 				047B75A120BE4A6000154E1A /* AppDelegate.m in Sources */,

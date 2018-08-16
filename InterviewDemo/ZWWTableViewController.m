@@ -17,6 +17,7 @@
 #import "ClassB.h"
 #import "ZWWTestWeakStongViewController.h"
 #import "ZWWTestThreadViewController.h"
+#import "TestBlock.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -130,7 +131,8 @@
                     break;
                 }
                 case 3:{//block
-                    
+                    TestBlock *testBlock = [[TestBlock alloc]init];
+                    [testBlock testBlock];
                     break;
                 }
                 case 4:{//copy&strong修饰的字符串
