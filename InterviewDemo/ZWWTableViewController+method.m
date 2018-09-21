@@ -234,7 +234,7 @@
 
 - (void)deleteSame{
     NSArray *arr = @[@"111",@"222",@"333",@"222"];
-    
+    ZWWLog(@"原数组==%@", arr);
     //NSSet去重的数组没有进行排序
     NSSet *set = [NSSet setWithArray:arr];
     ZWWLog(@"NSSet去重结果==%@",set);
@@ -244,6 +244,10 @@
         [mDic setObject:obj forKey:obj];
     }
      ZWWLog(@"NSMutableDictionary去重结果==%@",[mDic allValues]);
+    
+    //去重无序，valueForKeyPath还有很多很实用很强大的功能
+    NSArray *afterArr = [arr valueForKeyPath:@"@distinctUnionOfObjects.self"];
+     ZWWLog(@"valueForKeyPath去重结果%@", afterArr);
 }
 
 - (void)testPointer{
