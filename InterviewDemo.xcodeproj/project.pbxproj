@@ -568,15 +568,17 @@
 			baseConfigurationReference = 6E95A4964AFD9038D24CC097 /* Pods-InterviewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 95SLTE9L5Y;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InterviewDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = InterviewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zoe.--Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivi.a05HybridApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "A05 Development";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -586,15 +588,17 @@
 			baseConfigurationReference = 99DDD7E1AD30A0CA1C25CC6D /* Pods-InterviewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InterviewDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = InterviewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zoe.--Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivi.a05HybridApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
