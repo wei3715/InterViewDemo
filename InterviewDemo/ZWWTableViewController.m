@@ -18,6 +18,7 @@
 #import "ZWWTestWeakStongViewController.h"
 #import "ZWWTestThreadViewController.h"
 #import "TestBlock.h"
+#import "AAViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -30,11 +31,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题"];
+    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理"];
     _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承",@"消息转发实现多继承"],
                   @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"],
                   @[@"信号量",@"performSelector注意问题"],
-                  @[@"NSArray去重",@"主类和多个分类有同名方法执行顺序",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"]
+                  @[@"NSArray去重",@"主类和多个分类有同名方法执行顺序",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
+                  @[@"代理className"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -209,6 +211,12 @@
                     break;
             }
         }
+        case 4:{
+            AAViewController *aavc = [[AAViewController alloc]init];
+            [self.navigationController pushViewController:aavc animated:YES];
+            break;
+        }
+            
         default:
             break;
     }
