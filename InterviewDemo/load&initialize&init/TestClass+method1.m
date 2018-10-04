@@ -20,6 +20,16 @@
     }
 }
 
+- (instancetype)init
+{
+    ZWWLog(@"TestClass (Method1) init方法执行");
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)testCategoryFunc{
     ZWWLog(@"执行 TestClass (method1) 分类方法");
 }

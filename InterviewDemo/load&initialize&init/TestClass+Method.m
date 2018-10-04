@@ -36,6 +36,17 @@ const char *Addr = "NSString *";
     }
 }
 
+//会覆盖主类的init方法
+- (instancetype)init
+{
+    ZWWLog(@"TestClass (Method) init方法执行");
+    self = [super init];
+    if (self) {
+
+    }
+    return self;
+}
+
 - (void)testCategoryFunc{
     ZWWLog(@"执行 TestClass (method) 分类方法");
 }

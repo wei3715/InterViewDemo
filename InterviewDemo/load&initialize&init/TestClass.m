@@ -19,14 +19,25 @@
 @end
 
 @implementation TestClass
+
+//测试主类，多个分类同名方法执行顺序
+//load方法执行顺序
++ (void)load{
+    ZWWLog();
+}
+
++ (void)initialize
+{
+    ZWWLog(@"TestClass 中的initialize方法执行 class：%@",[self class]);
+}
+
 - (instancetype)init{
-   
-    ZWWLog(@"TestClass 中的init方法执行 class：%@",[self class]);
-    a = [[ClassA alloc]init];
-    b = [[ClassB alloc]init];
-   
-    return [super init];
     
+    ZWWLog(@"TestClass 中的init方法执行 class：%@",[self class]);
+//    a = [[ClassA alloc]init];
+//    b = [[ClassB alloc]init];
+    
+    return [super init];
 }
 
 //1.通过组合实现多继承
@@ -114,18 +125,6 @@ void replaceMethodA(id self, SEL _cmd){
         [anInvocation invokeWithTarget:b];
     }
  
-}
-
-//测试主类，多个分类同名方法执行顺序
-//load方法执行顺序
-
-+ (void)load{
-     ZWWLog();
-}
-
-+ (void)initialize
-{
-     ZWWLog(@"TestClass 中的initialize方法执行 class：%@",[self class]);
 }
 
 //普通同名方法执行顺序

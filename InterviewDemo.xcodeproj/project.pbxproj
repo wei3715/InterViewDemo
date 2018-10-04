@@ -32,6 +32,8 @@
 		E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F4382164A54E006B8BF8 /* AAViewController.m */; };
 		E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43B2164A560006B8BF8 /* BBViewController.m */; };
 		E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */; };
+		E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04573002165DD28007650D9 /* ZWWCacheViewController.m */; };
+		E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04573012165DD28007650D9 /* ZWWCacheViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,9 @@
 		E040F43B2164A560006B8BF8 /* BBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBViewController.m; sourceTree = "<group>"; };
 		E040F43D2164A72E006B8BF8 /* ZWWTestDelegateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestDelegateView.h; sourceTree = "<group>"; };
 		E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestDelegateView.m; sourceTree = "<group>"; };
+		E04572FF2165DD28007650D9 /* ZWWCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCacheViewController.h; sourceTree = "<group>"; };
+		E04573002165DD28007650D9 /* ZWWCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCacheViewController.m; sourceTree = "<group>"; };
+		E04573012165DD28007650D9 /* ZWWCacheViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWCacheViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +164,8 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E04573042165ECCD007650D9 /* load&initialize&init */,
+				E04572FE2165DD0A007650D9 /* cache */,
 				E040F4362164A537006B8BF8 /* delegate */,
 				04EA94C82106C45F00F7E153 /* weak&strong */,
 				047B75D720BE4B0900154E1A /* PrefixHeader.pch */,
@@ -181,14 +188,6 @@
 				04BDD20320C674D500FCA2D8 /* ClassA.m */,
 				04BDD20520C674E700FCA2D8 /* ClassB.h */,
 				04BDD20620C674E700FCA2D8 /* ClassB.m */,
-				04BDD20820C674F800FCA2D8 /* TestClass.h */,
-				04BDD20920C674F800FCA2D8 /* TestClass.m */,
-				04F066B621082CC900823498 /* TestClassSon.h */,
-				04F066B721082CC900823498 /* TestClassSon.m */,
-				04A20D8D210732F800CBC5AE /* TestClass+Method.h */,
-				04A20D8E210732F800CBC5AE /* TestClass+Method.m */,
-				04F066B3210828C900823498 /* TestClass+method1.h */,
-				04F066B4210828C900823498 /* TestClass+method1.m */,
 				047B75A820BE4A6400154E1A /* Assets.xcassets */,
 				047B75AA20BE4A6400154E1A /* LaunchScreen.storyboard */,
 				047B75AD20BE4A6400154E1A /* Info.plist */,
@@ -248,6 +247,31 @@
 				E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */,
 			);
 			path = delegate;
+			sourceTree = "<group>";
+		};
+		E04572FE2165DD0A007650D9 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				E04572FF2165DD28007650D9 /* ZWWCacheViewController.h */,
+				E04573002165DD28007650D9 /* ZWWCacheViewController.m */,
+				E04573012165DD28007650D9 /* ZWWCacheViewController.xib */,
+			);
+			path = cache;
+			sourceTree = "<group>";
+		};
+		E04573042165ECCD007650D9 /* load&initialize&init */ = {
+			isa = PBXGroup;
+			children = (
+				04BDD20820C674F800FCA2D8 /* TestClass.h */,
+				04BDD20920C674F800FCA2D8 /* TestClass.m */,
+				04F066B621082CC900823498 /* TestClassSon.h */,
+				04F066B721082CC900823498 /* TestClassSon.m */,
+				04A20D8D210732F800CBC5AE /* TestClass+Method.h */,
+				04A20D8E210732F800CBC5AE /* TestClass+Method.m */,
+				04F066B3210828C900823498 /* TestClass+method1.h */,
+				04F066B4210828C900823498 /* TestClass+method1.m */,
+			);
+			path = "load&initialize&init";
 			sourceTree = "<group>";
 		};
 		ECEE1CD83B9DA9EF02576323 /* Frameworks */ = {
@@ -364,6 +388,7 @@
 			files = (
 				047B75AC20BE4A6400154E1A /* LaunchScreen.storyboard in Resources */,
 				047B75A920BE4A6400154E1A /* Assets.xcassets in Resources */,
+				E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,14 +438,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */,
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
 				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
-				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */,
+				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
 				04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,

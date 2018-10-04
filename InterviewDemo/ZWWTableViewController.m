@@ -19,6 +19,7 @@
 #import "ZWWTestThreadViewController.h"
 #import "TestBlock.h"
 #import "AAViewController.h"
+#import "ZWWCacheViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -31,12 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理"];
+    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存"];
     _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承",@"消息转发实现多继承"],
                   @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"],
                   @[@"信号量",@"performSelector注意问题"],
                   @[@"NSArray去重",@"主类和多个分类有同名方法执行顺序",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
-                  @[@"代理className"]
+                  @[@"代理className"],
+                  @[@"缓存NSCache"],
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -118,6 +120,8 @@
             }
             break;
         }
+            
+            
         case 1:{//属性修饰词
             switch (indexPath.row) {
                 case 0:{//Copy，MutableCopy
@@ -152,6 +156,8 @@
 
             break;
         }
+            
+            
         case 2:{
             switch (indexPath.row) {
                 case 0:{//信号量
@@ -166,7 +172,11 @@
                 default:
                     break;
             }
+            
+            break;
         }
+            
+            
         case 3:{
             switch (indexPath.row) {
                 case 0:{//数组去重
@@ -182,20 +192,10 @@
 //                   TestClass *testCls1 = [[TestClass alloc]init];
 //                   TestClass *testCls2 = [[TestClass alloc]init];
 //                   TestClass *testCls3 = [[TestClass alloc]init];
-//+[TestClass initialize] [Line 131] TestClass 中的initialize方法执行 class：TestClass
-//-[TestClass init] [Line 25] TestClass 中的init方法执行 class：TestClass
-//-[TestClass init] [Line 25] TestClass 中的init方法执行 class：TestClass
-//-[TestClass init] [Line 25] TestClass 中的init方法执行 class：TestClass
-                    
+
                     TestClassSon *testClsSon1 = [[TestClassSon alloc]init];
                     TestClassSon *testClsSon2 = [[TestClassSon alloc]init];
-//+[TestClass initialize] [Line 128] TestClass 中的initialize方法执行 class：TestClass
-//+[TestClassSon initialize] [Line 19] //如过子类不实现initialize方法，这里调用的还是父类的initialize
-//-[TestClassSon init] [Line 25]
-//-[TestClass init] [Line 24] TestClass 中的init方法执行 class：TestClassSon
-//-[TestClassSon init] [Line 25]
-//-[TestClass init] [Line 24] TestClass 中的init方法执行 class：TestClassSon
-
+                    TestClassSon *testClsSon3 = [[TestClassSon alloc]init];
                     break;
                 }
                 case 3:{//指针
@@ -210,13 +210,21 @@
                 default:
                     break;
             }
+            break;
         }
+            
+            
         case 4:{
             AAViewController *aavc = [[AAViewController alloc]init];
             [self.navigationController pushViewController:aavc animated:YES];
             break;
         }
             
+        case 5:{//缓存
+            ZWWCacheViewController *cacheVC = [[ZWWCacheViewController alloc]init];
+            [self.navigationController pushViewController:cacheVC animated:YES];
+            break;
+        }
         default:
             break;
     }
