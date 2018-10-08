@@ -10,23 +10,6 @@
 
 @interface ZWWTableViewController (method)
 
-
-//框架类的深浅copy
-- (void)TestCopy;
-
-//自定义类的深浅copy
-- (void)TestCopy1;
-
-//容器对象的深浅copy
-//浅copy
-- (void)TestCopy201;
-
-//单层深copy
-- (void)TestCopy202;
-
-//字符串的strong和copy
-- (void)testStrongAndCopyStr;
-
 //信号量
 - (void)testSignal;
 
@@ -38,6 +21,5 @@
 
 //测试字符常量区
 - (void)testOCSting;
-
 
 @end

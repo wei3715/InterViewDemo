@@ -21,4 +21,19 @@
 #define KScreenHeight       [[UIScreen mainScreen] bounds].size.height
 #define KLocalMP4Url        @"http://cloud.video.taobao.com/play/u/2712925557/p/1/e/6/t/1/40050769.mp4"
 
+//单例化一个类
+#define SINGLETON_FOR_HEADER(className) \
+\
++ (className *)shared##className;
+
+#define SINGLETON_FOR_CLASS(className) \
+\
++ (className *)shared##className { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}
 #endif /* UtilsMacros_h */

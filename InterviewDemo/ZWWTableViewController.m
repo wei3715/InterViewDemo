@@ -20,6 +20,8 @@
 #import "TestBlock.h"
 #import "AAViewController.h"
 #import "ZWWCacheViewController.h"
+#import "ZWWTestCopyViewController.h"
+#import "ZWWCommonTestTableViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -32,13 +34,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存"];
+    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"杂七杂八"];
     _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承",@"消息转发实现多继承"],
-                  @[@"框架类的深浅copy",@"自定义类的深浅copy",@"容器对象的深浅copy",@"Block",@"copy&strong修饰的字符串",@"weak&strong"],
+                  @[@"各种类型的深浅copy",@"Block",@"weak&strong"],
                   @[@"信号量",@"performSelector注意问题"],
-                  @[@"NSArray去重",@"主类和多个分类有同名方法执行顺序",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
+                  @[@"NSArray去重",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
                   @[@"代理className"],
                   @[@"缓存NSCache"],
+                  @[@"杂七杂八"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -84,6 +87,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == _sectionTitleArr.count-1) {//最后一组
+        ZWWCommonTestTableViewController *commonVC = [[ZWWCommonTestTableViewController alloc]init];
+        [self.navigationController pushViewController:commonVC animated:YES];
+        return;
+    }
+    
+    
     switch (indexPath.section) {
         case 0:{//oc:'多继承
             switch (indexPath.row) {
@@ -125,27 +135,16 @@
         case 1:{//属性修饰词
             switch (indexPath.row) {
                 case 0:{//Copy，MutableCopy
-                    [self TestCopy];
+                    ZWWTestCopyViewController *testCopyVC = [[ZWWTestCopyViewController alloc]init];
+                    [self.navigationController pushViewController:testCopyVC animated:YES];
                     break;
                 }
-                case 1:{//自定义类的深浅拷贝
-                    [self TestCopy1];
-                    break;
-                }
-                case 2:{//容器对象的深浅copy
-                    [self TestCopy201];
-                    break;
-                }
-                case 3:{//block
+                case 1:{//block
                     TestBlock *testBlock = [[TestBlock alloc]init];
                     [testBlock testBlock];
                     break;
                 }
-                case 4:{//copy&strong修饰的字符串
-                    [self testStrongAndCopyStr];
-                    break;
-                }
-                case 5:{//weak&strong修饰的字符串
+                case 2:{//weak&strong修饰的字符串
                     ZWWTestWeakStongViewController *weakStrongVC = [[ZWWTestWeakStongViewController alloc]init];
                     [self.navigationController pushViewController:weakStrongVC animated:YES];
                     break;
@@ -183,26 +182,23 @@
                     [self deleteSame];
                     break;
                 }
-                case 1:{//多个分类有同名方法，方法执行哪个
-                   TestClass *testCls = [[TestClass alloc]init];
-                   [testCls testCategoryFunc];
-                    break;
-                }
-                case 2:{//多个分类有同名方法，方法执行哪个
+                case 1:{//多个分类有同名方法，方法执行哪个(执行编译顺序在后面的分类的同名方法)
 //                   TestClass *testCls1 = [[TestClass alloc]init];
 //                   TestClass *testCls2 = [[TestClass alloc]init];
 //                   TestClass *testCls3 = [[TestClass alloc]init];
+//                   [testCls1 testCategoryFunc];
+                    
 
                     TestClassSon *testClsSon1 = [[TestClassSon alloc]init];
                     TestClassSon *testClsSon2 = [[TestClassSon alloc]init];
                     TestClassSon *testClsSon3 = [[TestClassSon alloc]init];
                     break;
                 }
-                case 3:{//指针
+                case 2:{//指针
                     [self testPointer];
                     break;
                 }
-                case 4:{//字符常量区
+                case 3:{//字符常量区
                     [self testOCSting];
                     break;
                 }
@@ -214,7 +210,7 @@
         }
             
             
-        case 4:{
+        case 4:{//测试代理的class类型
             AAViewController *aavc = [[AAViewController alloc]init];
             [self.navigationController pushViewController:aavc animated:YES];
             break;
@@ -225,6 +221,7 @@
             [self.navigationController pushViewController:cacheVC animated:YES];
             break;
         }
+
         default:
             break;
     }

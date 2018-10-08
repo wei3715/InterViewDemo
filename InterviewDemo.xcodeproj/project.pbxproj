@@ -29,11 +29,16 @@
 		04F066B5210828C900823498 /* TestClass+method1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B4210828C900823498 /* TestClass+method1.m */; };
 		04F066B821082CCA00823498 /* TestClassSon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B721082CC900823498 /* TestClassSon.m */; };
 		B195D984371F716422C68323 /* libPods-InterviewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 101DC6C248B0F938D0496518 /* libPods-InterviewDemo.a */; };
+		E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */; };
+		E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */; };
+		E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */; };
 		E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F4382164A54E006B8BF8 /* AAViewController.m */; };
 		E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43B2164A560006B8BF8 /* BBViewController.m */; };
 		E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */; };
 		E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04573002165DD28007650D9 /* ZWWCacheViewController.m */; };
 		E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04573012165DD28007650D9 /* ZWWCacheViewController.xib */; };
+		E045730721660D9B007650D9 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E045730621660D9B007650D9 /* UserManager.m */; };
+		E045730A21660E45007650D9 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E045730921660E45007650D9 /* UserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +107,11 @@
 		101DC6C248B0F938D0496518 /* libPods-InterviewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InterviewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E95A4964AFD9038D24CC097 /* Pods-InterviewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewDemo/Pods-InterviewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		99DDD7E1AD30A0CA1C25CC6D /* Pods-InterviewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewDemo/Pods-InterviewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E03809BE216B000C005ED37E /* ZWWTestCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestCopyViewController.h; sourceTree = "<group>"; };
+		E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestCopyViewController.m; sourceTree = "<group>"; };
+		E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestCopyViewController.xib; sourceTree = "<group>"; };
+		E03809C3216B30F7005ED37E /* ZWWCommonTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCommonTestTableViewController.h; sourceTree = "<group>"; };
+		E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCommonTestTableViewController.m; sourceTree = "<group>"; };
 		E040F4372164A54E006B8BF8 /* AAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAViewController.h; sourceTree = "<group>"; };
 		E040F4382164A54E006B8BF8 /* AAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAViewController.m; sourceTree = "<group>"; };
 		E040F43A2164A560006B8BF8 /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBViewController.h; sourceTree = "<group>"; };
@@ -111,6 +121,10 @@
 		E04572FF2165DD28007650D9 /* ZWWCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCacheViewController.h; sourceTree = "<group>"; };
 		E04573002165DD28007650D9 /* ZWWCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCacheViewController.m; sourceTree = "<group>"; };
 		E04573012165DD28007650D9 /* ZWWCacheViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWCacheViewController.xib; sourceTree = "<group>"; };
+		E045730521660D9B007650D9 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		E045730621660D9B007650D9 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		E045730821660E45007650D9 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		E045730921660E45007650D9 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +178,9 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E03809C6216B3121005ED37E /* CommonVC */,
+				E03809BA216AFFCE005ED37E /* copy */,
+				E03809B9216AFEFA005ED37E /* Block */,
 				E04573042165ECCD007650D9 /* load&initialize&init */,
 				E04572FE2165DD0A007650D9 /* cache */,
 				E040F4362164A537006B8BF8 /* delegate */,
@@ -180,8 +197,6 @@
 				047B75A020BE4A6000154E1A /* AppDelegate.m */,
 				04C58CE520D368EA002B3B5F /* Model1.h */,
 				04C58CE620D368EA002B3B5F /* Model1.m */,
-				046F31CD211D78210084CED2 /* TestBlock.h */,
-				046F31CE211D78210084CED2 /* TestBlock.m */,
 				04BDD20B20C6772A00FCA2D8 /* MyPTL.h */,
 				04BDD20C20C6772A00FCA2D8 /* MyPTL.m */,
 				04BDD20220C674D500FCA2D8 /* ClassA.h */,
@@ -236,6 +251,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E03809B9216AFEFA005ED37E /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				046F31CD211D78210084CED2 /* TestBlock.h */,
+				046F31CE211D78210084CED2 /* TestBlock.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		E03809BA216AFFCE005ED37E /* copy */ = {
+			isa = PBXGroup;
+			children = (
+				E03809BE216B000C005ED37E /* ZWWTestCopyViewController.h */,
+				E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */,
+				E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */,
+			);
+			path = copy;
+			sourceTree = "<group>";
+		};
+		E03809C6216B3121005ED37E /* CommonVC */ = {
+			isa = PBXGroup;
+			children = (
+				E03809C3216B30F7005ED37E /* ZWWCommonTestTableViewController.h */,
+				E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */,
+			);
+			path = CommonVC;
+			sourceTree = "<group>";
+		};
 		E040F4362164A537006B8BF8 /* delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +298,10 @@
 				E04572FF2165DD28007650D9 /* ZWWCacheViewController.h */,
 				E04573002165DD28007650D9 /* ZWWCacheViewController.m */,
 				E04573012165DD28007650D9 /* ZWWCacheViewController.xib */,
+				E045730521660D9B007650D9 /* UserManager.h */,
+				E045730621660D9B007650D9 /* UserManager.m */,
+				E045730821660E45007650D9 /* UserModel.h */,
+				E045730921660E45007650D9 /* UserModel.m */,
 			);
 			path = cache;
 			sourceTree = "<group>";
@@ -386,6 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */,
 				047B75AC20BE4A6400154E1A /* LaunchScreen.storyboard in Resources */,
 				047B75A920BE4A6400154E1A /* Assets.xcassets in Resources */,
 				E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */,
@@ -442,16 +490,20 @@
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
 				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
+				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
+				E045730721660D9B007650D9 /* UserManager.m in Sources */,
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
 				E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */,
 				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
+				E045730A21660E45007650D9 /* UserModel.m in Sources */,
 				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
 				04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
 				E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */,
+				E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */,
 				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */,
 				046F31CF211D78210084CED2 /* TestBlock.m in Sources */,
 				04BDD20720C674E700FCA2D8 /* ClassB.m in Sources */,
