@@ -7,7 +7,7 @@
 //
 
 #import "ZWWCommonTestTableViewController.h"
-
+#import "ZWWTestDelegateView.h"
 @interface ZWWCommonTestTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     _sectionTitleArr = @[@"常见小问题测试",@"待扩展"];
-    _titleArr = @[@[@"compare结果",@"三元表达式第一个表达式缺省"],
+    _titleArr = @[@[@"compare结果",@"三元表达式第一个表达式缺省",@"测试自定义View 的init&initWithFrame先后顺序"],
                   @[@"待扩展"]
                   ];
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"commonCell"];
@@ -58,6 +58,14 @@
                 }
                 case 1:{
                     [self testTernaryExpression];
+                    break;
+                }
+                case 2:{
+                    //initWithFrame-->init
+                    ZWWTestDelegateView *customView0 = [[ZWWTestDelegateView alloc]init];
+                    
+                    //initWithFrame
+                    ZWWTestDelegateView *customView1 = [[ZWWTestDelegateView alloc]initWithFrame:CGRectZero];
                     break;
                 }
                     

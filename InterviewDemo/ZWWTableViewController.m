@@ -22,6 +22,7 @@
 #import "ZWWCacheViewController.h"
 #import "ZWWTestCopyViewController.h"
 #import "ZWWCommonTestTableViewController.h"
+#import "ZWWTestXibViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -34,13 +35,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"杂七杂八"];
+    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"杂七杂八"];
     _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承",@"消息转发实现多继承"],
                   @[@"各种类型的深浅copy",@"Block",@"weak&strong"],
                   @[@"信号量",@"performSelector注意问题"],
                   @[@"NSArray去重",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
                   @[@"代理className"],
                   @[@"缓存NSCache"],
+                  @[@"xib测试"],
                   @[@"杂七杂八"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
@@ -221,7 +223,11 @@
             [self.navigationController pushViewController:cacheVC animated:YES];
             break;
         }
-
+        case 6:{//xib
+            ZWWTestXibViewController *xibTestVC = [[ZWWTestXibViewController alloc]init];
+            [self.navigationController pushViewController:xibTestVC animated:YES];
+            break;
+        }
         default:
             break;
     }

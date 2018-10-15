@@ -14,7 +14,16 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+       ZWWLog(@"test initWithFrame");
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        ZWWLog(@"test init");
     }
     return self;
 }
