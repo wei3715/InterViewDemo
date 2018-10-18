@@ -28,3 +28,6 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+## self
+XibTest/
