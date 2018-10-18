@@ -19,6 +19,7 @@
 #define kWeakSelf(type)     __weak typeof(type) weak##type = type;
 #define KScreenWidth        [[UIScreen mainScreen] bounds].size.width
 #define KScreenHeight       [[UIScreen mainScreen] bounds].size.height
+#define kRealValue(with)    ((with)*(KScreenWidth/375.0f))
 #define KLocalMP4Url        @"http://cloud.video.taobao.com/play/u/2712925557/p/1/e/6/t/1/40050769.mp4"
 
 //单例化一个类

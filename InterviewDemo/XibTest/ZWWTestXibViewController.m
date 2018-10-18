@@ -4,16 +4,18 @@
 //
 //  Created by jolly on 2018/10/17.
 //  Copyright © 2018年 mac. All rights reserved.
-//
+//11
 
 #import "ZWWTestXibViewController.h"
 #import "UIImage+GIF.h"
 @interface ZWWTestXibViewController ()
+- (IBAction)chatBtnAction:(id)sender;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeight;
 @property (weak, nonatomic) IBOutlet UIImageView *giftImageView;
 
 @property (weak, nonatomic) IBOutlet UIView *loginView;
+@property (weak, nonatomic) IBOutlet UIView *bottomAdView;
 
 #pragma 用户信息
 
@@ -31,7 +33,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.contentViewWidth.constant = KScreenWidth;
-    self.contentViewHeight.constant = 1000;
+    self.contentViewHeight.constant = kRealValue(1000);
     [self playGif];
     [self checkLoginStatus];
 }
@@ -43,6 +45,11 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)playGif {
     NSString *gitPath = [[NSBundle mainBundle] pathForResource:@"home_game_class" ofType:@"gif"];
     NSData *data = [NSData dataWithContentsOfFile:gitPath];
@@ -52,15 +59,19 @@
 }
 
 - (void)checkLoginStatus{
-    self.loginView.hidden = NO;
+    self.loginView.hidden = YES;
+    self.bottomAdView.hidden = YES;
     [self updateUserInfo];
 }
 
 - (void)updateUserInfo{
-    self.headIV.image = nil;
-    self.loginNameLB.text = @"";
-    self.levelLB.text = @"";
-    self.moneyLB.text = @"";
+//    self.headIV.image = nil;
+//    self.loginNameLB.text = @"tall000";
+//    self.levelLB.text = @"V0";
+//    self.moneyLB.text = @"10.0";
     
+}
+- (IBAction)chatBtnAction:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
