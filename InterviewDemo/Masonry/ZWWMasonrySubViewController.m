@@ -7,8 +7,15 @@
 //
 
 #import "ZWWMasonrySubViewController.h"
-
+#define detailIVH 100
 @interface ZWWMasonrySubViewController ()
+
+@property (nonatomic, strong) MASConstraint   *ivHeightCons;
+@property (nonatomic, strong) MASConstraint   *viewTopCons;
+@property (weak, nonatomic) IBOutlet UISwitch *hideBtn;
+@property (weak, nonatomic) IBOutlet UILabel *titleLB;
+@property (weak, nonatomic) IBOutlet UIImageView *detailIV;
+@property (weak, nonatomic) IBOutlet UIView *underView;
 
 @end
 
@@ -17,16 +24,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self makeConstraints];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)makeConstraints{
+    
+    [self.hideBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(kRealValue(100), kRealValue(30)));
+        make.top.equalTo(self.view).offset(kRealValue(100));
+        make.left.equalTo(self.view).offset(kRealValue(15));
+    }];
+    
+    [self.titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(KScreenWidth-kRealValue(30), kRealValue(100)));
+        make.top.equalTo(self.hideBtn.mas_bottom).offset(kRealValue(20));
+        make.left.equalTo(self.view).offset(kRealValue(15));
+    }];
+    
+    [self.detailIV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(KScreenWidth-kRealValue(30));
+        self.ivHeightCons = make.height.mas_equalTo(detailIVH);
+        make.top.equalTo(self.titleLB.mas_bottom).offset(kRealValue(20));
+        make.left.equalTo(self.view).offset(kRealValue(15));
+    }];
+    
+    [self.underView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(KScreenWidth-kRealValue(30), kRealValue(80)));
+         make.top.equalTo(self.detailIV.mas_bottom).offset(kRealValue(20));
+        make.left.equalTo(self.view).offset(kRealValue(15));
+    }];
+    
 }
-*/
+- (IBAction)hideAction:(id)sender {
+    
+    
+}
+- (IBAction)hideViewAction:(UISwitch *)sender {
+    if (sender.on) {
+        self.ivHeightCons.mas_equalTo(detailIVH);
+        [self.underView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.detailIV.mas_bottom).offset(kRealValue(20));
+        }];
+    } else {
+        self.ivHeightCons.mas_equalTo(0);
+        [self.underView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.detailIV.mas_bottom);
+        }];
+    }
+}
+
 
 @end

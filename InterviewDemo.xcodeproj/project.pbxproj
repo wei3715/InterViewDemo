@@ -36,6 +36,10 @@
 		E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43B2164A560006B8BF8 /* BBViewController.m */; };
 		E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */; };
 		E0442FC121786AFB000CC193 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = E0442FC021786AFB000CC193 /* UIImage+GIF.m */; };
+		E0442FC621789BB1000CC193 /* ZWWMasonryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0442FC421789BB1000CC193 /* ZWWMasonryTableViewController.m */; };
+		E0442FC721789BB1000CC193 /* ZWWMasonryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0442FC521789BB1000CC193 /* ZWWMasonryTableViewController.xib */; };
+		E0442FCA21789CE6000CC193 /* ZWWMasonrySubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0442FC921789CE6000CC193 /* ZWWMasonrySubViewController.m */; };
+		E0442FCC21789F7E000CC193 /* ZWWMasonrySubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0442FCB21789F7E000CC193 /* ZWWMasonrySubViewController.xib */; };
 		E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04573002165DD28007650D9 /* ZWWCacheViewController.m */; };
 		E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04573012165DD28007650D9 /* ZWWCacheViewController.xib */; };
 		E045730721660D9B007650D9 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E045730621660D9B007650D9 /* UserManager.m */; };
@@ -124,6 +128,12 @@
 		E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestDelegateView.m; sourceTree = "<group>"; };
 		E0442FBF21786AFB000CC193 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		E0442FC021786AFB000CC193 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		E0442FC321789BB1000CC193 /* ZWWMasonryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWMasonryTableViewController.h; sourceTree = "<group>"; };
+		E0442FC421789BB1000CC193 /* ZWWMasonryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWMasonryTableViewController.m; sourceTree = "<group>"; };
+		E0442FC521789BB1000CC193 /* ZWWMasonryTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWMasonryTableViewController.xib; sourceTree = "<group>"; };
+		E0442FC821789CE6000CC193 /* ZWWMasonrySubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWMasonrySubViewController.h; sourceTree = "<group>"; };
+		E0442FC921789CE6000CC193 /* ZWWMasonrySubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWMasonrySubViewController.m; sourceTree = "<group>"; };
+		E0442FCB21789F7E000CC193 /* ZWWMasonrySubViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWMasonrySubViewController.xib; sourceTree = "<group>"; };
 		E04572FF2165DD28007650D9 /* ZWWCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCacheViewController.h; sourceTree = "<group>"; };
 		E04573002165DD28007650D9 /* ZWWCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCacheViewController.m; sourceTree = "<group>"; };
 		E04573012165DD28007650D9 /* ZWWCacheViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWCacheViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +198,7 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E0442FC221789B4C000CC193 /* Masonry */,
 				E0C45302217718E80049D800 /* Utils */,
 				E0C452FF217718C00049D800 /* Resource */,
 				E04A50DF216F629600C09162 /* XibTest */,
@@ -309,6 +320,19 @@
 				E0442FC021786AFB000CC193 /* UIImage+GIF.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		E0442FC221789B4C000CC193 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				E0442FC321789BB1000CC193 /* ZWWMasonryTableViewController.h */,
+				E0442FC421789BB1000CC193 /* ZWWMasonryTableViewController.m */,
+				E0442FC521789BB1000CC193 /* ZWWMasonryTableViewController.xib */,
+				E0442FC821789CE6000CC193 /* ZWWMasonrySubViewController.h */,
+				E0442FC921789CE6000CC193 /* ZWWMasonrySubViewController.m */,
+				E0442FCB21789F7E000CC193 /* ZWWMasonrySubViewController.xib */,
+			);
+			path = Masonry;
 			sourceTree = "<group>";
 		};
 		E04572FE2165DD0A007650D9 /* cache */ = {
@@ -482,6 +506,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */,
+				E0442FC721789BB1000CC193 /* ZWWMasonryTableViewController.xib in Resources */,
+				E0442FCC21789F7E000CC193 /* ZWWMasonrySubViewController.xib in Resources */,
 				047B75AC20BE4A6400154E1A /* LaunchScreen.storyboard in Resources */,
 				047B75A920BE4A6400154E1A /* Assets.xcassets in Resources */,
 				E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */,
@@ -538,7 +564,9 @@
 			files = (
 				E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */,
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
+				E0442FC621789BB1000CC193 /* ZWWMasonryTableViewController.m in Sources */,
 				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
+				E0442FCA21789CE6000CC193 /* ZWWMasonrySubViewController.m in Sources */,
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
 				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
 				E045730721660D9B007650D9 /* UserManager.m in Sources */,
