@@ -8,6 +8,7 @@
 
 #import "ZWWMasonryTableViewController.h"
 #import "ZWWMasonrySubViewController.h"
+#import "ZWWTestTabViewCellViewController.h"
 @interface ZWWMasonryTableViewController ()
 
 @property (nonatomic, strong) NSArray *dataArr;
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = @[@"动态隐藏显示View"];
+    self.dataArr = @[@"动态隐藏显示View",@"变高tableviewCell"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CommanCellID"];
 }
 
@@ -39,8 +40,14 @@
 
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZWWMasonrySubViewController *masonrySubVC = [[ZWWMasonrySubViewController alloc] initWithNibName:@"ZWWMasonrySubViewController" bundle:nil];
-    [self.navigationController pushViewController:masonrySubVC animated:YES];
+    if (indexPath.row == 0) {
+        ZWWMasonrySubViewController *masonrySubVC = [[ZWWMasonrySubViewController alloc] initWithNibName:@"ZWWMasonrySubViewController" bundle:nil];
+        [self.navigationController pushViewController:masonrySubVC animated:YES];
+    } else if (indexPath.row == 1){
+        ZWWTestTabViewCellViewController *testTabCellVC = [[ZWWTestTabViewCellViewController alloc] init];
+        [self.navigationController pushViewController:testTabCellVC animated:YES];
+    }
+    
 }
 
 @end

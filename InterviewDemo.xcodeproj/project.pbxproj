@@ -29,6 +29,10 @@
 		04F066B5210828C900823498 /* TestClass+method1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B4210828C900823498 /* TestClass+method1.m */; };
 		04F066B821082CCA00823498 /* TestClassSon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B721082CC900823498 /* TestClassSon.m */; };
 		B195D984371F716422C68323 /* libPods-InterviewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 101DC6C248B0F938D0496518 /* libPods-InterviewDemo.a */; };
+		E02DE8A1217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8A0217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.m */; };
+		E02DE8A6217D70B8002FA9D9 /* ZWWCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8A5217D70B8002FA9D9 /* ZWWCell.m */; };
+		E02DE8A9217D7110002FA9D9 /* zwwDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8A8217D7110002FA9D9 /* zwwDataEntity.m */; };
+		E02DE8AD217D772E002FA9D9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8AC217D772D002FA9D9 /* Common.m */; };
 		E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */; };
 		E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */; };
 		E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */; };
@@ -115,6 +119,14 @@
 		101DC6C248B0F938D0496518 /* libPods-InterviewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InterviewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E95A4964AFD9038D24CC097 /* Pods-InterviewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewDemo/Pods-InterviewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		99DDD7E1AD30A0CA1C25CC6D /* Pods-InterviewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewDemo/Pods-InterviewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E02DE89F217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestTabViewCellViewController.h; sourceTree = "<group>"; };
+		E02DE8A0217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestTabViewCellViewController.m; sourceTree = "<group>"; };
+		E02DE8A4217D70B8002FA9D9 /* ZWWCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCell.h; sourceTree = "<group>"; };
+		E02DE8A5217D70B8002FA9D9 /* ZWWCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCell.m; sourceTree = "<group>"; };
+		E02DE8A7217D7110002FA9D9 /* zwwDataEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zwwDataEntity.h; sourceTree = "<group>"; };
+		E02DE8A8217D7110002FA9D9 /* zwwDataEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zwwDataEntity.m; sourceTree = "<group>"; };
+		E02DE8AB217D772D002FA9D9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		E02DE8AC217D772D002FA9D9 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		E03809BE216B000C005ED37E /* ZWWTestCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestCopyViewController.h; sourceTree = "<group>"; };
 		E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestCopyViewController.m; sourceTree = "<group>"; };
 		E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestCopyViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +210,7 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E02DE8AA217D772D002FA9D9 /* Tools */,
 				E0442FC221789B4C000CC193 /* Masonry */,
 				E0C45302217718E80049D800 /* Utils */,
 				E0C452FF217718C00049D800 /* Resource */,
@@ -272,6 +285,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E02DE89E217D6B8C002FA9D9 /* case2 */ = {
+			isa = PBXGroup;
+			children = (
+				E02DE89F217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.h */,
+				E02DE8A0217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.m */,
+				E02DE8A4217D70B8002FA9D9 /* ZWWCell.h */,
+				E02DE8A5217D70B8002FA9D9 /* ZWWCell.m */,
+				E02DE8A7217D7110002FA9D9 /* zwwDataEntity.h */,
+				E02DE8A8217D7110002FA9D9 /* zwwDataEntity.m */,
+			);
+			path = case2;
+			sourceTree = "<group>";
+		};
+		E02DE8AA217D772D002FA9D9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E02DE8AB217D772D002FA9D9 /* Common.h */,
+				E02DE8AC217D772D002FA9D9 /* Common.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		E03809B9216AFEFA005ED37E /* Block */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +360,7 @@
 		E0442FC221789B4C000CC193 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				E02DE89E217D6B8C002FA9D9 /* case2 */,
 				E0442FC321789BB1000CC193 /* ZWWMasonryTableViewController.h */,
 				E0442FC421789BB1000CC193 /* ZWWMasonryTableViewController.m */,
 				E0442FC521789BB1000CC193 /* ZWWMasonryTableViewController.xib */,
@@ -562,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02DE8AD217D772E002FA9D9 /* Common.m in Sources */,
 				E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */,
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
 				E0442FC621789BB1000CC193 /* ZWWMasonryTableViewController.m in Sources */,
@@ -571,6 +608,8 @@
 				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
 				E045730721660D9B007650D9 /* UserManager.m in Sources */,
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
+				E02DE8A9217D7110002FA9D9 /* zwwDataEntity.m in Sources */,
+				E02DE8A6217D70B8002FA9D9 /* ZWWCell.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
 				E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */,
@@ -580,6 +619,7 @@
 				04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
 				E0C452F8217717BF0049D800 /* ZWWTestXibViewController.m in Sources */,
+				E02DE8A1217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.m in Sources */,
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
 				E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */,
 				E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */,
@@ -752,6 +792,7 @@
 			baseConfigurationReference = 6E95A4964AFD9038D24CC097 /* Pods-InterviewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 95SLTE9L5Y;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InterviewDemo/Utils/PrefixHeader.pch";
@@ -772,6 +813,7 @@
 			baseConfigurationReference = 99DDD7E1AD30A0CA1C25CC6D /* Pods-InterviewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InterviewDemo/Utils/PrefixHeader.pch";
