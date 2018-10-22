@@ -37,12 +37,12 @@
     
    
     
-#ifdef IOS_8_NEW_FEATURE_SELF_SIZING
-    //ios8 的Self-sizing特性
-    if ([UIDevice currentDevice].systemVersion.integerValue > 7) {
-       _zwwTableView.rowHeight = UITableViewAutomaticDimension;
-    }
-#endif
+//#ifdef IOS_8_NEW_FEATURE_SELF_SIZING
+//    //ios8 的Self-sizing特性
+//    if ([UIDevice currentDevice].systemVersion.integerValue > 7) {
+//       _zwwTableView.rowHeight = UITableViewAutomaticDimension;
+//    }
+//#endif
     
     //注册cell
      [_zwwTableView registerClass:[ZWWCell class] forCellReuseIdentifier:NSStringFromClass([ZWWCell class])];
@@ -59,10 +59,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-#ifdef IOS_8_NEW_FEATURE_SELF_SIZING
-    // iOS 8 的Self-sizing特性
-    return UITableViewAutomaticDimension;
-#else
+//#ifdef IOS_8_NEW_FEATURE_SELF_SIZING
+//    // iOS 8 的Self-sizing特性
+//    return UITableViewAutomaticDimension;
+//#else
     
     if (!_zwwTempCell) {
         _zwwTempCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZWWCell class])];
@@ -83,7 +83,7 @@
     }
     
     return dataEntity.cellHeight;
-#endif
+//#endif
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

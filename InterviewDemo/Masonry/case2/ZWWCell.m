@@ -64,45 +64,6 @@
     }];
 
     [_contentLB setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-    
-//    self.tag = 1000;
-//    
-//    // Avatar头像
-//    _avatarIV = [UIImageView new];
-//    [self.contentView addSubview:_avatarIV];
-//    [_avatarIV mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.and.height.equalTo(@44);
-//        make.left.and.top.equalTo(self.contentView).with.offset(4);
-//    }];
-//    
-//    // Title - 单行
-//    _titleLB = [UILabel new];
-//    [self.contentView addSubview:_titleLB];
-//    
-//    [_titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(@22);
-//        make.top.equalTo(self.contentView).with.offset(4);
-//        make.left.equalTo(_avatarIV.mas_right).with.offset(4);
-//        make.right.equalTo(self.contentView).with.offset(-4);
-//    }];
-//    
-//    // 计算UILabel的preferredMaxLayoutWidth值，多行时必须设置这个值，否则系统无法决定Label的宽度
-//    CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - 44 - 4 * 3; // 44 = avatar宽度，4 * 3为padding
-//    
-//    // Content - 多行
-//    _contentLB = [UILabel new];
-//    _contentLB.numberOfLines = 0;
-//    _contentLB.preferredMaxLayoutWidth = preferredMaxWidth; // 多行时必须设置
-//    [self.contentView addSubview:_contentLB];
-//    
-//    [_contentLB mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_titleLB.mas_bottom).with.offset(4);
-//        make.left.equalTo(_avatarIV.mas_right).with.offset(4);
-//        make.right.equalTo(self.contentView).with.offset(-4);
-//        make.bottom.equalTo(self.contentView).with.offset(-4);
-//    }];
-//    
-//    [_contentLB setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
 }
 
 - (void)setupData:(ZWWDataEntity *)dataEntity{
