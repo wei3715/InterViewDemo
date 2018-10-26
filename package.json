@@ -1,0 +1,32 @@
+{
+  "name": "interviewdemo",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "yes",
+  "scripts": {
+    "test": "test commit rules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wei3715/InterviewDemo.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "zww",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wei3715/InterviewDemo/issues"
+  },
+  "homepage": "https://github.com/wei3715/InterviewDemo#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-angular": "^7.1.2",
+    "husky": "^1.1.2"
+  },
+  "husky":{
+   "hooks":{
+   "commit-msg":"commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
