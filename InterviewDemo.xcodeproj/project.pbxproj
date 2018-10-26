@@ -33,6 +33,7 @@
 		E02DE8A6217D70B8002FA9D9 /* ZWWCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8A5217D70B8002FA9D9 /* ZWWCell.m */; };
 		E02DE8A9217D7110002FA9D9 /* zwwDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8A8217D7110002FA9D9 /* zwwDataEntity.m */; };
 		E02DE8AD217D772E002FA9D9 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8AC217D772D002FA9D9 /* Common.m */; };
+		E02DE8B0217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m in Sources */ = {isa = PBXBuildFile; fileRef = E02DE8AF217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m */; };
 		E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */; };
 		E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */; };
 		E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */; };
@@ -48,6 +49,10 @@
 		E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04573012165DD28007650D9 /* ZWWCacheViewController.xib */; };
 		E045730721660D9B007650D9 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E045730621660D9B007650D9 /* UserManager.m */; };
 		E045730A21660E45007650D9 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E045730921660E45007650D9 /* UserModel.m */; };
+		E0788897218160E8008B8866 /* ZWWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0788895218160E8008B8866 /* ZWWLoginViewController.m */; };
+		E0788898218160E8008B8866 /* ZWWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0788896218160E8008B8866 /* ZWWLoginViewController.xib */; };
+		E078889C21816D1E008B8866 /* ZWWBaseNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E078889B21816D1E008B8866 /* ZWWBaseNaviViewController.m */; };
+		E078889E21819B7D008B8866 /* TestBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E078889D21819B7D008B8866 /* TestBlock.cpp */; };
 		E0C452F8217717BF0049D800 /* ZWWTestXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */; };
 		E0C452F9217717BF0049D800 /* ZWWTestXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */; };
 		E0C45301217718C00049D800 /* home_game_class.gif in Resources */ = {isa = PBXBuildFile; fileRef = E0C45300217718C00049D800 /* home_game_class.gif */; };
@@ -127,6 +132,8 @@
 		E02DE8A8217D7110002FA9D9 /* zwwDataEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zwwDataEntity.m; sourceTree = "<group>"; };
 		E02DE8AB217D772D002FA9D9 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		E02DE8AC217D772D002FA9D9 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		E02DE8AE217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZWWCommonTestTableViewController+method.h"; sourceTree = "<group>"; };
+		E02DE8AF217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZWWCommonTestTableViewController+method.m"; sourceTree = "<group>"; };
 		E03809BE216B000C005ED37E /* ZWWTestCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestCopyViewController.h; sourceTree = "<group>"; };
 		E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestCopyViewController.m; sourceTree = "<group>"; };
 		E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestCopyViewController.xib; sourceTree = "<group>"; };
@@ -153,6 +160,12 @@
 		E045730621660D9B007650D9 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		E045730821660E45007650D9 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		E045730921660E45007650D9 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		E0788894218160E8008B8866 /* ZWWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWLoginViewController.h; sourceTree = "<group>"; };
+		E0788895218160E8008B8866 /* ZWWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWLoginViewController.m; sourceTree = "<group>"; };
+		E0788896218160E8008B8866 /* ZWWLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWLoginViewController.xib; sourceTree = "<group>"; };
+		E078889A21816D1E008B8866 /* ZWWBaseNaviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWBaseNaviViewController.h; sourceTree = "<group>"; };
+		E078889B21816D1E008B8866 /* ZWWBaseNaviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWBaseNaviViewController.m; sourceTree = "<group>"; };
+		E078889D21819B7D008B8866 /* TestBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestBlock.cpp; path = InterviewDemo/TestBlock.cpp; sourceTree = SOURCE_ROOT; };
 		E0C452F5217717BF0049D800 /* ZWWTestXibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestXibViewController.h; sourceTree = "<group>"; };
 		E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestXibViewController.m; sourceTree = "<group>"; };
 		E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestXibViewController.xib; sourceTree = "<group>"; };
@@ -220,12 +233,9 @@
 				E03809B9216AFEFA005ED37E /* Block */,
 				E04573042165ECCD007650D9 /* load&initialize&init */,
 				E04572FE2165DD0A007650D9 /* cache */,
+				E078889921816CD8008B8866 /* Base */,
 				E040F4362164A537006B8BF8 /* delegate */,
 				04EA94C82106C45F00F7E153 /* weak&strong */,
-				047B75D320BE4AA500154E1A /* ZWWTableViewController.h */,
-				047B75D220BE4AA500154E1A /* ZWWTableViewController.m */,
-				047B75D120BE4AA500154E1A /* ZWWTableViewController+method.h */,
-				047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */,
 				04879BEC210963AE00A1A30A /* ZWWTestThreadViewController.h */,
 				04879BED210963AE00A1A30A /* ZWWTestThreadViewController.m */,
 				047B759F20BE4A6000154E1A /* AppDelegate.h */,
@@ -310,6 +320,7 @@
 		E03809B9216AFEFA005ED37E /* Block */ = {
 			isa = PBXGroup;
 			children = (
+				E078889D21819B7D008B8866 /* TestBlock.cpp */,
 				046F31CD211D78210084CED2 /* TestBlock.h */,
 				046F31CE211D78210084CED2 /* TestBlock.m */,
 			);
@@ -331,6 +342,8 @@
 			children = (
 				E03809C3216B30F7005ED37E /* ZWWCommonTestTableViewController.h */,
 				E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */,
+				E02DE8AE217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.h */,
+				E02DE8AF217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m */,
 			);
 			path = CommonVC;
 			sourceTree = "<group>";
@@ -407,9 +420,26 @@
 				E0C452F5217717BF0049D800 /* ZWWTestXibViewController.h */,
 				E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */,
 				E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */,
+				E0788894218160E8008B8866 /* ZWWLoginViewController.h */,
+				E0788895218160E8008B8866 /* ZWWLoginViewController.m */,
+				E0788896218160E8008B8866 /* ZWWLoginViewController.xib */,
 			);
 			path = XibTest;
 			sourceTree = "<group>";
+		};
+		E078889921816CD8008B8866 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				047B75D320BE4AA500154E1A /* ZWWTableViewController.h */,
+				047B75D220BE4AA500154E1A /* ZWWTableViewController.m */,
+				047B75D120BE4AA500154E1A /* ZWWTableViewController+method.h */,
+				047B75D420BE4AA500154E1A /* ZWWTableViewController+method.m */,
+				E078889A21816D1E008B8866 /* ZWWBaseNaviViewController.h */,
+				E078889B21816D1E008B8866 /* ZWWBaseNaviViewController.m */,
+			);
+			name = Base;
+			path = InterviewDemo/Base;
+			sourceTree = SOURCE_ROOT;
 		};
 		E0C452FF217718C00049D800 /* Resource */ = {
 			isa = PBXGroup;
@@ -546,6 +576,7 @@
 				E0442FCC21789F7E000CC193 /* ZWWMasonrySubViewController.xib in Resources */,
 				047B75AC20BE4A6400154E1A /* LaunchScreen.storyboard in Resources */,
 				047B75A920BE4A6400154E1A /* Assets.xcassets in Resources */,
+				E0788898218160E8008B8866 /* ZWWLoginViewController.xib in Resources */,
 				E04573032165DD28007650D9 /* ZWWCacheViewController.xib in Resources */,
 				E0C452F9217717BF0049D800 /* ZWWTestXibViewController.xib in Resources */,
 				E0C45301217718C00049D800 /* home_game_class.gif in Resources */,
@@ -605,6 +636,7 @@
 				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
 				E0442FCA21789CE6000CC193 /* ZWWMasonrySubViewController.m in Sources */,
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
+				E078889E21819B7D008B8866 /* TestBlock.cpp in Sources */,
 				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
 				E045730721660D9B007650D9 /* UserManager.m in Sources */,
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
@@ -612,6 +644,7 @@
 				E02DE8A6217D70B8002FA9D9 /* ZWWCell.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
+				E0788897218160E8008B8866 /* ZWWLoginViewController.m in Sources */,
 				E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */,
 				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				E045730A21660E45007650D9 /* UserModel.m in Sources */,
@@ -624,12 +657,14 @@
 				E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */,
 				E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */,
 				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */,
+				E02DE8B0217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m in Sources */,
 				046F31CF211D78210084CED2 /* TestBlock.m in Sources */,
 				04BDD20720C674E700FCA2D8 /* ClassB.m in Sources */,
 				047B75D520BE4AA500154E1A /* ZWWTableViewController.m in Sources */,
 				047B75A120BE4A6000154E1A /* AppDelegate.m in Sources */,
 				04BDD20D20C6772A00FCA2D8 /* MyPTL.m in Sources */,
 				E0442FC121786AFB000CC193 /* UIImage+GIF.m in Sources */,
+				E078889C21816D1E008B8866 /* ZWWBaseNaviViewController.m in Sources */,
 				04EA94CE2106C45F00F7E153 /* ZWWCustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -54,6 +54,7 @@
     //多行
     _contentLB = [UILabel new];
     _contentLB.numberOfLines = 0;
+    //利用ios8的UITableViewAutomaticDimension高度是时可以不用设置这个属性
     _contentLB.preferredMaxLayoutWidth = preferredMaxWidth; // 多行时必须设置
     [self.contentView addSubview:_contentLB];
     [_contentLB mas_makeConstraints:^(MASConstraintMaker *make) {

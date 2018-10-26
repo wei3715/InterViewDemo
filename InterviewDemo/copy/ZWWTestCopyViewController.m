@@ -25,8 +25,8 @@
 }
 
 //首先说说深浅copy准则:
-//浅copy: 指针复制，不会创建一个新的对象。
-//深copy: 内容复制，会创建一个新的对象。
+//浅copy: 指针复制，不会创建一个新的对象,指针与原指针地址相同
+//深copy: 内容复制，会创建一个新的对象,指针地址与原对象的指针地址不同。
 
 //1、框架类的深浅copy准则:
 //探究框架类深copy还是浅copy，需要清楚的是该类如何实现的NSCopying和NSMutableCopy的两个方法copyWithZone:和mutableCopyWithZone:。然而OC并不开源，并且本文这里也不会进行源码的推测。
@@ -36,6 +36,11 @@
 //对mutableObject，即可变对象，执行copy，会得到不可变对象，并且是深copy。
 //对mutableObject，即可变对象，执行mutableCopy，会得到可变对象，并且是深copy。
 
+//总结
+//1- 对一个NSString字符串进行copy不会产生新对象（浅拷贝)
+//2- 对一个NSMutableString字符串进行copy会产生新对象（深拷贝)
+//3- copy产生的新对象为NSString类型
+//4- mutableCopy产生的新对象为NSMutableString类型
 
 //1.框架类深浅拷贝
 - (IBAction)testCopy1:(id)sender {

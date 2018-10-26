@@ -8,6 +8,7 @@
 
 #import "ZWWCommonTestTableViewController.h"
 #import "ZWWTestDelegateView.h"
+#import "ZWWCommonTestTableViewController+method.h"
 @interface ZWWCommonTestTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     
     _sectionTitleArr = @[@"常见小问题测试",@"待扩展"];
-    _titleArr = @[@[@"compare结果",@"三元表达式第一个表达式缺省",@"测试自定义View 的init&initWithFrame先后顺序"],
+    _titleArr = @[@[@"compare结果",@"三元表达式第一个表达式缺省",@"测试自定义View 的init&initWithFrame先后顺序",@"测试registerDefaults",@"测试日期格式"],
                   @[@"待扩展"]
                   ];
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"commonCell"];
@@ -68,7 +69,14 @@
                     ZWWTestDelegateView *customView1 = [[ZWWTestDelegateView alloc]initWithFrame:CGRectZero];
                     break;
                 }
-                    
+                case 3:{
+                    [self testRegisterDefaultsFunc];
+                    break;
+                }
+                case 4:{
+                    [self testDate];
+                    break;
+                }
                 default:
                     break;
             }
@@ -76,30 +84,12 @@
             
             break;
             
+        
+            
         default:
             break;
     }
 }
 
-- (void)testCompare{
-    NSString *str1 = @"2.1.0";
-    NSString *str2 = @"2.1.1";
-    //NSOrderedDescending： 参数1>参数2
-    if ([str1 compare:str2] == NSOrderedDescending) {
-        NSLog(@"str1  > str2");
-    } else {
-        NSLog(@"str1 < str2");
-    }
-}
 
-//测试三元表达式第一个表达式缺省
-- (void)testTernaryExpression{
-
-    NSString *mood = [self haveMood] ? : @"sad";
-    NSLog(@"缺省值是代表直接返回问号表达式的值==%@",mood);
-}
-
-- (NSString *)haveMood{
-    return @"happy";
-}
 @end

@@ -8,6 +8,8 @@
 
 #import "ZWWTestXibViewController.h"
 #import "UIImage+GIF.h"
+#import "ZWWLoginViewController.h"
+
 @interface ZWWTestXibViewController ()
 - (IBAction)chatBtnAction:(id)sender;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidth;
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *loginNameLB;
 @property (weak, nonatomic) IBOutlet UILabel *levelLB;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLB;
+@property (weak, nonatomic) IBOutlet UIView *recommendView;
 
 @end
 
@@ -59,8 +62,10 @@
 }
 
 - (void)checkLoginStatus{
-    self.loginView.hidden = YES;
-    self.bottomAdView.hidden = YES;
+    self.loginView.hidden = NO;
+    self.bottomAdView.hidden = NO;
+//    self.loginView.hidden = YES;
+//    self.bottomAdView.hidden = YES;
     [self updateUserInfo];
 }
 
@@ -72,6 +77,11 @@
     
 }
 - (IBAction)chatBtnAction:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+   [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)loginAction:(UIButton *)sender {
+    ZWWLoginViewController *loginXibVC = [[ZWWLoginViewController alloc]init];
+    [self.navigationController pushViewController:loginXibVC animated:YES];
 }
 @end

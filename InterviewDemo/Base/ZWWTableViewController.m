@@ -24,6 +24,7 @@
 #import "ZWWCommonTestTableViewController.h"
 #import "ZWWTestXibViewController.h"
 #import "ZWWMasonryTableViewController.h"
+#import "ZWWLoginViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;

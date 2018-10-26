@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZWWTableViewController.h"
-
+#import "ZWWBaseNaviViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,9 +20,11 @@
     self.window = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, [UIScreen mainScreen].bounds.size.height)];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     ZWWTableViewController *tabVC = [[ZWWTableViewController alloc]init];
-    UINavigationController *tabNavi = [[UINavigationController alloc]initWithRootViewController:tabVC];
+    ZWWBaseNaviViewController *tabNavi = [[ZWWBaseNaviViewController alloc]initWithRootViewController:tabVC];
     self.window.rootViewController = tabNavi;
+    
     return YES;
 }
 

@@ -15,7 +15,7 @@
 #define ZWWLog(...)
 #endif
 
-
+#define MAS_SHORTHAND_GLOBALS   //这样equalTo 完全等价于mas_equalTo
 #define kWeakSelf(type)     __weak typeof(type) weak##type = type;
 #define KScreenWidth        [[UIScreen mainScreen] bounds].size.width
 #define KScreenHeight       [[UIScreen mainScreen] bounds].size.height

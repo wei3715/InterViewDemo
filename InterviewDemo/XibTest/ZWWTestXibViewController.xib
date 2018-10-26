@@ -21,6 +21,7 @@
                 <outlet property="loginNameLB" destination="mih-JP-A9Y" id="Yse-aB-1TG"/>
                 <outlet property="loginView" destination="My2-eN-ZGC" id="zpb-yh-a1Z"/>
                 <outlet property="moneyLB" destination="t24-9a-zbi" id="jLl-ej-KrH"/>
+                <outlet property="recommendView" destination="7Z0-Sy-EYa" id="6Tq-EY-ehq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -128,6 +129,9 @@
                                                     <state key="normal" title="立即登录">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="SDN-gq-gyb"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8o-e1-uCC">
                                                     <rect key="frame" x="188" y="0.0" width="187" height="40"/>
@@ -136,6 +140,9 @@
                                                     <state key="normal" title="免费开户">
                                                         <color key="titleColor" red="1" green="0.16736452039137117" blue="0.085179074137948119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="cVi-e8-bwn"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

@@ -31,7 +31,7 @@
 - (void)makeConstraints{
     
     [self.hideBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(kRealValue(100), kRealValue(30)));
+        make.size.equalTo(CGSizeMake(kRealValue(100), kRealValue(30)));
         make.top.equalTo(self.view).offset(kRealValue(100));
         make.left.equalTo(self.view).offset(kRealValue(15));
     }];
@@ -43,15 +43,19 @@
     }];
     
     [self.detailIV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(KScreenWidth-kRealValue(30));
-        self.ivHeightCons = make.height.mas_equalTo(detailIVH);
+        make.width.equalTo(@(KScreenWidth-kRealValue(30)));
+        self.ivHeightCons = make.height.equalTo(@(detailIVH));
         make.top.equalTo(self.titleLB.mas_bottom).offset(kRealValue(20));
         make.left.equalTo(self.view).offset(kRealValue(15));
     }];
     
     [self.underView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(KScreenWidth-kRealValue(30), kRealValue(80)));
-         make.top.equalTo(self.detailIV.mas_bottom).offset(kRealValue(20));
+        make.top.equalTo(self.detailIV.mas_bottom).offset(kRealValue(20));
+        
+        //下面约束会在self.detailIV移除（不是hidden）后，self.underView相对self.titleLB布局
+//        make.top.equalTo(self.detailIV.mas_bottom).offset(kRealValue(20)).priority(999);
+//        make.top.equalTo(self.titleLB.mas_bottom).offset(kRealValue(20)).priorityLow();
         make.left.equalTo(self.view).offset(kRealValue(15));
     }];
     
@@ -66,11 +70,17 @@
         [self.underView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.detailIV.mas_bottom).offset(kRealValue(20));
         }];
+        
+        
     } else {
         self.ivHeightCons.mas_equalTo(0);
         [self.underView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.detailIV.mas_bottom);
         }];
+        
+        //移除后self.underView会相对self.titleLB布局
+        //[self.detailIV removeFromSuperview];
+        
     }
 }
 
