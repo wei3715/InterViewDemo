@@ -4,7 +4,6 @@
 //
 //  Created by mac on 2018/5/19.
 //  Copyright © 2018年 mac. All rights reserved.
-//测试
 
 
 //下面导入的文件的+load的方法都会默认执行，不需要主动调用
