@@ -4,8 +4,16 @@
   "description": "test",
   "main": "yes",
   "scripts": {
-    "test": "test commit rules"
-  },
+  "lint": "eslint .",
+  "commitmsg": "commitlint -e $GIT_PARAMS",
+  "release": "standard-version",
+  "validate": "npm prune",
+  "pre-commit": "npm run lint",
+  "pre-push": "npm run validate",
+  "npmi": "npm i",
+  "post-merge": "npm run npmi",
+  "post-rewrite": "npm run npmi"
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wei3715/InterviewDemo.git"
@@ -22,11 +30,13 @@
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-angular": "^7.1.2",
-    "husky": "^1.1.2"
+    "@commitlint/config-conventional": "^7.1.2",
+    "husky": "^1.1.2",
+    "standard-version": "^4.4.0"
   },
-  "husky":{
-   "hooks":{
-   "commit-msg":"commitlint -E HUSKY_GIT_PARAMS"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
