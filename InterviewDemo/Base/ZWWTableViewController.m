@@ -25,6 +25,7 @@
 #import "ZWWTestXibViewController.h"
 #import "ZWWMasonryTableViewController.h"
 #import "ZWWLoginViewController.h"
+#import "ZWWTestTabEditViewController.h"
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -37,16 +38,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"masonry",@"杂七杂八"];
-    _titleArr = @[@[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承",@"消息转发实现多继承"],
-                  @[@"各种类型的深浅copy",@"Block",@"weak&strong"],
-                  @[@"信号量",@"performSelector注意问题"],
-                  @[@"NSArray去重",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
-                  @[@"代理className"],
-                  @[@"缓存NSCache"],
-                  @[@"xib测试"],
-                  @[@"masonry测试"],
-                  @[@"杂七杂八"]
+    _sectionTitleArr = @[@"0.oc实现多继承效果",@"1.属性修饰词",@"2.线程相关",@"3.常见面试小题",@"4.代理",@"5.缓存",@"6.xib测试",@"7.masonry",@"8.UITableView编辑",@"9.测试跳转到设置界面",@"10.杂七杂八"];
+    _titleArr = @[@[@"0-0:组合实现多继承",@"0-1:代理实现多继承",@"0-2:类别实现单继承",@"03:消息转发实现多继承"],
+                  @[@"1-0:各种类型的深浅copy",@"1-1:Block",@"1-2:weak&strong"],
+                  @[@"2-0:信号量",@"2-1:performSelector注意问题"],
+                  @[@"3-0:NSArray去重",@"3-1:load,initialize,init对比测试", @"3-2:指针问题",@"3-3:字符常量区"],
+                  @[@"4-0:代理className"],
+                  @[@"5-0:缓存NSCache"],
+                  @[@"6-0:xib测试"],
+                  @[@"7-0:masonry测试"],
+                  @[@"8-0:UITableView编辑"],
+                  @[@"9-0:测试跳转到设置界面"],
+                  @[@"10-1:杂七杂八"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -231,15 +234,43 @@
             [self.navigationController pushViewController:xibTestVC animated:YES];
             break;
         }
-        case 7:{//xib
+        case 7:{//masonry
             ZWWMasonryTableViewController *masonryVC = [[ZWWMasonryTableViewController alloc]init];
             [self.navigationController pushViewController:masonryVC animated:YES];
+            break;
+        }
+        case 8:{//tableview
+            ZWWTestTabEditViewController *tabEditVC = [[ZWWTestTabEditViewController alloc]init];
+            [self.navigationController pushViewController:tabEditVC animated:YES];
+            break;
+        }
+        case 9:{//跳转到设置界面
+//            1、iOS 10以上都是跳转到当前的APP设置页面 iOS 10及以下可以打开特定的设置（wifi，热点，关于本机）页面
+// 注：app-Prefs和Prefs有区别，没有iOS 10以下的机子，没办法测试
+            NSURL *url = [NSURL URLWithString:@"App-Prefs:root=WIFI"];
+//            NSURL *url = [NSURL URLWithString:@"prefs:root=WIFI"];
+            // 只打开设置页面
+            //    NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if (@available(iOS 10.0, *)) {
+                // 系统大于10的时候直接打开当前App的设置界面
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+            } else {
+                 //系统小于10 系统的Wi-Fi界面
+                [[UIApplication sharedApplication] openURL:url];
+            }
+            break;
+        }
+        case 10:{//tableview
+            ZWWCommonTestTableViewController *commonVC = [[ZWWCommonTestTableViewController alloc]init];
+            [self.navigationController pushViewController:commonVC animated:YES];
             break;
         }
         default:
             break;
     }
 }
+
+
 
 
 @end

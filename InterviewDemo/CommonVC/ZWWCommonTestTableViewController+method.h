@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)testRegisterDefaultsFunc;
 
 - (void)testDate;
+
+- (void)testSeparate;
 @end
 
 NS_ASSUME_NONNULL_END

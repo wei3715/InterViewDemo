@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     _sectionTitleArr = @[@"常见小问题测试",@"待扩展"];
-    _titleArr = @[@[@"compare结果",@"三元表达式第一个表达式缺省",@"测试自定义View 的init&initWithFrame先后顺序",@"测试registerDefaults",@"测试日期格式"],
+    _titleArr = @[@[@"compare结果",@"三元表达式第一个表达式缺省",@"测试自定义View 的init&initWithFrame先后顺序",@"测试registerDefaults",@"测试日期格式",@"测试字符串分割"],
                   @[@"待扩展"]
                   ];
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"commonCell"];
@@ -75,6 +75,10 @@
                 }
                 case 4:{
                     [self testDate];
+                    break;
+                }
+                case 5:{
+                    [self testSeparate];
                     break;
                 }
                 default:
