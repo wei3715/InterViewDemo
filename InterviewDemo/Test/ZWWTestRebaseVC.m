@@ -18,7 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"测试rrebase命令");
+    NSLog(@"测试rebase命令");
+    NSLog(@"测试rebase-i命令");
 }
 
 
