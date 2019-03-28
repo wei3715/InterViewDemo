@@ -37,6 +37,7 @@
 		E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */; };
 		E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */; };
 		E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */; };
+		E039E49A224CC9E90001A56E /* ZWWTestRebaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E039E499224CC9E90001A56E /* ZWWTestRebaseVC.m */; };
 		E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F4382164A54E006B8BF8 /* AAViewController.m */; };
 		E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43B2164A560006B8BF8 /* BBViewController.m */; };
 		E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */; };
@@ -139,6 +140,8 @@
 		E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestCopyViewController.xib; sourceTree = "<group>"; };
 		E03809C3216B30F7005ED37E /* ZWWCommonTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCommonTestTableViewController.h; sourceTree = "<group>"; };
 		E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCommonTestTableViewController.m; sourceTree = "<group>"; };
+		E039E498224CC9E90001A56E /* ZWWTestRebaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestRebaseVC.h; sourceTree = "<group>"; };
+		E039E499224CC9E90001A56E /* ZWWTestRebaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestRebaseVC.m; sourceTree = "<group>"; };
 		E040F4372164A54E006B8BF8 /* AAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAViewController.h; sourceTree = "<group>"; };
 		E040F4382164A54E006B8BF8 /* AAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAViewController.m; sourceTree = "<group>"; };
 		E040F43A2164A560006B8BF8 /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBViewController.h; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E039E49B224CCA110001A56E /* Test */,
 				E0BF4EF121AEA70C00CD5AC1 /* tableView */,
 				E02DE8AA217D772D002FA9D9 /* Tools */,
 				E0442FC221789B4C000CC193 /* Masonry */,
@@ -347,6 +351,15 @@
 				E02DE8AF217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m */,
 			);
 			path = CommonVC;
+			sourceTree = "<group>";
+		};
+		E039E49B224CCA110001A56E /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				E039E498224CC9E90001A56E /* ZWWTestRebaseVC.h */,
+				E039E499224CC9E90001A56E /* ZWWTestRebaseVC.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		E040F4362164A537006B8BF8 /* delegate */ = {
@@ -660,6 +673,7 @@
 				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
 				04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
+				E039E49A224CC9E90001A56E /* ZWWTestRebaseVC.m in Sources */,
 				E0C452F8217717BF0049D800 /* ZWWTestXibViewController.m in Sources */,
 				E02DE8A1217D6BF1002FA9D9 /* ZWWTestTabViewCellViewController.m in Sources */,
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
