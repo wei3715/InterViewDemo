@@ -26,6 +26,8 @@
 #import "ZWWMasonryTableViewController.h"
 #import "ZWWLoginViewController.h"
 #import "ZWWTestTabEditViewController.h"
+#import "ZWWTestScollviewXib.h"
+
 @interface ZWWTableViewController ()
 
 @property (nonatomic, strong) NSArray  *sectionTitleArr;
@@ -38,7 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"0.oc实现多继承效果",@"1.属性修饰词",@"2.线程相关",@"3.常见面试小题",@"4.代理",@"5.缓存",@"6.xib测试",@"7.masonry",@"8.UITableView编辑",@"9.测试跳转到设置界面",@"10.杂七杂八"];
+    _sectionTitleArr = @[@"0.oc实现多继承效果",@"1.属性修饰词",@"2.线程相关",@"3.常见面试小题",@"4.代理",@"5.缓存",@"6.xib测试",@"7.masonry",@"8.UITableView编辑",@"9.测试跳转到设置界面",@"10.测试scrollview 的xib适配",@"11.杂七杂八"];
     _titleArr = @[@[@"0-0:组合实现多继承",@"0-1:代理实现多继承",@"0-2:类别实现单继承",@"03:消息转发实现多继承"],
                   @[@"1-0:各种类型的深浅copy",@"1-1:Block",@"1-2:weak&strong"],
                   @[@"2-0:信号量",@"2-1:performSelector注意问题"],
@@ -49,7 +51,8 @@
                   @[@"7-0:masonry测试"],
                   @[@"8-0:UITableView编辑"],
                   @[@"9-0:测试跳转到设置界面"],
-                  @[@"10-1:杂七杂八"]
+                  @[@"10-0:scrollview 的xib适配"],
+                  @[@"11-1:杂七杂八"]
                   ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
@@ -261,6 +264,12 @@
             break;
         }
         case 10:{//tableview
+            ZWWTestScollviewXib *testScrollViewXibVC = [[ZWWTestScollviewXib alloc]init];
+            [self.navigationController pushViewController:testScrollViewXibVC animated:YES];
+            break;
+        }
+            
+        case 11:{//tableview
             ZWWCommonTestTableViewController *commonVC = [[ZWWCommonTestTableViewController alloc]init];
             [self.navigationController pushViewController:commonVC animated:YES];
             break;

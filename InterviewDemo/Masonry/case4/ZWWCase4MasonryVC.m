@@ -1,40 +1,34 @@
 //
-//  ZWWTestTabViewCellViewController.m
+//  ZWWCase4MasonryVC.m
 //  InterviewDemo
 //
 //  Created by jolly on 2018/10/22.
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import "ZWWTestTabViewCellViewController.h"
+#import "ZWWCase4MasonryVC.h"
 #import "ZWWCell.h"
 #import "zwwDataEntity.h"
 #import "Common.h"
 static NSInteger countIndex = 0;
-@interface ZWWTestTabViewCellViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZWWCase4MasonryVC ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView        *zwwTableView;
 @property (nonatomic, strong) ZWWCell            *zwwTempCell;
 @property (nonatomic, strong) NSArray            *dataArr;
+@property (weak, nonatomic) IBOutlet UITableView *zwwTableView;
 
 
 @end
 
-@implementation ZWWTestTabViewCellViewController
+@implementation ZWWCase4MasonryVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _zwwTableView = [UITableView new];
-    [self.view addSubview:_zwwTableView];
-    [_zwwTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
-    }];
-    
     _zwwTableView.delegate = self;
     _zwwTableView.dataSource = self;
-    _zwwTableView.estimatedRowHeight = 80;
+    _zwwTableView.estimatedRowHeight = 80.0f;
     
 #ifdef IOS_8_NEW_FEATURE_SELF_SIZING
     //ios8 的Self-sizing特性
@@ -108,6 +102,7 @@ static NSInteger countIndex = 0;
         dataEntity.avatar = [UIImage imageNamed:[NSString stringWithFormat:@"bluefaces_%d", (i % 4) + 1]];
         dataEntity.title = [NSString stringWithFormat:@"Title: %d", i];
         dataEntity.content = [Common getText:@"content-" withRepeat:i * 2 + 1];
+        dataEntity.testLast = @"测试多行label不是contentView最下面控件，撑开cell的情况";
         [tmpData addObject:dataEntity];
     }
     

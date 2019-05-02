@@ -1,5 +1,5 @@
 //
-//  ZWWTestTabViewCellViewController.h
+//  ZWWCase4MasonryVC.h
 //  InterviewDemo
 //
 //  Created by jolly on 2018/10/22.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZWWTestTabViewCellViewController : UIViewController
+@interface ZWWCase4MasonryVC : UIViewController
 
 @end
 

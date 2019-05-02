@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZWWCase1MasonryVC">
+            <connections>
+                <outlet property="contentView1" destination="65c-QR-bYQ" id="UV4-pv-RaL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="并排两个label，整体靠左边，宽度随内容增长，左边的label“优先级更高”。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sB-Sc-zUI">
+                    <rect key="frame" x="0.0" y="40" width="375" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="HvW-eS-1rt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65c-QR-bYQ" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="160" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HNb-Mf-J90"/>
+                    </constraints>
+                </view>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="mTC-vV-TmZ">
+                    <rect key="frame" x="0.0" y="240" width="94" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="9RR-oL-aWi"/>
+                        <constraint firstAttribute="width" constant="94" id="Hyz-hD-S55"/>
+                    </constraints>
+                    <connections>
+                        <action selector="addLabelConstraintAction:" destination="-1" eventType="valueChanged" id="EJw-Ot-0sP"/>
+                    </connections>
+                </stepper>
+                <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0n1-J6-BbQ">
+                    <rect key="frame" x="281" y="240" width="94" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="bhy-Ig-qNX"/>
+                        <constraint firstAttribute="height" constant="29" id="wcF-Wt-pqT"/>
+                    </constraints>
+                    <connections>
+                        <action selector="addLabelConstraintAction:" destination="-1" eventType="valueChanged" id="ReG-gu-bqe"/>
+                    </connections>
+                </stepper>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="65c-QR-bYQ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="5Dk-J2-JLy"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="65c-QR-bYQ" secondAttribute="trailing" id="B2P-8q-lan"/>
+                <constraint firstItem="mTC-vV-TmZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ISn-lU-re7"/>
+                <constraint firstItem="mTC-vV-TmZ" firstAttribute="top" secondItem="65c-QR-bYQ" secondAttribute="bottom" constant="30" id="Mf4-cX-M0u"/>
+                <constraint firstAttribute="trailing" secondItem="7sB-Sc-zUI" secondAttribute="trailing" id="Pbi-l7-LaD"/>
+                <constraint firstItem="0n1-J6-BbQ" firstAttribute="top" secondItem="65c-QR-bYQ" secondAttribute="bottom" constant="30" id="cCh-uV-8w9"/>
+                <constraint firstItem="7sB-Sc-zUI" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="pL1-xf-lC8"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0n1-J6-BbQ" secondAttribute="trailing" id="qxY-aF-Dhz"/>
+                <constraint firstItem="65c-QR-bYQ" firstAttribute="top" secondItem="7sB-Sc-zUI" secondAttribute="bottom" constant="20" id="rcM-JF-M7a"/>
+                <constraint firstItem="7sB-Sc-zUI" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="vGX-yo-Lhc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+        </view>
+    </objects>
+</document>

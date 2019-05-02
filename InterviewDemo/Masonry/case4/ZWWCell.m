@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UILabel *titleLB;
 @property (nonatomic, strong) UILabel *contentLB;
 @property (nonatomic, weak) ZWWDataEntity *dataEntity;
+@property (nonatomic, strong) UILabel *testLB;
 
 @end
 
@@ -61,10 +62,20 @@
         make.top.equalTo(_titleLB.mas_bottom).offset(4);
         make.left.equalTo(_avatarIV.mas_right).offset(4);
         make.right.equalTo(self.contentView).offset(-4);
-        make.bottom.equalTo(self.contentView).offset(-4);
     }];
 
     [_contentLB setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    
+    _testLB = [UILabel new];
+    _testLB.numberOfLines = 0;
+    [self.contentView addSubview:_testLB];
+    [_testLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(50);
+        make.top.equalTo(_contentLB.mas_bottom).offset(4);
+        make.left.equalTo(_avatarIV.mas_right).offset(4);
+        make.right.equalTo(self.contentView).offset(-4);
+        make.bottom.equalTo(self.contentView).offset(-4);
+    }];
 }
 
 - (void)setupData:(ZWWDataEntity *)dataEntity{
@@ -72,6 +83,8 @@
     _avatarIV.image = dataEntity.avatar;
     _titleLB.text = dataEntity.title;
     _contentLB.text = dataEntity.content;
+    _testLB.text = dataEntity.testLast;
+    
 }
 
 @end
