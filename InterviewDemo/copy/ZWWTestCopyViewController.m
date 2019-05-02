@@ -161,8 +161,8 @@
     self.stringCopy = copyStr;
     
     //strongStr是一个指针变量，它指向strongStr对象的地址。&strongStr指的是strongStr这个指针变量所在的地址。
-    ZWWLog(@"strongStr地址==%p; self.stringStrong地址==%p",strongStr,self.stringStrong);
-    ZWWLog(@"copyStr地址==%p; self.stringCopy地址==%p",copyStr,self.stringCopy);
+    ZWWLog(@"strongStr地址==%p，内容=%@, self.stringStrong地址==%p,内容=%@",strongStr,strongStr,self.stringStrong,self.stringStrong);
+    ZWWLog(@"copyStr地址==%p，内容=%@, self.stringCopy地址==%p,内容=%@",copyStr,copyStr,self.stringCopy,copyStr);
     
     //两个NSString进行操作（对不可变字符串拼接，是产生两个新的内存）
     NSString *strong1Append =  [strongStr stringByAppendingString:@"+11111"];
@@ -178,8 +178,8 @@
     NSMutableString *mCopyStr = [NSMutableString stringWithFormat:@"I am MutableCopy"];
     self.stringStrong = mStrongStr;
     self.stringCopy = mCopyStr;
-    ZWWLog(@"mStrongStr地址==%p, self.stringStrong地址==%p", mStrongStr,self.stringStrong);
-    ZWWLog(@"mCopyStr地址==%p,self.stringCopy地址==%p", mCopyStr,self.stringCopy);
+    ZWWLog(@"mStrongStr地址==%p,内容==%@, self.stringStrong地址==%p,内容==%@", mStrongStr,mStrongStr,self.stringStrong,self.stringStrong);
+    ZWWLog(@"mCopyStr地址==%p,内容==%@,self.stringCopy地址==%p,内容==%@", mCopyStr,mCopyStr,self.stringCopy,self.stringCopy);
     
     
     //两个MutableString进行操作（不返回值）
