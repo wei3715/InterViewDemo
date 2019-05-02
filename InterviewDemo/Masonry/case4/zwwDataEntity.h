@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *content;
 @property (strong, nonatomic) UIImage *avatar;
+@property (copy, nonatomic) NSString *testLast;
 
 // Cache
 @property (assign, nonatomic) CGFloat cellHeight;

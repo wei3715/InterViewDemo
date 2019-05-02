@@ -1,8 +1,8 @@
 //
-//  ZWWTestMasonryTableVC.h
+//  ZWWCase6MasonryVC.h
 //  InterviewDemo
 //
-//  Created by jolly on 2019/3/28.
+//  Created by jolly on 2019/4/4.
 //  Copyright © 2019年 mac. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZWWTestMasonryTableVC : UITableViewController
+@interface ZWWCase6MasonryVC : UIViewController
 
 @end
 

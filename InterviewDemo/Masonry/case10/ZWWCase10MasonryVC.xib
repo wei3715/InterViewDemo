@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZWWCase10MasonryVC">
+            <connections>
+                <outlet property="contentView" destination="j72-km-INQ" id="V3u-fh-iYR"/>
+                <outlet property="logLabel" destination="GF0-WF-NBs" id="tpO-XM-8pW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j72-km-INQ">
+                    <rect key="frame" x="15" y="35" width="345" height="220"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="gBc-kV-jfd"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拖动上方的灰色View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF0-WF-NBs">
+                    <rect key="frame" x="0.0" y="305" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="hR8-j1-TRe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="巧用优先级保证内容的可见性" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLD-TT-wdz">
+                    <rect key="frame" x="0.0" y="346" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="o5u-HB-BID"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KLD-TT-wdz" firstAttribute="top" secondItem="GF0-WF-NBs" secondAttribute="bottom" constant="20" id="8yv-TH-swx"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="KLD-TT-wdz" secondAttribute="trailing" id="BVJ-9X-KZb"/>
+                <constraint firstItem="KLD-TT-wdz" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="EAx-aQ-MU8"/>
+                <constraint firstItem="j72-km-INQ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="JFT-J8-bcQ"/>
+                <constraint firstItem="GF0-WF-NBs" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="XXk-oo-h7L"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="GF0-WF-NBs" secondAttribute="trailing" id="kFW-UQ-L8Y"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="j72-km-INQ" secondAttribute="trailing" constant="15" id="sFo-tc-gbN"/>
+                <constraint firstItem="j72-km-INQ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="sdB-IU-pVs"/>
+                <constraint firstItem="GF0-WF-NBs" firstAttribute="top" secondItem="j72-km-INQ" secondAttribute="bottom" constant="50" id="uq6-hM-u6w"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+        </view>
+    </objects>
+</document>
