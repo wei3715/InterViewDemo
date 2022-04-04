@@ -13,4 +13,6 @@
 #import "ZWWTableViewController.h"
 #import "MyPTL.h"
 #import <Masonry.h>
+#import "ZWWBaseModel.h"
+
 #endif /* PrefixHeader_pch */

@@ -27,12 +27,10 @@
 #import "ZWWLoginViewController.h"
 #import "ZWWTestTabEditViewController.h"
 #import "ZWWTestScollviewXib.h"
-
+#import "ZWWHomeModel.h"
 @interface ZWWTableViewController ()
 
-@property (nonatomic, strong) NSArray  *sectionTitleArr;
-@property (nonatomic, strong) NSArray  *titleArr;
-
+@property (nonatomic, strong) NSMutableArray  <ZWWHomeModel *> *dataArr;
 
 @end
 
@@ -40,20 +38,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _sectionTitleArr = @[@"0.oc实现多继承效果",@"1.属性修饰词",@"2.线程相关",@"3.常见面试小题",@"4.代理",@"5.缓存",@"6.xib测试",@"7.masonry",@"8.UITableView编辑",@"9.测试跳转到设置界面",@"10.测试scrollview 的xib适配",@"11.杂七杂八"];
-    _titleArr = @[@[@"0-0:组合实现多继承",@"0-1:代理实现多继承",@"0-2:类别实现单继承",@"03:消息转发实现多继承"],
-                  @[@"1-0:各种类型的深浅copy",@"1-1:Block",@"1-2:weak&strong"],
-                  @[@"2-0:信号量",@"2-1:performSelector注意问题"],
-                  @[@"3-0:NSArray去重",@"3-1:load,initialize,init对比测试", @"3-2:指针问题",@"3-3:字符常量区"],
-                  @[@"4-0:代理className"],
-                  @[@"5-0:缓存NSCache"],
-                  @[@"6-0:xib测试"],
-                  @[@"7-0:masonry测试"],
-                  @[@"8-0:UITableView编辑"],
-                  @[@"9-0:测试跳转到设置界面"],
-                  @[@"10-0:scrollview 的xib适配"],
-                  @[@"11-1:杂七杂八"]
+    
+    self.title = @"探索验证";
+    _dataArr = [NSMutableArray new];
+    NSArray *sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"masonry",@"UITableView编辑",@"测试跳转到设置界面",@"测试scrollview 的xib适配",@"定时器",@"杂七杂八"];
+    NSArray *rowArr = @[
+                  @[@"组合实现多继承",@"代理实现多继承",@"类别实现单继承",@"消息转发实现多继承"],
+                  @[@"各种类型的深浅copy",@"Block",@"weak&strong"],
+                  @[@"信号量",@"performSelector注意问题"],
+                  @[@"NSArray去重",@"load,initialize,init对比测试", @"指针问题",@"字符常量区"],
+                  @[@"代理className"],
+                  @[@"缓存NSCache"],
+                  @[@"xib测试"],
+                  @[@"masonry测试"],
+                  @[@"UITableView编辑"],
+                  @[@"测试跳转到设置界面"],
+                  @[@"scrollview 的xib适配"],
+                  @[@"定时器"],
+                  @[@"杂七杂八"]
                   ];
+    
+    NSMutableArray *tempDataArr = [NSMutableArray new];
+    for (NSInteger i = 0; i<sectionTitleArr.count; i++) {
+        NSString *str = sectionTitleArr[i];
+        
+        ZWWHomeModel *sectionModel = [[ZWWHomeModel alloc]init];
+        sectionModel.sectionTitle = str;
+        
+        NSMutableArray *rowMArr = [NSMutableArray new];
+        NSArray *rowTempArr = rowArr[i];
+        for (NSString *str in rowTempArr) {
+            ZWWHomeRowModel *rowModel = [[ZWWHomeRowModel alloc]init];
+            rowModel.rowTitle = str;
+            [rowMArr addObject:rowModel];
+            sectionModel.rowModelArr = [rowMArr mutableCopy];
+        }
+        [tempDataArr addObject:sectionModel];
+    }
+    _dataArr = [tempDataArr mutableCopy];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseCell"];
     
 }
@@ -67,18 +89,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return _sectionTitleArr.count;
+    return _dataArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return [_titleArr[section]count];
+    ZWWHomeModel *model = _dataArr[section];
+    return model.rowModelArr.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"baseCell" forIndexPath:indexPath];
-    cell.textLabel.text = _titleArr[indexPath.section][indexPath.row];
+    ZWWHomeModel *model = _dataArr[indexPath.section];
+    ZWWHomeRowModel *rowModel = model.rowModelArr[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd-%zd:%@",indexPath.section,indexPath.row,rowModel.rowTitle];
     
     return cell;
 }
@@ -87,7 +111,9 @@
     UILabel *titleLB = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 40)];
     titleLB.backgroundColor = [UIColor cyanColor];
     [titleLB setTextAlignment:NSTextAlignmentCenter];
-    titleLB.text = _sectionTitleArr[section];
+    
+    ZWWHomeModel *sectionModel = _dataArr[section];
+    titleLB.text = [NSString stringWithFormat:@"%zd-%@",section,sectionModel.sectionTitle];
     [titleLB setTextColor:[UIColor blackColor]];
     
     return titleLB;
@@ -98,7 +124,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == _sectionTitleArr.count-1) {//最后一组
+    if (indexPath.section == _dataArr.count-1) {//最后一组
         ZWWCommonTestTableViewController *commonVC = [[ZWWCommonTestTableViewController alloc]init];
         [self.navigationController pushViewController:commonVC animated:YES];
         return;

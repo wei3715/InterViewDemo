@@ -45,7 +45,6 @@
 		E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */; };
 		E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */; };
 		E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */; };
-		E039E49A224CC9E90001A56E /* ZWWTestRebaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E039E499224CC9E90001A56E /* ZWWTestRebaseVC.m */; };
 		E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F4382164A54E006B8BF8 /* AAViewController.m */; };
 		E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43B2164A560006B8BF8 /* BBViewController.m */; };
 		E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */; };
@@ -81,6 +80,8 @@
 		E0C452F8217717BF0049D800 /* ZWWTestXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */; };
 		E0C452F9217717BF0049D800 /* ZWWTestXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */; };
 		E0C45301217718C00049D800 /* home_game_class.gif in Resources */ = {isa = PBXBuildFile; fileRef = E0C45300217718C00049D800 /* home_game_class.gif */; };
+		E0C46BA027FAC85700CBD90C /* ZWWBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46B9F27FAC85700CBD90C /* ZWWBaseModel.m */; };
+		E0C46BA627FAC91400CBD90C /* ZWWHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BA527FAC91400CBD90C /* ZWWHomeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,8 +177,6 @@
 		E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestCopyViewController.xib; sourceTree = "<group>"; };
 		E03809C3216B30F7005ED37E /* ZWWCommonTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCommonTestTableViewController.h; sourceTree = "<group>"; };
 		E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCommonTestTableViewController.m; sourceTree = "<group>"; };
-		E039E498224CC9E90001A56E /* ZWWTestRebaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestRebaseVC.h; sourceTree = "<group>"; };
-		E039E499224CC9E90001A56E /* ZWWTestRebaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestRebaseVC.m; sourceTree = "<group>"; };
 		E040F4372164A54E006B8BF8 /* AAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAViewController.h; sourceTree = "<group>"; };
 		E040F4382164A54E006B8BF8 /* AAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAViewController.m; sourceTree = "<group>"; };
 		E040F43A2164A560006B8BF8 /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBViewController.h; sourceTree = "<group>"; };
@@ -235,6 +234,10 @@
 		E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestXibViewController.m; sourceTree = "<group>"; };
 		E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestXibViewController.xib; sourceTree = "<group>"; };
 		E0C45300217718C00049D800 /* home_game_class.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = home_game_class.gif; sourceTree = "<group>"; };
+		E0C46B9E27FAC85700CBD90C /* ZWWBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWBaseModel.h; sourceTree = "<group>"; };
+		E0C46B9F27FAC85700CBD90C /* ZWWBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWBaseModel.m; sourceTree = "<group>"; };
+		E0C46BA427FAC91400CBD90C /* ZWWHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWHomeModel.h; sourceTree = "<group>"; };
+		E0C46BA527FAC91400CBD90C /* ZWWHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWHomeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,15 +444,6 @@
 			path = CommonVC;
 			sourceTree = "<group>";
 		};
-		E039E49B224CCA110001A56E /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				E039E498224CC9E90001A56E /* ZWWTestRebaseVC.h */,
-				E039E499224CC9E90001A56E /* ZWWTestRebaseVC.m */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		E040F4362164A537006B8BF8 /* delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +591,7 @@
 		E078889921816CD8008B8866 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E0C46B9D27FAC78B00CBD90C /* Model */,
 				047B75D320BE4AA500154E1A /* ZWWTableViewController.h */,
 				047B75D220BE4AA500154E1A /* ZWWTableViewController.m */,
 				047B75D120BE4AA500154E1A /* ZWWTableViewController+method.h */,
@@ -657,6 +652,17 @@
 				047B75D820BE4B0900154E1A /* UtilsMacros.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E0C46B9D27FAC78B00CBD90C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0C46B9E27FAC85700CBD90C /* ZWWBaseModel.h */,
+				E0C46B9F27FAC85700CBD90C /* ZWWBaseModel.m */,
+				E0C46BA427FAC91400CBD90C /* ZWWHomeModel.h */,
+				E0C46BA527FAC91400CBD90C /* ZWWHomeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ECEE1CD83B9DA9EF02576323 /* Frameworks */ = {
@@ -847,6 +853,7 @@
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
 				E0442FC621789BB1000CC193 /* ZWWMasonryTableViewController.m in Sources */,
 				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
+				E0C46BA627FAC91400CBD90C /* ZWWHomeModel.m in Sources */,
 				E0442FCA21789CE6000CC193 /* ZWWMasonrySubViewController.m in Sources */,
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
 				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
@@ -866,6 +873,7 @@
 				E0C00A4422572952000F51F9 /* ZWWCase9MasonryVC.m in Sources */,
 				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				E045730A21660E45007650D9 /* UserModel.m in Sources */,
+				E0C46BA027FAC85700CBD90C /* ZWWBaseModel.m in Sources */,
 				04A20D8F210732F800CBC5AE /* TestClass+Method.m in Sources */,
 				04879BEE210963AE00A1A30A /* ZWWTestThreadViewController.m in Sources */,
 				04BDD20A20C674F800FCA2D8 /* TestClass.m in Sources */,
@@ -987,7 +995,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1039,7 +1047,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
