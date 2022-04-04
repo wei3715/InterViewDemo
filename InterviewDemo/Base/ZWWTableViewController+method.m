@@ -7,7 +7,6 @@
 //
 
 #import "ZWWTableViewController+method.h"
-#import "Model1.h"
 #import <objc/runtime.h>
 @interface ZWWTableViewController ()
 

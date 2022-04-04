@@ -7,8 +7,8 @@
 //
 
 #import "ZWWHomeModel.h"
-@implementation ZWWHomeRowModel
-@end
+//@implementation ZWWHomeRowModel
+//@end
 
 @implementation ZWWHomeModel
 

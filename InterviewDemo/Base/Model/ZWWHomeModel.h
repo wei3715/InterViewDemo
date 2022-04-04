@@ -7,22 +7,23 @@
 //
 
 #import "ZWWHomeModel.h"
-
+#import "ZWWHomeItemModel.h"
 NS_ASSUME_NONNULL_BEGIN
-@protocol ZWWHomeRowModel
-@end
-
-
-@interface ZWWHomeRowModel : ZWWBaseModel
-
-@property (nonatomic, copy) NSString *rowTitle;
-
-@end
+//@protocol ZWWHomeRowModel
+//@end
+//
+//
+//@interface ZWWHomeRowModel : ZWWBaseModel
+//
+//@property (nonatomic, copy) NSString *rowTitle;
+//@property (nonatomic, copy) NSString *jumpVC;
+//
+//@end
 
 @interface ZWWHomeModel : ZWWBaseModel
 
 @property (nonatomic, copy) NSString *sectionTitle;
-@property (nonatomic, strong) NSArray <ZWWHomeRowModel> *rowModelArr;
+@property (nonatomic, strong) NSArray <ZWWHomeItemModel *> *rowModelArr;
 
 @end
 

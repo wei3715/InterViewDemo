@@ -82,6 +82,13 @@
 		E0C45301217718C00049D800 /* home_game_class.gif in Resources */ = {isa = PBXBuildFile; fileRef = E0C45300217718C00049D800 /* home_game_class.gif */; };
 		E0C46BA027FAC85700CBD90C /* ZWWBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46B9F27FAC85700CBD90C /* ZWWBaseModel.m */; };
 		E0C46BA627FAC91400CBD90C /* ZWWHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BA527FAC91400CBD90C /* ZWWHomeModel.m */; };
+		E0C46BB227FADEB000CBD90C /* ZWWTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C46BAA27FADEB000CBD90C /* ZWWTimerViewController.xib */; };
+		E0C46BB327FADEB000CBD90C /* ZWWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BAD27FADEB000CBD90C /* ZWWThread.m */; };
+		E0C46BB427FADEB000CBD90C /* ZWWUseRunloopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BAE27FADEB000CBD90C /* ZWWUseRunloopViewController.m */; };
+		E0C46BB527FADEB000CBD90C /* ZWWObserverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BAF27FADEB000CBD90C /* ZWWObserverViewController.m */; };
+		E0C46BB627FADEB000CBD90C /* ZWWTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BB027FADEB000CBD90C /* ZWWTimerViewController.m */; };
+		E0C46BB727FADEB000CBD90C /* ZWWUseRunloopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C46BB127FADEB000CBD90C /* ZWWUseRunloopViewController.xib */; };
+		E0C46BBA27FADF2500CBD90C /* ZWWHomeItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BB927FADF2500CBD90C /* ZWWHomeItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +245,18 @@
 		E0C46B9F27FAC85700CBD90C /* ZWWBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWBaseModel.m; sourceTree = "<group>"; };
 		E0C46BA427FAC91400CBD90C /* ZWWHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWHomeModel.h; sourceTree = "<group>"; };
 		E0C46BA527FAC91400CBD90C /* ZWWHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWHomeModel.m; sourceTree = "<group>"; };
+		E0C46BA827FADEB000CBD90C /* ZWWObserverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWObserverViewController.h; sourceTree = "<group>"; };
+		E0C46BA927FADEB000CBD90C /* ZWWUseRunloopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWUseRunloopViewController.h; sourceTree = "<group>"; };
+		E0C46BAA27FADEB000CBD90C /* ZWWTimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZWWTimerViewController.xib; sourceTree = "<group>"; };
+		E0C46BAB27FADEB000CBD90C /* ZWWThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWThread.h; sourceTree = "<group>"; };
+		E0C46BAC27FADEB000CBD90C /* ZWWTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWTimerViewController.h; sourceTree = "<group>"; };
+		E0C46BAD27FADEB000CBD90C /* ZWWThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWThread.m; sourceTree = "<group>"; };
+		E0C46BAE27FADEB000CBD90C /* ZWWUseRunloopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWUseRunloopViewController.m; sourceTree = "<group>"; };
+		E0C46BAF27FADEB000CBD90C /* ZWWObserverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWObserverViewController.m; sourceTree = "<group>"; };
+		E0C46BB027FADEB000CBD90C /* ZWWTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWTimerViewController.m; sourceTree = "<group>"; };
+		E0C46BB127FADEB000CBD90C /* ZWWUseRunloopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZWWUseRunloopViewController.xib; sourceTree = "<group>"; };
+		E0C46BB827FADF2500CBD90C /* ZWWHomeItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWHomeItemModel.h; sourceTree = "<group>"; };
+		E0C46BB927FADF2500CBD90C /* ZWWHomeItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWHomeItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,11 +310,13 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E0C46BBC27FAE68900CBD90C /* Thread */,
+				E0C46BBB27FAE65800CBD90C /* Inherit */,
+				E0C46BA727FADEB000CBD90C /* RunLoop */,
 				E04F8898224F14D30022B449 /* TestScrollXIB */,
 				E0BF4EF121AEA70C00CD5AC1 /* tableView */,
 				E02DE8AA217D772D002FA9D9 /* Tools */,
 				E0442FC221789B4C000CC193 /* Masonry */,
-				E0C45302217718E80049D800 /* Utils */,
 				E0C452FF217718C00049D800 /* Resource */,
 				E04A50DF216F629600C09162 /* XibTest */,
 				E03809C6216B3121005ED37E /* CommonVC */,
@@ -303,21 +324,14 @@
 				E03809B9216AFEFA005ED37E /* Block */,
 				E04573042165ECCD007650D9 /* load&initialize&init */,
 				E04572FE2165DD0A007650D9 /* cache */,
-				E078889921816CD8008B8866 /* Base */,
 				E040F4362164A537006B8BF8 /* delegate */,
 				04EA94C82106C45F00F7E153 /* weak&strong */,
-				04879BEC210963AE00A1A30A /* ZWWTestThreadViewController.h */,
-				04879BED210963AE00A1A30A /* ZWWTestThreadViewController.m */,
+				E0C45302217718E80049D800 /* Utils */,
+				E078889921816CD8008B8866 /* Base */,
 				047B759F20BE4A6000154E1A /* AppDelegate.h */,
 				047B75A020BE4A6000154E1A /* AppDelegate.m */,
-				04C58CE520D368EA002B3B5F /* Model1.h */,
-				04C58CE620D368EA002B3B5F /* Model1.m */,
 				04BDD20B20C6772A00FCA2D8 /* MyPTL.h */,
 				04BDD20C20C6772A00FCA2D8 /* MyPTL.m */,
-				04BDD20220C674D500FCA2D8 /* ClassA.h */,
-				04BDD20320C674D500FCA2D8 /* ClassA.m */,
-				04BDD20520C674E700FCA2D8 /* ClassB.h */,
-				04BDD20620C674E700FCA2D8 /* ClassB.m */,
 				047B75AA20BE4A6400154E1A /* LaunchScreen.storyboard */,
 				047B75AD20BE4A6400154E1A /* Info.plist */,
 				047B75AE20BE4A6400154E1A /* main.m */,
@@ -426,6 +440,8 @@
 		E03809BA216AFFCE005ED37E /* copy */ = {
 			isa = PBXGroup;
 			children = (
+				04C58CE520D368EA002B3B5F /* Model1.h */,
+				04C58CE620D368EA002B3B5F /* Model1.m */,
 				E03809BE216B000C005ED37E /* ZWWTestCopyViewController.h */,
 				E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */,
 				E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */,
@@ -661,8 +677,47 @@
 				E0C46B9F27FAC85700CBD90C /* ZWWBaseModel.m */,
 				E0C46BA427FAC91400CBD90C /* ZWWHomeModel.h */,
 				E0C46BA527FAC91400CBD90C /* ZWWHomeModel.m */,
+				E0C46BB827FADF2500CBD90C /* ZWWHomeItemModel.h */,
+				E0C46BB927FADF2500CBD90C /* ZWWHomeItemModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E0C46BA727FADEB000CBD90C /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				E0C46BA827FADEB000CBD90C /* ZWWObserverViewController.h */,
+				E0C46BA927FADEB000CBD90C /* ZWWUseRunloopViewController.h */,
+				E0C46BAA27FADEB000CBD90C /* ZWWTimerViewController.xib */,
+				E0C46BAB27FADEB000CBD90C /* ZWWThread.h */,
+				E0C46BAC27FADEB000CBD90C /* ZWWTimerViewController.h */,
+				E0C46BAD27FADEB000CBD90C /* ZWWThread.m */,
+				E0C46BAE27FADEB000CBD90C /* ZWWUseRunloopViewController.m */,
+				E0C46BAF27FADEB000CBD90C /* ZWWObserverViewController.m */,
+				E0C46BB027FADEB000CBD90C /* ZWWTimerViewController.m */,
+				E0C46BB127FADEB000CBD90C /* ZWWUseRunloopViewController.xib */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		E0C46BBB27FAE65800CBD90C /* Inherit */ = {
+			isa = PBXGroup;
+			children = (
+				04BDD20220C674D500FCA2D8 /* ClassA.h */,
+				04BDD20320C674D500FCA2D8 /* ClassA.m */,
+				04BDD20520C674E700FCA2D8 /* ClassB.h */,
+				04BDD20620C674E700FCA2D8 /* ClassB.m */,
+			);
+			path = Inherit;
+			sourceTree = "<group>";
+		};
+		E0C46BBC27FAE68900CBD90C /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				04879BEC210963AE00A1A30A /* ZWWTestThreadViewController.h */,
+				04879BED210963AE00A1A30A /* ZWWTestThreadViewController.m */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		ECEE1CD83B9DA9EF02576323 /* Frameworks */ = {
@@ -784,11 +839,13 @@
 				E027380A2254A54600A7688F /* ZWWCase3MasonryVC.xib in Resources */,
 				E04522572255EEC400562FA0 /* ZWWCase7MasonryVC.xib in Resources */,
 				E0442FCC21789F7E000CC193 /* ZWWMasonrySubViewController.xib in Resources */,
+				E0C46BB227FADEB000CBD90C /* ZWWTimerViewController.xib in Resources */,
 				E02737FB225483F900A7688F /* ZWWCase1MasonryVC.xib in Resources */,
 				E066765A2255D1530093B06A /* ZWWCase5MasonryVC.xib in Resources */,
 				E06676542255AE300093B06A /* ZWWCase4MasonryVC.xib in Resources */,
 				047B75AC20BE4A6400154E1A /* LaunchScreen.storyboard in Resources */,
 				047B75A920BE4A6400154E1A /* Assets.xcassets in Resources */,
+				E0C46BB727FADEB000CBD90C /* ZWWUseRunloopViewController.xib in Resources */,
 				E04F889D224F150E0022B449 /* ZWWTestScollviewXib.xib in Resources */,
 				E0788898218160E8008B8866 /* ZWWLoginViewController.xib in Resources */,
 				E01A1142225DD36500FA57C0 /* ZWWCase10MasonryVC.xib in Resources */,
@@ -849,6 +906,7 @@
 				E01A1141225DD36500FA57C0 /* ZWWCase10MasonryVC.m in Sources */,
 				E02DE8AD217D772E002FA9D9 /* Common.m in Sources */,
 				E04522512255E9EF00562FA0 /* ZWWCase6ItemView.m in Sources */,
+				E0C46BB627FADEB000CBD90C /* ZWWTimerViewController.m in Sources */,
 				E04573022165DD28007650D9 /* ZWWCacheViewController.m in Sources */,
 				047B75AF20BE4A6400154E1A /* main.m in Sources */,
 				E0442FC621789BB1000CC193 /* ZWWMasonryTableViewController.m in Sources */,
@@ -858,13 +916,16 @@
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
 				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
 				E045730721660D9B007650D9 /* UserManager.m in Sources */,
+				E0C46BB527FADEB000CBD90C /* ZWWObserverViewController.m in Sources */,
 				04C58CE720D368EA002B3B5F /* Model1.m in Sources */,
 				E02738092254A54600A7688F /* ZWWCase3MasonryVC.m in Sources */,
+				E0C46BBA27FADF2500CBD90C /* ZWWHomeItemModel.m in Sources */,
 				E02DE8A9217D7110002FA9D9 /* zwwDataEntity.m in Sources */,
 				E02DE8A6217D70B8002FA9D9 /* ZWWCell.m in Sources */,
 				E0C00A382256EFCF000F51F9 /* ZWWCase8MasonryVC.m in Sources */,
 				04BDD20420C674D500FCA2D8 /* ClassA.m in Sources */,
 				047B75D620BE4AA500154E1A /* ZWWTableViewController+method.m in Sources */,
+				E0C46BB427FADEB000CBD90C /* ZWWUseRunloopViewController.m in Sources */,
 				E045224D2255E94F00562FA0 /* ZWWCase6MasonryVC.m in Sources */,
 				E027380322549B0800A7688F /* ZWWCase2MasonryVC.m in Sources */,
 				E04522562255EEC400562FA0 /* ZWWCase7MasonryVC.m in Sources */,
@@ -898,6 +959,7 @@
 				E0442FC121786AFB000CC193 /* UIImage+GIF.m in Sources */,
 				E078889C21816D1E008B8866 /* ZWWBaseNaviViewController.m in Sources */,
 				04EA94CE2106C45F00F7E153 /* ZWWCustomView.m in Sources */,
+				E0C46BB327FADEB000CBD90C /* ZWWThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
