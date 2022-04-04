@@ -314,20 +314,20 @@
 				E0C46BBB27FAE65800CBD90C /* Inherit */,
 				E0C46BA727FADEB000CBD90C /* RunLoop */,
 				E04F8898224F14D30022B449 /* TestScrollXIB */,
-				E0BF4EF121AEA70C00CD5AC1 /* tableView */,
+				E0BF4EF121AEA70C00CD5AC1 /* TableView */,
 				E02DE8AA217D772D002FA9D9 /* Tools */,
 				E0442FC221789B4C000CC193 /* Masonry */,
-				E0C452FF217718C00049D800 /* Resource */,
 				E04A50DF216F629600C09162 /* XibTest */,
 				E03809C6216B3121005ED37E /* CommonVC */,
-				E03809BA216AFFCE005ED37E /* copy */,
+				E03809BA216AFFCE005ED37E /* Copy */,
 				E03809B9216AFEFA005ED37E /* Block */,
-				E04573042165ECCD007650D9 /* load&initialize&init */,
-				E04572FE2165DD0A007650D9 /* cache */,
-				E040F4362164A537006B8BF8 /* delegate */,
-				04EA94C82106C45F00F7E153 /* weak&strong */,
+				E04573042165ECCD007650D9 /* Load&Initialize&Init */,
+				E04572FE2165DD0A007650D9 /* Cache */,
+				E040F4362164A537006B8BF8 /* Delegate */,
+				04EA94C82106C45F00F7E153 /* Weak&Strong */,
 				E0C45302217718E80049D800 /* Utils */,
 				E078889921816CD8008B8866 /* Base */,
+				E0C452FF217718C00049D800 /* Resource */,
 				047B759F20BE4A6000154E1A /* AppDelegate.h */,
 				047B75A020BE4A6000154E1A /* AppDelegate.m */,
 				04BDD20B20C6772A00FCA2D8 /* MyPTL.h */,
@@ -357,7 +357,7 @@
 			path = InterviewDemoUITests;
 			sourceTree = "<group>";
 		};
-		04EA94C82106C45F00F7E153 /* weak&strong */ = {
+		04EA94C82106C45F00F7E153 /* Weak&Strong */ = {
 			isa = PBXGroup;
 			children = (
 				04EA94C92106C45F00F7E153 /* Person.h */,
@@ -367,7 +367,7 @@
 				04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongViewController.h */,
 				04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */,
 			);
-			path = "weak&strong";
+			path = "Weak&Strong";
 			sourceTree = "<group>";
 		};
 		38FEF255834C6E6AA569476F /* Pods */ = {
@@ -437,7 +437,7 @@
 			path = Block;
 			sourceTree = "<group>";
 		};
-		E03809BA216AFFCE005ED37E /* copy */ = {
+		E03809BA216AFFCE005ED37E /* Copy */ = {
 			isa = PBXGroup;
 			children = (
 				04C58CE520D368EA002B3B5F /* Model1.h */,
@@ -446,7 +446,7 @@
 				E03809BF216B000C005ED37E /* ZWWTestCopyViewController.m */,
 				E03809C0216B000C005ED37E /* ZWWTestCopyViewController.xib */,
 			);
-			path = copy;
+			path = Copy;
 			sourceTree = "<group>";
 		};
 		E03809C6216B3121005ED37E /* CommonVC */ = {
@@ -460,7 +460,7 @@
 			path = CommonVC;
 			sourceTree = "<group>";
 		};
-		E040F4362164A537006B8BF8 /* delegate */ = {
+		E040F4362164A537006B8BF8 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				E040F4372164A54E006B8BF8 /* AAViewController.h */,
@@ -470,7 +470,7 @@
 				E040F43D2164A72E006B8BF8 /* ZWWTestDelegateView.h */,
 				E040F43E2164A72E006B8BF8 /* ZWWTestDelegateView.m */,
 			);
-			path = delegate;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		E0442FBE21786AFB000CC193 /* Category */ = {
@@ -527,7 +527,7 @@
 			path = case7;
 			sourceTree = "<group>";
 		};
-		E04572FE2165DD0A007650D9 /* cache */ = {
+		E04572FE2165DD0A007650D9 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
 				E04572FF2165DD28007650D9 /* ZWWCacheViewController.h */,
@@ -538,10 +538,10 @@
 				E045730821660E45007650D9 /* UserModel.h */,
 				E045730921660E45007650D9 /* UserModel.m */,
 			);
-			path = cache;
+			path = Cache;
 			sourceTree = "<group>";
 		};
-		E04573042165ECCD007650D9 /* load&initialize&init */ = {
+		E04573042165ECCD007650D9 /* Load&Initialize&Init */ = {
 			isa = PBXGroup;
 			children = (
 				04BDD20820C674F800FCA2D8 /* TestClass.h */,
@@ -553,7 +553,7 @@
 				04F066B3210828C900823498 /* TestClass+method1.h */,
 				04F066B4210828C900823498 /* TestClass+method1.m */,
 			);
-			path = "load&initialize&init";
+			path = "Load&Initialize&Init";
 			sourceTree = "<group>";
 		};
 		E04A50DF216F629600C09162 /* XibTest */ = {
@@ -619,13 +619,13 @@
 			path = InterviewDemo/Base;
 			sourceTree = SOURCE_ROOT;
 		};
-		E0BF4EF121AEA70C00CD5AC1 /* tableView */ = {
+		E0BF4EF121AEA70C00CD5AC1 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
 				E0BF4EF221AEA73700CD5AC1 /* ZWWTestTabEditViewController.h */,
 				E0BF4EF321AEA73700CD5AC1 /* ZWWTestTabEditViewController.m */,
 			);
-			path = tableView;
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		E0C00A342256EF77000F51F9 /* case8 */ = {
