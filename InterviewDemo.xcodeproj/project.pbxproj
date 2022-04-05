@@ -93,6 +93,9 @@
 		E0C46BC227FAE97400CBD90C /* ZWWMainTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BC127FAE97400CBD90C /* ZWWMainTabVC.m */; };
 		E0C46BC927FAEA7F00CBD90C /* ZWWHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BC727FAEA7F00CBD90C /* ZWWHomeVC.m */; };
 		E0C46BCA27FAEA7F00CBD90C /* ZWWHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C46BC827FAEA7F00CBD90C /* ZWWHomeVC.xib */; };
+		E0C46BCF27FBD9C200CBD90C /* AAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C46BCE27FBD9C200CBD90C /* AAViewController.xib */; };
+		E0C46BD327FBE2C400CBD90C /* ZWWViewLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C46BD127FBE2C400CBD90C /* ZWWViewLayerVC.m */; };
+		E0C46BD427FBE2C400CBD90C /* ZWWViewLayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C46BD227FBE2C400CBD90C /* ZWWViewLayerVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +271,10 @@
 		E0C46BC627FAEA7F00CBD90C /* ZWWHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWHomeVC.h; sourceTree = "<group>"; };
 		E0C46BC727FAEA7F00CBD90C /* ZWWHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWHomeVC.m; sourceTree = "<group>"; };
 		E0C46BC827FAEA7F00CBD90C /* ZWWHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWHomeVC.xib; sourceTree = "<group>"; };
+		E0C46BCE27FBD9C200CBD90C /* AAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AAViewController.xib; sourceTree = "<group>"; };
+		E0C46BD027FBE2C400CBD90C /* ZWWViewLayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWViewLayerVC.h; sourceTree = "<group>"; };
+		E0C46BD127FBE2C400CBD90C /* ZWWViewLayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWViewLayerVC.m; sourceTree = "<group>"; };
+		E0C46BD227FBE2C400CBD90C /* ZWWViewLayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWViewLayerVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +474,9 @@
 				E03809C4216B30F7005ED37E /* ZWWCommonTestTableViewController.m */,
 				E02DE8AE217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.h */,
 				E02DE8AF217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m */,
+				E0C46BD027FBE2C400CBD90C /* ZWWViewLayerVC.h */,
+				E0C46BD127FBE2C400CBD90C /* ZWWViewLayerVC.m */,
+				E0C46BD227FBE2C400CBD90C /* ZWWViewLayerVC.xib */,
 			);
 			path = CommonVC;
 			sourceTree = "<group>";
@@ -476,6 +486,7 @@
 			children = (
 				E040F4372164A54E006B8BF8 /* AAViewController.h */,
 				E040F4382164A54E006B8BF8 /* AAViewController.m */,
+				E0C46BCE27FBD9C200CBD90C /* AAViewController.xib */,
 				E040F43A2164A560006B8BF8 /* BBViewController.h */,
 				E040F43B2164A560006B8BF8 /* BBViewController.m */,
 				E040F43D2164A72E006B8BF8 /* ZWWTestDelegateView.h */,
@@ -880,8 +891,10 @@
 				E027380422549B0800A7688F /* ZWWCase2MasonryVC.xib in Resources */,
 				E027380A2254A54600A7688F /* ZWWCase3MasonryVC.xib in Resources */,
 				E04522572255EEC400562FA0 /* ZWWCase7MasonryVC.xib in Resources */,
+				E0C46BCF27FBD9C200CBD90C /* AAViewController.xib in Resources */,
 				E0442FCC21789F7E000CC193 /* ZWWMasonrySubViewController.xib in Resources */,
 				E0C46BB227FADEB000CBD90C /* ZWWTimerViewController.xib in Resources */,
+				E0C46BD427FBE2C400CBD90C /* ZWWViewLayerVC.xib in Resources */,
 				E0C46BCA27FAEA7F00CBD90C /* ZWWHomeVC.xib in Resources */,
 				E02737FB225483F900A7688F /* ZWWCase1MasonryVC.xib in Resources */,
 				E066765A2255D1530093B06A /* ZWWCase5MasonryVC.xib in Resources */,
@@ -975,6 +988,7 @@
 				E04522562255EEC400562FA0 /* ZWWCase7MasonryVC.m in Sources */,
 				E0788897218160E8008B8866 /* ZWWLoginViewController.m in Sources */,
 				E040F43C2164A560006B8BF8 /* BBViewController.m in Sources */,
+				E0C46BD327FBE2C400CBD90C /* ZWWViewLayerVC.m in Sources */,
 				E0C00A4422572952000F51F9 /* ZWWCase9MasonryVC.m in Sources */,
 				04F066B5210828C900823498 /* TestClass+method1.m in Sources */,
 				E045730A21660E45007650D9 /* UserModel.m in Sources */,

@@ -19,8 +19,9 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)run{
-    ZWWLog(@"实现代理AAVCDelegate方法");
+- (void)iNeedYouHelpMeDoSomethingWithStr:(NSString *)str{
+    ZWWLog(@"%s使用%@完成委托事情",object_getClassName(self), str);
+    
 }
 
 @end

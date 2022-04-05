@@ -29,6 +29,9 @@
     self.delegate = bbVC;
     const char * className = object_getClassName(self.delegate);
     ZWWLog(@"AAVCDelegate类型名字==%s", className);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(iNeedYouHelpMeDoSomethingWithStr:)]) {
+        [self.delegate iNeedYouHelpMeDoSomethingWithStr:[NSString stringWithFormat:@"%s的钱",object_getClassName(self)]];
+    }
 }
 
 - (void)getDelegateClassName1{
@@ -36,9 +39,9 @@
     self.delegate = zwwView;
     const char * className = object_getClassName(self.delegate);
     ZWWLog(@"AAVCDelegate类型名字==%s", className);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(run)]) {
-        ZWWLog(@"run,run,run");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(iNeedYouHelpMeDoSomethingWithStr:)]) {
+        [self.delegate iNeedYouHelpMeDoSomethingWithStr:[NSString stringWithFormat:@"%s的钱",object_getClassName(self)]];
     }
-    
 }
+
 @end

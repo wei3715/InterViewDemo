@@ -44,7 +44,7 @@
     _dataArr = [NSMutableArray new];
     NSArray *sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"masonry",@"UITableView编辑",@"测试跳转到设置界面",@"测试scrollview 的xib适配",@"RunLoop",@"定时器",@"杂七杂八"];
     NSArray *rowArr = @[
-        @[@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""}],
+        @[@{@"title":@"组合实现多继承",@"pushVCName":@""},@{@"title":@"代理实现多继承",@"pushVCName":@""},@{@"title":@"类别实现单继承",@"pushVCName":@""},@{@"title":@"消息转发实现多继承",@"pushVCName":@""}],
         @[@{@"title":@"各种类型的深浅copy",@"pushVCName":@"ZWWTestCopyViewController"},@{@"title":@"Block",@"pushVCName":@""},@{@"title":@"weak&strong",@"pushVCName":@"ZWWTestWeakStongViewController"}],
         @[@{@"title":@"信号量",@"pushVCName":@""},@{@"title":@"performSelector注意问题",@"pushVCName":@"ZWWTestThreadViewController"}],
         @[@{@"title":@"NSArray去重",@"pushVCName":@""},@{@"title":@"load,initialize,init对比测试",@"pushVCName":@""},@{@"title":@"指针问题",@"pushVCName":@""},@{@"title":@"字符常量区",@"pushVCName":@""}],

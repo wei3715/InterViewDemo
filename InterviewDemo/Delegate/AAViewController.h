@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+//委托方-定义代理协议
 @protocol AAVCDelagate <NSObject>
 
-- (void)run;
+- (void)iNeedYouHelpMeDoSomethingWithStr:(NSString *)str;
 
 @end
 
 @interface AAViewController : UIViewController
 
+//遵循协议的一个代理变量定义
 @property (nonatomic, weak)id <AAVCDelagate> delegate;
 
 @end

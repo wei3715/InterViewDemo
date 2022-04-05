@@ -28,6 +28,7 @@
 #import "ZWWTestScollviewXib.h"
 #import "ZWWHomeModel.h"
 #import "ZWWHomeItemModel.h"
+#import "ZWWViewLayerVC.h"
 
 @interface ZWWHomeVC ()
 
@@ -50,7 +51,7 @@
         @[@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""}],
         @[@{@"title":@"各种类型的深浅copy",@"pushVCName":@"ZWWTestCopyViewController"},@{@"title":@"Block",@"pushVCName":@""},@{@"title":@"weak&strong",@"pushVCName":@"ZWWTestWeakStongViewController"}],
         @[@{@"title":@"信号量",@"pushVCName":@""},@{@"title":@"performSelector注意问题",@"pushVCName":@"ZWWTestThreadViewController"}],
-        @[@{@"title":@"NSArray去重",@"pushVCName":@""},@{@"title":@"load,initialize,init对比测试",@"pushVCName":@""},@{@"title":@"指针问题",@"pushVCName":@""},@{@"title":@"字符常量区",@"pushVCName":@""}],
+        @[@{@"title":@"UIView&CALayer",@"pushVCName":@"ZWWViewLayerVC"},@{@"title":@"NSArray去重",@"pushVCName":@""},@{@"title":@"load,initialize,init对比测试",@"pushVCName":@""},@{@"title":@"指针问题",@"pushVCName":@""},@{@"title":@"字符常量区",@"pushVCName":@""}],
         @[@{@"title":@"代理className",@"pushVCName":@"AAViewController"}],
         @[@{@"title":@"缓存NSCache",@"pushVCName":@"ZWWCacheViewController"}],
         @[@{@"title":@"xib测试",@"pushVCName":@"ZWWTestXibViewController"}],
