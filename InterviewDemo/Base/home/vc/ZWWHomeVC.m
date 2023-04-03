@@ -46,7 +46,7 @@
     
     self.title = @"探索验证";
     _dataArr = [NSMutableArray new];
-    NSArray *sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"masonry",@"UITableView编辑",@"测试跳转到设置界面",@"测试scrollview 的xib适配",@"RunLoop",@"定时器",@"杂七杂八"];
+    NSArray *sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"masonry",@"UITableView编辑",@"测试跳转到设置界面",@"测试scrollview 的xib适配",@"RunLoop",@"定时器",@"自造轮子",@"杂七杂八"];
     NSArray *rowArr = @[
         @[@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""}],
         @[@{@"title":@"各种类型的深浅copy",@"pushVCName":@"ZWWTestCopyViewController"},@{@"title":@"Block",@"pushVCName":@""},@{@"title":@"weak&strong",@"pushVCName":@"ZWWTestWeakStongViewController"}],
@@ -61,6 +61,7 @@
         @[@{@"title":@"scrollview 的xib适配",@"pushVCName":@"ZWWTestScollviewXib"}],
         @[@{@"title":@"NSTimer创建",@"pushVCName":@"ZWWTimerViewController"},@{@"title":@"obsver",@"pushVCName":@"ZWWObserverViewController"},@{@"title":@"runLoop使用案例",@"pushVCName":@""}],
         @[@{@"title":@"定时器",@"pushVCName":@""}],
+        @[@{@"title":@"自造轮子-加油",@"pushVCName":@""}],
         @[@{@"title":@"杂七杂八",@"pushVCName":@"ZWWCommonTestTableViewController"}]
     ];
     
