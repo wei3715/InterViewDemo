@@ -14,6 +14,7 @@
 @property (nonatomic, strong)NSTimer    *timer1;
 @property (nonatomic, strong)NSTimer    *timer2;
 @property (nonatomic, strong)dispatch_source_t timer3;
+@property (weak, nonatomic) IBOutlet UILabel *timeLB;
 
 @end
 
@@ -43,7 +44,7 @@
     _timer2 = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(handle:) userInfo:_timer2 repeats:YES];
     //2.1将Timer手动添加到当前Runloop中(默认mode)
     //mode 为NSDefaultRunLoopMode导致的问题：当TextView滑动时，会停止计时，滑动结束后继续计时。
-     //原因：当滑动Scrollview时。mode改变成为UITrackingRunLoopMode，而timer添加到了默认模式下 NSDefaultRunLoopMode
+    //原因：当滑动Scrollview时。mode改变成为UITrackingRunLoopMode，而timer添加到了默认模式下 NSDefaultRunLoopMode
     [[NSRunLoop currentRunLoop]addTimer:_timer2 forMode:NSDefaultRunLoopMode];
 }
 
@@ -83,6 +84,7 @@
         //设置触发事件
         dispatch_source_set_event_handler(self.timer3, ^{
             NSLog(@"--run--");
+            w.timeLB.text = [NSString stringWithFormat:@"倒计时：%zd",_count];
             if (count == 5) {//取消计时
                 dispatch_source_cancel(self.timer3);
                 self.timer3 = nil;
@@ -96,6 +98,7 @@
 - (void)handle:(id)timer{
     _count++;
     NSLog(@"----run--- count==%ld,当前runloopMode==%@",_count,[[NSRunLoop currentRunLoop]currentMode]);
+    self.timeLB.text = [NSString stringWithFormat:@"倒计时：%zd",_count];
     if (_count==10) {
         
         [timer invalidate];

