@@ -1,5 +1,5 @@
 //
-//  ZWWTestWeakStongViewController.h
+//  ZWWTestWeakStongVC.h
 //  InterviewDemo
 //
 //  Created by mac on 2018/7/24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZWWTestWeakStongViewController : UIViewController
+@interface ZWWTestWeakStongVC : UIViewController
 
 @end

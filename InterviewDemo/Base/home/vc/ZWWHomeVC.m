@@ -14,7 +14,7 @@
 #import "TestClass+method1.h"
 #import "ClassA.h"
 #import "ClassB.h"
-#import "ZWWTestWeakStongViewController.h"
+#import "ZWWTestWeakStongVC.h"
 #import "ZWWTestThreadViewController.h"
 #import "TestBlock.h"
 #import "AAViewController.h"
@@ -46,12 +46,13 @@
     
     self.title = @"探索验证";
     _dataArr = [NSMutableArray new];
-    NSArray *sectionTitleArr = @[@"oc实现多继承效果",@"属性修饰词",@"线程相关",@"常见面试小题",@"代理",@"缓存",@"xib测试",@"masonry",@"UITableView编辑",@"测试跳转到设置界面",@"测试scrollview 的xib适配",@"RunLoop",@"定时器",@"杂七杂八"];
+    NSArray *sectionTitleArr = @[@"常见面试小题",@"属性修饰词",@"线程相关",@"oc实现多继承效果",@"代理",@"缓存",@"xib测试",@"masonry",@"UITableView编辑",@"测试跳转到设置界面",@"测试scrollview 的xib适配",@"RunLoop",@"定时器",@"杂七杂八"];
     NSArray *rowArr = @[
-        @[@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""}],
-        @[@{@"title":@"各种类型的深浅copy",@"pushVCName":@"ZWWTestCopyViewController"},@{@"title":@"Block",@"pushVCName":@""},@{@"title":@"weak&strong",@"pushVCName":@"ZWWTestWeakStongViewController"}],
+        @[@{@"title":@"指针问题",@"pushVCName":@"ZWWIsaTestVC"},@{@"title":@"UIView&CALayer",@"pushVCName":@"ZWWViewLayerVC"},@{@"title":@"NSArray去重",@"pushVCName":@""},@{@"title":@"load,initialize,init对比测试",@"pushVCName":@""},@{@"title":@"字符常量区",@"pushVCName":@""}],
+        @[@{@"title":@"各种类型的深浅copy",@"pushVCName":@"ZWWTestCopyViewController"},@{@"title":@"Block",@"pushVCName":@""},@{@"title":@"weak&strong",@"pushVCName":@"ZWWTestWeakStongVC"}],
         @[@{@"title":@"信号量",@"pushVCName":@""},@{@"title":@"performSelector注意问题",@"pushVCName":@"ZWWTestThreadViewController"}],
-        @[@{@"title":@"UIView&CALayer",@"pushVCName":@"ZWWViewLayerVC"},@{@"title":@"NSArray去重",@"pushVCName":@""},@{@"title":@"load,initialize,init对比测试",@"pushVCName":@""},@{@"title":@"指针问题",@"pushVCName":@""},@{@"title":@"字符常量区",@"pushVCName":@""}],
+       
+        @[@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""},@{@"title":@"组合实现多继",@"pushVCName":@""}],
         @[@{@"title":@"代理className",@"pushVCName":@"AAViewController"}],
         @[@{@"title":@"缓存NSCache",@"pushVCName":@"ZWWCacheViewController"}],
         @[@{@"title":@"xib测试",@"pushVCName":@"ZWWTestXibViewController"}],
@@ -140,7 +141,85 @@
     }else{
         
         switch (indexPath.section) {
-            case 0:{//oc:'多继承
+            case 0:{
+                switch (indexPath.row) {
+                    case 2:{//指针
+//                        [self testPointer];
+                        break;
+                    }
+                        
+                    case 0:{//数组去重
+//                        [self deleteSame];
+                        break;
+                    }
+                    case 1:{//多个分类有同名方法，方法执行哪个(执行编译顺序在后面的分类的同名方法)
+                        //                   TestClass *testCls1 = [[TestClass alloc]init];
+                        //                   TestClass *testCls2 = [[TestClass alloc]init];
+                        //                   TestClass *testCls3 = [[TestClass alloc]init];
+                        //                   [testCls1 testCategoryFunc];
+                        
+                        
+                        TestClassSon *testClsSon1 = [[TestClassSon alloc]init];
+                        TestClassSon *testClsSon2 = [[TestClassSon alloc]init];
+                        TestClassSon *testClsSon3 = [[TestClassSon alloc]init];
+                        break;
+                    }
+
+                    case 3:{//字符常量区
+//                        [self testOCSting];
+                        break;
+                    }
+                        
+                    default:
+                        break;
+                }
+                break;
+            }
+                   
+            case 1:{//属性修饰词
+                switch (indexPath.row) {
+                    case 0:{//Copy，MutableCopy
+                        ZWWTestCopyViewController *testCopyVC = [[ZWWTestCopyViewController alloc]init];
+                        [self.navigationController pushViewController:testCopyVC animated:YES];
+                        break;
+                    }
+                    case 1:{//block
+                        TestBlock *testBlock = [[TestBlock alloc]init];
+                        [testBlock testBlock];
+                        break;
+                    }
+                    case 2:{//weak&strong修饰的字符串
+                        ZWWTestWeakStongVC *weakStrongVC = [[ZWWTestWeakStongVC alloc]init];
+                        [self.navigationController pushViewController:weakStrongVC animated:YES];
+                        break;
+                    }
+                    default:
+                        break;
+                }
+                
+                break;
+            }
+                
+                
+            case 2:{
+                switch (indexPath.row) {
+                    case 0:{//信号量
+//                        [self testSignal];
+                        break;
+                    }
+                    case 1:{//performSelector
+                        ZWWTestThreadViewController *testThreadVC = [[ZWWTestThreadViewController alloc]init];
+                        [self.navigationController pushViewController:testThreadVC animated:YES];
+                        break;
+                    }
+                    default:
+                        break;
+                }
+                
+                break;
+            }
+                
+            case 3:{//oc:'多继承
                 switch (indexPath.row) {
                     case 0:{//通过组合实现"多继承"效果
                         TestClass *testCls = [[TestClass alloc]init];
@@ -175,85 +254,6 @@
                 }
                 break;
             }
-                
-                
-            case 1:{//属性修饰词
-                switch (indexPath.row) {
-                    case 0:{//Copy，MutableCopy
-                        ZWWTestCopyViewController *testCopyVC = [[ZWWTestCopyViewController alloc]init];
-                        [self.navigationController pushViewController:testCopyVC animated:YES];
-                        break;
-                    }
-                    case 1:{//block
-                        TestBlock *testBlock = [[TestBlock alloc]init];
-                        [testBlock testBlock];
-                        break;
-                    }
-                    case 2:{//weak&strong修饰的字符串
-                        ZWWTestWeakStongViewController *weakStrongVC = [[ZWWTestWeakStongViewController alloc]init];
-                        [self.navigationController pushViewController:weakStrongVC animated:YES];
-                        break;
-                    }
-                    default:
-                        break;
-                }
-                
-                break;
-            }
-                
-                
-            case 2:{
-                switch (indexPath.row) {
-                    case 0:{//信号量
-//                        [self testSignal];
-                        break;
-                    }
-                    case 1:{//performSelector
-                        ZWWTestThreadViewController *testThreadVC = [[ZWWTestThreadViewController alloc]init];
-                        [self.navigationController pushViewController:testThreadVC animated:YES];
-                        break;
-                    }
-                    default:
-                        break;
-                }
-                
-                break;
-            }
-                
-                
-            case 3:{
-                switch (indexPath.row) {
-                    case 0:{//数组去重
-//                        [self deleteSame];
-                        break;
-                    }
-                    case 1:{//多个分类有同名方法，方法执行哪个(执行编译顺序在后面的分类的同名方法)
-                        //                   TestClass *testCls1 = [[TestClass alloc]init];
-                        //                   TestClass *testCls2 = [[TestClass alloc]init];
-                        //                   TestClass *testCls3 = [[TestClass alloc]init];
-                        //                   [testCls1 testCategoryFunc];
-                        
-                        
-                        TestClassSon *testClsSon1 = [[TestClassSon alloc]init];
-                        TestClassSon *testClsSon2 = [[TestClassSon alloc]init];
-                        TestClassSon *testClsSon3 = [[TestClassSon alloc]init];
-                        break;
-                    }
-                    case 2:{//指针
-//                        [self testPointer];
-                        break;
-                    }
-                    case 3:{//字符常量区
-//                        [self testOCSting];
-                        break;
-                    }
-                        
-                    default:
-                        break;
-                }
-                break;
-            }
-                
             case 9:{//跳转到设置界面
                 //            1、iOS 10以上都是跳转到当前的APP设置页面 iOS 10及以下可以打开特定的设置（wifi，热点，关于本机）页面
                 // 注：app-Prefs和Prefs有区别，没有iOS 10以下的机子，没办法测试

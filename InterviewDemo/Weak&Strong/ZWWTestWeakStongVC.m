@@ -1,22 +1,22 @@
 //
-//  ZWWTestWeakStongViewController.m
+//  ZWWTestWeakStongVC.m
 //  InterviewDemo
 //
 //  Created by mac on 2018/7/24.
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import "ZWWTestWeakStongViewController.h"
+#import "ZWWTestWeakStongVC.h"
 #import "Person.h"
 #import "ZWWCustomView.h"
 
-@interface ZWWTestWeakStongViewController ()
+@interface ZWWTestWeakStongVC ()
 
 @property (nonatomic, strong) ZWWCustomView *customView;
 
 @end
 
-@implementation ZWWTestWeakStongViewController
+@implementation ZWWTestWeakStongVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +28,6 @@
 
 //验证使用weak的作用
 - (void)creatUI{
-    //创建自定义view
     ZWWCustomView *customView = [[ZWWCustomView alloc]init];
     ZWWLog(@"1: retainCount=%ld",CFGetRetainCount((__bridge CFTypeRef)customView));
     customView.frame=CGRectMake(50, 100, 200, 200);
@@ -94,7 +93,7 @@
     Person *sunLiu = [[Person alloc]init];
     sunLiu.name = @"孙六";
     
-    /*先将分配好的内存赋值给一个strong变量,然后再将这个strong变量赋值给一个weak变量，这样两个Person的地址都一样，显然name属性也一样。这样两个Person的地址都一样，显然name属性也一样。这样就好比先用结实的绳子拴住牛，这样牛就不会跑了，然后再用一根弱小的绳子拴住这头牛，这样顺着这根弱小的绳子也能找到这头牛。很明显如果当我们把结实的绳子弄断时，弱小的绳子自然也拉不住这头牛了*/
+    /*先将分配好的内存赋值给一个strong变量,然后再将这个strong变量赋值给一个weak变量，这样两个Person的地址都一样，显然name属性也一样.这样就好比先用结实的绳子拴住牛，这样牛就不会跑了，然后再用一根弱小的绳子拴住这头牛，这样顺着这根弱小的绳子也能找到这头牛。很明显如果当我们把结实的绳子弄断时，弱小的绳子自然也拉不住这头牛了*/
     p = sunLiu;
     
     //此时：person这块内存有一个strong指针sunLiu，和一个weak指针wangWu
@@ -129,11 +128,17 @@
 //strong修饰时：没有打印对象被销毁，weak修饰时：打印了对象被销毁
 //为什么我们没有添加strong属性的时候分配出来的内存没有被释放，仍然能通过for循环找到它？需要注意的是：当一个视图A被添加到另一个视图B时，A就被B的subViews强引用了（有一个结实的绳子拉着它了），所以我们再用一个强属性去拉着它的话，自然要两条绳子都断了，它才会被释放。
 
+- (void)testBlockWeakStrong{
+    int a = 5;
+    void(^ablock)(int a) = ^(int a){
+        NSLog(@"a==%d",a);
+    };
+    ablock(4);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

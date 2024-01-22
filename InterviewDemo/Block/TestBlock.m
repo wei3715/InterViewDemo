@@ -5,6 +5,10 @@
 //  Created by mac on 2018/8/10.
 //  Copyright © 2018年 mac. All rights reserved.
 //
+/*
+ block声明 void(^block)(int a,int b)  返回值-block名称-参数列表
+ block定义 void(^block)(int a,int b)= ^(int a,int b){do something}; 返回值（void的话可省略）block名称-参数列表
+ */
 
 #import "TestBlock.h"
 typedef void(^Ablock)(id testData);
@@ -28,12 +32,12 @@ typedef void(^Bblock)(id data, Ablock testBlock);
 
 
 - (void)testBlock{
-    
 //    GlobalBlock();
     
     int val = 10;
     int *p = &val;
-    NSLog(@"原参数地址=%p",p);
+    NSLog(@"block外 指针值=%p,参数地址==%p",p,&val);
+    
     void(^StackBlock)(int *p) = ^(int *p){
         //通过指针改变局部变量的值（指针传递，访问的是同一块内存，所以可以改变val的值）
         //如果直接通过变量名访问，是值传递，只是block外val的一个副本，所以改变不会影响原来val的值
@@ -55,7 +59,7 @@ typedef void(^Bblock)(id data, Ablock testBlock);
     NSLog(@"block外改变后值==%d",val); //val = 12
     
     //嵌套block
-    [self testActionWith:^(id data, Ablock testBlock) {
+    [self testActionWithBlock:^(id data, Ablock testBlock) {
         NSLog(@"第一层block参数==%@",data);
         if (testBlock) {
             testBlock(@"第二层block");
@@ -63,7 +67,8 @@ typedef void(^Bblock)(id data, Ablock testBlock);
     }];
 }
 
-- (void)testActionWith:(Bblock)block{
+
+- (void)testActionWithBlock:(Bblock)block{
     NSLog(@"测试block嵌套调用");
     _byBlock = block;
     
@@ -75,7 +80,7 @@ typedef void(^Bblock)(id data, Ablock testBlock);
 
 
 //测试block访问外部变量
-//C语言中变量有哪几种。一般可以分为一下5种：
+//C语言中变量一般可以分为一下5种：
 //自动变量
 //函数参数 （block中不用考虑）
 //静态变量
