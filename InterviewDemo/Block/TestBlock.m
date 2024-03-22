@@ -6,8 +6,35 @@
 //  Copyright © 2018年 mac. All rights reserved.
 //
 /*
- block声明 void(^block)(int a,int b)  返回值-block名称-参数列表
- block定义 void(^block)(int a,int b)= ^(int a,int b){do something}; 返回值（void的话可省略）block名称-参数列表
+ block声明:
+ void(^block)(int a,int b)
+ 返回值类型-block名称-参数列表
+ returentype (^blockName)(parammeterType)
+ block定义:
+ void(^block)(int a,int b)= ^(int a,int b){do something};
+ 返回值（void的话可省略）block名称-参数列表
+ returntype(^blockName)(parametTypes)=^returntype(parammeters){};
+ 使用场景：
+ 1.做为本地变量
+ returntype(^blockName)(parametTypes)=^returntype(parammeters){
+ ......
+ };
+ 2.做为property
+ @property (nonatomic, copy)returentype (^blockName)(parammeterTypes);
+ 3.做为方法的参数
+ -(void)doWithBlock(returntype(^)(parammeterType))blockName;
+ 4.做为方法参数被调用时
+ [someObject doWithBlock:^returntype(parammeters){
+ ......
+ }];
+ 5.typedef声明block
+ typedef returntype(^blockName)(parammeterTypes);
+ blockName blockname = ^returntype(parammeters){
+ ...
+ };
+ @property (nonatomic, copy) blockName blockname;
+
+ 
  */
 
 #import "TestBlock.h"

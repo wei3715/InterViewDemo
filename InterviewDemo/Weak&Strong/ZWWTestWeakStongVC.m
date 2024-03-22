@@ -5,6 +5,14 @@
 //  Created by mac on 2018/7/24.
 //  Copyright © 2018年 mac. All rights reserved.
 //
+/**
+ weak指针所引用的对象retainCount不会增加；
+ //内存区域：
+ 栈区/堆区/
+ 全局/静态区：全局 静态全局 静态局部变量
+ 常量区：字符串存在常量区
+ 代码区：
+*/
 
 #import "ZWWTestWeakStongVC.h"
 #import "Person.h"
@@ -26,6 +34,15 @@
     [self creatUI];
 }
 
+- (void)test02{
+/*runtime维护了一个弱引用表sidetable，当对某个对象进行弱引用的时候，runtime会将这个__weak修饰的变量存储在这个弱引用表中，
+ key：被引用的对象 value：存放着__weak修饰的变量的数组（可能有多个__weak变量引用对象）
+ 举例：下面 key：p1,value:装有weakP1的数组
+*/
+    
+    Person *p1 = [[Person alloc]init];
+    __weak Person *weakP1 = p1;
+}
 //验证使用weak的作用
 - (void)creatUI{
     ZWWCustomView *customView = [[ZWWCustomView alloc]init];
@@ -59,7 +76,7 @@
 //weak&strong
 //赋值给weak变量后这块内存会马上被释放；而分配给strong变量的会等到这个变量的生命周期结束后，这块内存才被释放(不用关键字weak修饰的变量默认为strong变量)。
 - (void)testWeakAndStrong{
-    //weak
+    //weak 分配完就释放
     __weak Person *zhangSan = [[Person alloc]init];
     zhangSan.name = @"张三";
     
@@ -72,16 +89,17 @@
     ZWWLog(@"weak对象属性值地址==%@,strong对象属性值地址==%@",zhangSan.name,liSi.name);
     
     __weak Person *wangWu;
+    ZWWLog(@"weak对象内存地址==%p",wangWu);
     [self testWeakAndStrong1WithPerson:wangWu];
     
     //这时候 person这块内存只有一个weak指针wangWu，strong指针sunLiu已经失效
     ZWWLog(@"weak对象属内存地址==%@,weak对象属性值地址==%@",wangWu,wangWu.name);
     
-    //测试常量区
-//    NSString *str1 = @"222";
-//    ZWWLog(@"常量区的变量值果然不可以改变%@ %p retainCount=%ld",str1,str1, CFGetRetainCount((__bridge CFTypeRef)str1));
-//    str1 = @"333";
-//    ZWWLog(@"常量区的变量值果然不可以改变%@ %p,retainCount=%ld",str1,str1,CFGetRetainCount((__bridge CFTypeRef)str1));
+    //测试常量区-字符串存储在常量区
+    NSString *str1 = @"222";
+    ZWWLog(@"常量区的变量值果然不可以改变%@ %p retainCount=%ld",str1,str1, CFGetRetainCount((__bridge CFTypeRef)str1));
+    str1 = @"333";
+    ZWWLog(@"常量区的变量值果然不可以改变%@ %p,retainCount=%ld",str1,str1,CFGetRetainCount((__bridge CFTypeRef)str1));
 }
 // weak对象内存地址==0x0,strong对象内存地址==0x604000012910
 // weak对象属性值地址==(null),strong对象属性值地址==李四
